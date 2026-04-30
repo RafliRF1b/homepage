@@ -493,3 +493,1250 @@
     .container { grid-template-columns: 1fr; }
     .card-grid { grid-template-columns: 1fr; }
 }
+
+/* ============================================================
+    RESPONSIVE TEMPLATE (MOBILE-FIRST / min-width)
+    Sesuai Standar Breakpoints Tailwind CSS
+    ============================================================ */
+
+/* SM Mode: (Tailwind sm: -> 640px) */
+@media only screen and (min-width: 640px) {
+    .margin-x-section {
+        /* 64px */
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    /* ================= Section Hero ================= */
+    .hero-section .hero-content .hero-title {
+        font-size: 36px;
+    }
+    .hero-section .hero-desc-wrapper .hero-desc {
+        font-size: 12px;
+    }
+    .hero-section .hero-cta-wrapper {
+        margin-top: 12px;
+    }
+    .hero-section .hero-image-container .overlay-top {
+        padding-top: 8px;
+    }
+    .hero-section .hero-image-container .overlay-bottom {
+        padding-bottom: 8px;
+    }
+    .overlay-top .hero-logo-container .logo-bar-blur {
+        padding: 4px 8px; /* sm:py-1 sm:px-2 */
+        gap: 4px; /* sm:gap-1 */
+    }
+    .overlay-top .hero-logo-container .logo-bar-blur img {
+        width: 16px; /* sm:w-4 */
+        height: 16px;
+    }
+    .overlay-bottom .image-description-container .image-description-subtitle {
+        font-size: 8px;
+    }
+    .hero-section .nilai-kabinet-container .nilai-kabinet-mobile {
+        width: 70%;
+    }
+    .nilai-kabinet-desktop .nilai-title-pc,
+    .nilai-kabinet-mobile .nilai-title-mobile {
+        font-size: 14px;
+    }
+    .overlay-bottom .image-description-container .image-description-title .image-title {
+        font-size: 12px;
+    }
+    /* ================= Section Hero ================= */
+    
+    /* ================= Section Kahim Wahim ================= */
+    .about-title-container h2 {
+        font-size: 18px;
+    }
+    .about-title-container h1 {
+        font-size: 30px; width: 100%;
+    }
+    .about-title-container p {
+        max-width: 576px;
+    }
+    .about-section .about-container .kahim-wahim-container {
+        max-width: 100%;
+    }
+    .kahim-wahim-container .inner-container {
+        gap: 28px;
+    }
+    .kahim-container .kahim-card .kahim-overlay h2 {
+        font-size: 14px;
+    }
+    .kahim-container .kahim-card .kahim-overlay h3 {
+        font-size: 17px;
+        margin-top: 8px;
+    }
+    .kahim-container .himtika-periode {
+        font-size: 24px;
+    }
+    .wahim-container .about-cabinet img {
+        width: 28px; height: 28px;
+    }
+    .wahim-container .about-cabinet h2 {
+        font-size: 24px;
+    }
+    .wahim-container .wahim-card .wahim-overlay {
+        padding-bottom: 28px;
+    }
+    .wahim-container .wahim-card .wahim-overlay p {
+        font-size: 12px;
+    }
+    .wahim-container .wahim-card .wahim-overlay h3 {
+        font-size: 18px;
+        margin-top: 8px;
+    }
+    .about-section .statistik-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .about-section .statistik-container .stats-card {
+        width: calc(50% - 10px);
+        max-width: none;
+        padding: 20px 24px;
+    }
+    .about-section .statistik-container .stats-card .stats-number {
+        font-size: 18px;
+    }
+    .stats-card .stats-label-container .label-wrapper .label-proker,
+    .stats-card .stats-label-container .label-wrapper .label-pengurus,
+    .stats-card .stats-label-container .label-wrapper-2 .label-event  {
+        font-size: 12px;
+    }
+    /* ================= Section Kahim Wahim ================= */
+
+    /* ================= Section Kenali ================= */
+    .kenali-container .video-overlay {
+        padding: 24px;
+    }
+    .kenali-container .video-overlay button {
+        font-size: 0.875rem;
+    }
+    .exploration-grid .card-visi-misi,
+    .exploration-grid .card-grand-design,
+    .exploration-grid .card-logo,
+    .exploration-grid .card-sejarah {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .logo-title-wrapper h3 {
+        max-width: 80%;
+    }
+    .logo-title-wrapper p,
+    .sejarah-title-wrapper p {
+        max-width: 80%;
+    }
+    /* ================= Section Kenali ================= */
+    
+    /* ================= Section Event ================= */
+    .event-section .event-header {
+        margin-bottom: 40px;
+    }
+    .card-event-header .header-left span {
+        font-size: 12px;
+    }
+    .card-event-1 .card-event-footer p,
+    .card-event-itbootcamp .card-event-footer p,
+    .card-event-diesnatalis .card-event-footer p {
+        font-size: 12px;
+    }
+    .card-event-1 .card-event-footer .btn-seemore,
+    .card-event-itbootcamp .card-event-footer .btn-seemore,
+    .card-event-diesnatalis .card-event-footer .btn-seemore {
+        font-size: 14px;
+    }
+    /* ================= Section Event ================= */
+
+    /* ================= Section Fitur Himfo ================= */
+    .fitur-himfo-grid .fitur-himtika h3,
+    .fitur-himfo-grid .fitur-hiagenda h3 {
+        font-size: 1.125rem;
+    }
+    .fitur-himfo-grid .fitur-himtika p,
+    .fitur-himfo-grid .fitur-hiagenda p,
+    .fitur-himfo-grid .fitur-hicode p {
+        font-size: 0.75rem;
+    }
+    /* ================= Section Fitur Himfo ================= */
+
+    /* ================= Section FAQ ================= */
+    .faq-left-column .faq-description {
+        font-size: 0.875rem;
+    }
+    .faq-right-column .container-accordion li {
+        padding: 10px 14px;
+    }
+    .faq-right-column .container-accordion li label {
+        font-size: 0.875rem;
+    }
+    .faq-right-column .container-accordion li .faq-content {
+        font-size: 0.875rem;
+    }
+    /* ================= Section FAQ ================= */
+}
+
+/* MD Mode: (Tailwind md: -> 768px) */
+@media only screen and (min-width: 768px) {
+    /* ================= Section Hero ================= */
+    .hero-section {
+        padding-top: 160px;
+    }
+    .hero-section .hero-content .hero-title {
+        font-size: 48px;
+        line-height: 52px;
+    }
+    .hero-section .hero-cta-wrapper .hero-btn-left {
+        padding: 10px 24px;
+    }
+    .hero-section .hero-cta-wrapper .hero-btn-left span {
+        font-weight: 500;
+    }
+    .hero-section .hero-cta-wrapper .hero-btn-left .btn-icon-top {
+        width: 16px;
+        height: 16px;
+    }
+    .hero-section .hero-cta-wrapper .hero-btn-right {
+        padding: 10px 24px;
+    }
+    .hero-section .hero-cta-wrapper .hero-btn-right span {
+        font-weight: 500;
+    }
+    .hero-section .hero-image-container .overlay-top {
+        padding-top: 16px;
+    }
+    .hero-section .hero-image-container .overlay-bottom {
+        padding-bottom: 16px;
+    }
+    .overlay-bottom .image-description-container .image-description-title .image-title {
+        font-size: 18px;
+    }
+    .overlay-bottom .image-description-container .image-description-subtitle {
+        font-size: 10px;
+    }
+    /* ================= Section Hero ================= */
+    
+    /* ================= Section Kahim Wahim ================= */
+    .about-section .statistik-container .stats-card {
+        width: calc(50% - 12px);
+        border-radius: 24px;
+    }
+    .stats-card .stats-label-container .label-wrapper,
+    .stats-card .stats-label-container .label-wrapper-2 {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+    .stats-card .stats-label-container .label-wrapper-2 .icon-event,
+    .stats-card .stats-label-container .label-wrapper .icon-pengurus  {
+        width: 32px;
+        height: 32px;
+    }
+    .stats-card .stats-label-container .label-wrapper .icon-proker  {
+        width: 28px;
+        height: 28px;
+    }
+    .stats-card .stats-label-container .label-wrapper .label-proker,
+    .stats-card .stats-label-container .label-wrapper .label-pengurus,
+    .stats-card .stats-label-container .label-wrapper-2 .label-event  {
+        font-size: 14px;
+    }
+    /* ================= Section Kahim Wahim ================= */
+    
+    /* ================= Section Kenali ================= */
+    .kenali-container .video-footage-bg {
+        background-position: top; /* md:bg-top */
+    }
+    .kenali-container .video-overlay {
+        padding: 30px; /* md:p-7.5 */
+    }
+    .kenali-container .video-overlay button {
+        font-size: 1.125rem;
+        padding: 8px 24px;
+    }
+    .kenali-container .video-overlay .video-description h2 {
+        font-size: 1.5rem;
+    }
+    .kenali-container .video-overlay .video-description p {
+        font-size: 1rem;
+    }
+    .kenali-container .exploration-container .title-wrapper h2 {
+        font-size: 1.125rem;
+    }
+    .kenali-container .exploration-container .title-wrapper h1 {
+        font-size: 1.875rem; /* 30px */
+        max-width: 32rem; /* 512px */
+    }
+    .kenali-container .exploration-container .exploration-grid {
+        gap: 28px;
+    }
+    .exploration-grid .card-visi-misi,
+    .exploration-grid .card-grand-design {
+        padding-left: 1.25rem; /* px-5 */
+        padding-right: 1.25rem;
+    }
+    .visi-misi-title-wrapper h3,
+    .grand-design-title-wrapper h3,
+    .logo-title-wrapper h3,
+    .sejarah-title-wrapper h3 {
+        font-size: 1.125rem;
+    }
+    .visi-misi-title-wrapper p,
+    .grand-design-title-wrapper p,
+    .logo-title-wrapper p,
+    .sejarah-title-wrapper p {
+        font-size: 0.75rem;
+    }
+    .card-visi-misi .arrow-icon-top,
+    .card-grand-design .arrow-icon-top-2,
+    .card-logo .arrow-icon-top-3,
+    .card-sejarah .arrow-icon-top-4 {
+        width: 12px; height: 12px;
+    }
+    /* ================= Section Kenali ================= */
+    
+    /* ================= Section Event ================= */
+    .event-section .event-header h2 {
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+    .event-section .event-header h1 {
+        font-size: 30px;
+    }
+    .card-wrapper {
+        margin-left: 56px;
+        margin-right: 56px;
+        margin-bottom: 36px;
+    }
+    .card-event-header .header-left span {
+        padding-top: 4px; padding-bottom: 4px;
+    }
+    .card-event-header .header-right .arrow-icon {
+        width: 12px; height: 12px;
+    }
+    .card-event-1 .card-event-footer h3,
+    .card-event-itbootcamp .card-event-footer h3,
+    .card-event-diesnatalis .card-event-footer h3 {
+        font-size: 16px;
+    }
+    /* ================= Section Event ================= */
+
+    /* ================= Section Himfo ================= */
+    .himfo-section {
+        padding-top: 40px;
+        padding-bottom: 120px;
+    }
+    .himfo-content .himfo-title {
+        font-size: 1.25rem;
+    }
+    .himfo-content .himfo-subtitle {
+        font-size: 1.875rem;
+    }
+    .himfo-content p {
+        font-size: 0.875rem;
+        font-weight: 500;
+    }
+    .kenali-container .video-footage-bg {
+        background-position: top;
+    }
+    .kenali-container .video-overlay {
+        padding: 30px;
+    }
+    /* ================= Section Himfo ================= */
+    
+    /* ================= Section Fitur Himfo ================= */
+    .fitur-himfo-title h1 {
+        font-size: 1.125rem;
+    }
+    .fitur-himfo-title h2 {
+        font-size: 1.875rem;
+    }
+    .fitur-himfo-grid .fitur-himtika h3,
+    .fitur-himfo-grid .fitur-hiagenda h3 {
+        font-size: 1.25rem;
+        margin-bottom: 16px;
+    }
+    .fitur-himfo-grid .fitur-hicode h3 {
+        font-size: 1.25rem;
+        margin-bottom: 16px;
+    }
+    .fitur-himfo-grid .fitur-himtika p,
+    .fitur-himfo-grid .fitur-hiagenda p,
+    .fitur-himfo-grid .fitur-hicode p {
+        font-size: 0.875rem;
+    }
+    /* ================= Section Fitur Himfo ================= */
+    /* ================= Section FAQ ================= */
+    .faq-left-column .faq-title-wrapper .faq-title {
+        font-size: 1.125rem;
+        margin-bottom: 0.5rem;
+    }
+    .faq-left-column .faq-title-wrapper .faq-subtitle {
+        font-size: 1.875rem;
+    }
+    .faq-left-column .faq-description {
+        font-weight: 400;
+    }
+    .faq-left-column .faq-contact-button {
+        padding: 10px 24px;
+        font-weight: 500; 
+    }
+    .faq-right-column .container-accordion li label {
+        font-size: 1rem;
+    }
+    /* ================= Section FAQ ================= */
+}
+
+/* LG Mode: (Tailwind lg: -> 1024px) */
+@media only screen and (min-width: 1024px) {
+    .margin-x-section {
+        padding-right: 44px;
+        padding-left: 44px;
+    }
+
+    /* ================= Section Hero ================= */
+    .hero-section {
+        padding-top: 188px;
+    }
+    .hero-section .hero-glow {
+        top: 0;
+        right: 10px;
+        box-shadow: 0 0 300px 250px rgba(31, 127, 120, 0.3);
+    }
+    .hero-section .hero-glow-2 {
+        bottom: 200px;
+        left: 200px;
+        box-shadow: 0 0 400px 200px rgba(31, 127, 120, 0.3);
+    }
+    .hero-section .hero-content .hero-title {
+        font-size: 60px;
+        line-height: 1.2;
+    }
+    .hero-section .hero-desc-wrapper {
+        margin-top: 40px;
+    }
+    .hero-section .hero-desc-wrapper .hero-desc {
+        font-size: 18px;
+        max-width: 860px;
+    }
+    .hero-section .hero-cta-wrapper {
+        gap: 32px;
+        margin-top: 30px;
+    }
+    .hero-section .hero-cta-wrapper .hero-btn-left span {
+        font-size: 16px;
+        font-weight: 400;
+    }
+    .hero-section .hero-cta-wrapper .hero-btn-left .btn-icon-top {
+        width: 19px;
+        height: 19px;
+    }
+    .hero-section .hero-cta-wrapper .hero-btn-right span {
+        font-size: 16px;
+        font-weight: 400;
+    }
+    .hero-section .hero-image-container {
+        margin-top: 80px;
+        border-radius: 32px;
+        filter: drop-shadow(0px 0px 18px rgba(50, 97, 93, 1));
+    -webkit-filter: drop-shadow(0px 0px 18px rgba(50, 97, 93, 1));
+    }
+    .hero-section .hero-image-container .overlay-top {
+        padding-top: 20px;
+        padding-right: 24px;
+        padding-left: 24px;
+    }
+    .hero-section .hero-image-container .overlay-bottom {
+        padding-bottom: 24px;
+        padding-right: 24px;
+        padding-left: 24px;
+    }
+    .overlay-top .hero-logo-container {
+        padding-bottom: 40px;
+    }
+    .overlay-top .hero-logo-container .logo-bar-blur {
+        padding: 8px 12px; /* lg:py-2 lg:px-3 */
+        gap: 8px;
+    }
+    .overlay-top .hero-logo-container .logo-bar-blur img {
+        width: 24px; /* lg:w-6 */
+        height: 24px;
+    }
+    .overlay-bottom .image-description-container {
+        gap: 4px;
+        margin-top: 40px;
+    }
+    .overlay-bottom .image-description-container .image-description-title .image-title {
+        font-size: 20px; /* lg:text-xl */
+        font-weight: 600;
+    }
+    .overlay-bottom .image-description-container .image-description-subtitle {
+        font-size: 14px;
+    }
+    .hero-section .nilai-kabinet-container {
+        display: flex; /* lg:flex */
+        flex-direction: row; /* Balikin ke baris buat flex-wrap */
+        flex-wrap: wrap; /* lg:flex-wrap */
+        justify-content: space-between; /* lg:justify-between */
+        align-items: center;
+        margin-top: 24px; /* lg:mt-6 (6 * 4px) */
+        gap: 0; /* lg:gap-0 */
+        width: 100%; /* lg:w-full */
+    }
+    .hero-section .nilai-kabinet-container .nilai-kabinet-desktop {
+        gap: 10px;
+    }
+    .nilai-kabinet-desktop .nilai-sistematis,
+    .nilai-kabinet-desktop .nilai-efisiensi,
+    .nilai-kabinet-desktop .nilai-lestari,
+    .nilai-kabinet-desktop .nilai-aktualisasi {
+        padding-left: 16px;
+        padding-right: 16px;
+        gap: 6px;
+    }
+    .nilai-kabinet-desktop .nilai-reformasi,
+    .nilai-kabinet-desktop .nilai-aktif,
+    .nilai-kabinet-desktop .nilai-sinergi {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .nilai-kabinet-desktop .nilai-title-pc {
+        font-size: 16px; /* lg:text-base */
+        font-weight: 500;
+    }
+    .nilai-kabinet-mobile .nilai-title-mobile {
+        font-size: 20px; /* lg:text-base */
+        font-weight: 500;
+    }
+    #hero-section .sparkle {
+        width: 28px;
+        height: 28px;
+    }
+    .hero-section .nilai-kabinet-container .nilai-kabinet-mobile {
+        gap: 10px;
+        margin-top: 0px;
+        width: auto;
+        display: none;
+    }
+    .nilai-kabinet-mobile .nilai-reformasi-mobile,
+    .nilai-kabinet-mobile .nilai-aktif-mobile,
+    .nilai-kabinet-mobile .nilai-sinergi-mobile {
+        padding: 16px;
+        min-width: 6px;
+        gap: 6px;
+    }
+    /* ================= Section Hero ================= */
+
+    /* ================= Section Kahim Wahim ================= */
+    .about-section .about-glow {
+        right: 80px;
+        top: 200px;
+        box-shadow: 0 0 500px 300px rgba(31, 127, 120, 0.3);
+    }
+    .about-section .statistik-glow {
+        display: none;
+    }
+    .about-section .about-container {
+        flex-direction: row;
+        align-items: center;
+    }
+    .about-section .about-container .about-title-container {
+        width: 42.85%;
+    }
+    .about-title-container h2 {
+        font-size: 20px;
+    }
+    .about-title-container h1 {
+        font-size: 40px; margin-bottom: 16px;
+    }
+    .about-title-container p {
+        margin-bottom: 28px;
+    }
+    .about-title-container .about-button a { 
+        font-weight: 600; font-size: 16px;
+    }
+    .about-section .about-container .kahim-wahim-container {
+        width: 57.14%;
+        justify-content: flex-end;
+    }
+    .kahim-container .kahim-card {
+        border-top-right-radius: 24px;
+        border-top-left-radius: 72px;
+        border-bottom-left-radius: 24px;
+    }
+    .kahim-container .kahim-card .kahim-overlay {
+        padding-bottom: 24px;
+    }
+    .kahim-container .kahim-card .kahim-overlay h2 {
+        font-size: 15px;
+    }
+    .kahim-container .kahim-card .kahim-overlay h3 {
+        font-size: 18px;
+        margin-top: 6px;
+    }
+    .kahim-container .himtika-periode {
+        font-size: 20px;
+    }
+    .wahim-container .about-cabinet img {
+        width: 36px; height: 36px;
+    }
+    .wahim-container .about-cabinet h2 {
+        font-size: 20px;
+    }
+    .wahim-container .wahim-card {
+        /* lg:rounded-tr-3xl (24px) lg:rounded-br-[72px] lg:rounded-bl-3xl (24px) */
+        border-top-right-radius: 24px;
+        border-bottom-right-radius: 72px;
+        border-bottom-left-radius: 24px;
+    }
+    .wahim-container .wahim-card .wahim-overlay {
+        padding-bottom: 32px;
+    }
+    .wahim-container .wahim-card .wahim-overlay p {
+        font-size: 15px;
+    }
+    .wahim-container .wahim-card .wahim-overlay h3 {
+        font-size: 18px;
+        margin-top: 10px
+    }
+    .about-section .statistik-container {
+        flex-wrap: nowrap;
+        margin-top: 72px;
+    }
+    .about-section .statistik-container .stats-card {
+        width: 100%;
+    }
+    .about-section .statistik-container .stats-card .stats-number {
+        font-size: 20px;
+    }
+    /* ================= Section Kahim Wahim ================= */
+
+    /* ================= Section Kenali ================= */
+    .kenali-section .kenali-glow {
+        top: calc(1 / 2 * 100%);
+        right: 80px;
+        box-shadow: 0 0 500px 300px rgba(31, 127, 120, 0.3);
+    }
+    .kenali-section .kenali-container {
+        flex-direction: row;
+        gap: 80px;
+        height: 600px;
+    }
+    .kenali-container .video-card-wrapper {
+        height: 100%;
+        max-width: 42.8%;
+    }
+    .kenali-container .video-footage-bg {
+        background-position: center;
+    }
+    .kenali-container .video-overlay {
+        padding: 24px;
+    }
+    .kenali-container .video-overlay button {
+        font-size: 1rem;
+        padding: 8px 20px;
+    }
+    .kenali-container .video-overlay img {
+        width: 60px;
+        height: 60px;
+    }
+    .kenali-container .video-overlay .video-description h2 {
+        font-size: 1.25rem;
+    }
+    .kenali-container .video-overlay .video-description p {
+        font-size: 14px;
+    }
+    .kenali-container .exploration-container {
+        max-width: 57.14%;
+        gap: 20px;
+    }
+    .kenali-container .exploration-container .title-wrapper h1 {
+        max-width: 100%;
+    }
+    .visi-misi-title-wrapper h3,
+    .grand-design-title-wrapper h3,
+    .logo-title-wrapper h3,
+    .sejarah-title-wrapper h3 {
+        margin-bottom: 12px;
+    }
+    .visi-misi-title-wrapper p,
+    .grand-design-title-wrapper p,
+    .logo-title-wrapper p,
+    .sejarah-title-wrapper p {
+        line-height: 1.625;
+    }
+    .card-visi-misi img {
+        width: 108px;
+    }
+    .card-visi-misi .arrow-icon-top,
+    .card-grand-design .arrow-icon-top-2,
+    .card-logo .arrow-icon-top-3,
+    .card-sejarah .arrow-icon-top-4 {
+        top: 16px; 
+        right: 16px;
+        width: 14px; 
+        height: 14px;
+    }
+    .card-grand-design img {
+        width: 116px;
+    }
+    .card-logo img,
+    .card-sejarah img {
+        width: 124px;
+    }
+    .exploration-grid .card-sejarah {
+        padding: 24px;
+    }
+    .card-sejarah img {
+        top: -40px;
+        left: -40px;
+    }
+    /* ================= Section Kenali ================= */
+
+    /* ================= Section Event ================= */
+    .event-section .event-glow {
+        top: 50%;
+        left: 80px;
+        box-shadow: 0 0 600px 400px rgba(31, 127, 120, 0.25);
+    }
+    .event-section {
+        padding-top: 160px;
+        padding-bottom: 160px;
+    }
+    .event-section .event-header {
+        margin-bottom: 60px;
+    }
+    .event-section .event-header h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    .event-section .event-header h1 {
+        font-size: 40px;
+    }
+    .card-event-header .header-right .arrow-icon {
+        width: 14px; height: 14px;
+    }
+    .card-event-1 .card-event-footer h3,
+    .card-event-itbootcamp .card-event-footer h3,
+    .card-event-diesnatalis .card-event-footer h3 {
+        font-size: 20px;
+    }
+    .card-event-1 .card-event-footer p,
+    .card-event-itbootcamp .card-event-footer p,
+    .card-event-diesnatalis .card-event-footer p {
+        font-size: 14px;
+    }
+    /* ================= Section Event ================= */
+
+    /* ================= Section Himfo ================= */
+    .himfo-section .himfo-card {
+        border-radius: 1.5rem;
+        padding-left: 3.75rem;
+        padding-right: 3.75rem;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+    .himfo-card .himfo-container-content {
+        flex-direction: row;
+        gap: 80px;
+    }
+    .mockup-1 {
+        top: -36px;
+        right: -8px;
+    }
+    .mockup-2 {
+        bottom: -40px;
+    }
+    .mockup-3 {
+        top: 0;
+        left: -8px;
+    }
+    .himfo-content p {
+        margin-top: 0;
+    }
+    /* ================= Section Himfo ================= */
+
+    /* ================= Section Fitur Himfo ================= */
+    .fitur-himfo-section .fitur-himfo-glow {
+        top: 0;
+        right: 200px;
+        box-shadow: 0 0 600px 500px rgba(31, 127, 120, 0.3);
+    }
+    .fitur-himfo-container .fitur-himfo-title {
+        margin-bottom: 60px;
+    }
+    .fitur-himfo-title h1 {
+        font-size: 1.25rem;
+        margin-bottom: 0.75rem;
+    }
+    .fitur-himfo-title h2 {
+        font-size: 2.5rem;
+    }
+    .fitur-himfo-container .fitur-himfo-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 28px;
+    }
+    .fitur-himfo-container .fitur-himfo-grid .fitur-himtika {
+        padding-top: 2.25rem;
+        padding-bottom: 2.75rem;
+        padding-left: 2.25rem;
+        padding-right: 2.25rem;
+    }
+    .fitur-himfo-grid .fitur-himtika img {
+        width: 128px;
+    }
+    .fitur-himfo-grid .fitur-himtika h3,
+    .fitur-himfo-grid .fitur-hiagenda h3 {
+        font-size: 1.5rem;
+    }
+    .fitur-himfo-grid .fitur-himtika p,
+    .fitur-himfo-grid .fitur-hiagenda p,
+    .fitur-himfo-grid .fitur-hicode p {
+        font-size: 1rem;
+    }
+    .fitur-himfo-grid .fitur-himtika .bg-icon-himtika, 
+    .fitur-himfo-grid .fitur-hiagenda .bg-icon-hiagenda,
+    .fitur-himfo-grid .fitur-hicode .bg-icon-hicode {
+        width: 64px;
+        height: 64px;
+        margin-bottom: 48px;
+    }
+    .fitur-himfo-container .fitur-himfo-grid .fitur-hiagenda {
+        padding-top: 2.25rem;
+        padding-bottom: 2.75rem;
+        padding-left: 2.25rem;
+        padding-right: 2.25rem;
+    }
+    .fitur-himfo-grid .fitur-hiagenda img {
+        width: 120px;
+    }
+    .fitur-himfo-container .fitur-himfo-grid .fitur-hicode {
+        padding-top: 2.25rem;
+        padding-bottom: 2.75rem;
+        padding-left: 2.25rem;
+        padding-right: 2.25rem;
+        /* lg:col-auto lg:col-span-1 */
+        grid-column: span 1 / span 1;
+        grid-column-start: auto;
+    }
+    .fitur-himfo-grid .fitur-hicode img {
+        top: 16px;
+        width: 150px;
+    }
+    .fitur-himfo-grid .fitur-hicode h3 {
+        font-size: 1.5rem;
+    }
+    /* ================= Section Fitur Himfo ================= */
+
+    /* ================= Section FAQ ================= */
+    /* 0 untuk atas-bawah, 80px untuk kiri-kanan */
+    .faq-section .faq-glow {
+        top: 0;
+        left: 160px;
+        box-shadow: 0 0 600px 400px rgba(31, 127, 120, 0.25);
+    }
+    .faq-section .faq-container {
+        flex-direction: row;
+        justify-content: center;
+        gap: 80px;
+    }
+    .faq-left-column .faq-title-wrapper .faq-title {
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+    }
+    .faq-left-column .faq-title-wrapper .faq-subtitle {
+        font-size: 2.5rem;
+    }
+    .faq-left-column .faq-description {
+        font-size: 1rem;
+        margin-bottom: 2.25rem;
+    }
+    .faq-left-column .faq-contact-button {
+        font-size: 1rem;
+        font-weight: 400;
+    }
+    .faq-right-column .container-accordion li .faq-content {
+        text-align: left;
+        font-size: 1rem;
+    }
+    /* ================= Section FAQ ================= */
+}
+
+/* XL Mode: (Tailwind xl: -> 1280px) */
+@media only screen and (min-width: 1280px) {
+    .margin-x-section {
+        padding-right: 54px;
+        padding-left: 54px;
+    }
+
+    /* ================= Section Hero ================= */
+    .hero-section .hero-image-container .overlay-top,
+    .hero-section .hero-image-container .overlay-bottom {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+    .overlay-top .hero-logo-container .logo-bar-blur img {
+        width: 32px;
+        height: 32px;
+    }
+    .overlay-bottom .image-description-container .image-description-title .image-title {
+        font-size: 30px;
+    }
+    .overlay-bottom .image-description-container .image-description-subtitle {
+        font-size: 18px;
+    }
+    .nilai-kabinet-desktop .nilai-title-pc {
+        font-size: 20px;
+    }
+    /* ================= Section Hero ================= */
+
+    /* ================= Section kahim wahim ================= */
+    .about-section {
+        padding-top: 140px;
+    }
+    .about-section .about-container {
+        gap: 80px;
+    }
+    .about-section .about-container .about-title-container {
+        width: 100%;
+        gap: 16px;
+    }
+    .about-title-container h2 {
+        font-size: 24px;
+    }
+    .about-title-container p {
+        font-size: 16px;
+    }
+    .about-title-container .about-button {
+        padding: 10px 24px;
+    }
+    .about-section .about-container .kahim-wahim-container {
+        width: 100%;
+    }
+    .kahim-container .himtika-periode {
+        font-size: 24px;
+    }
+    .wahim-container .about-cabinet h2 {
+        font-size: 24px;
+    }
+    .about-section .statistik-container {
+        justify-content: space-between;
+        gap: 28px;
+    }
+    .about-section .statistik-container .stats-card {
+        padding: 28px 32px;
+    }
+    .about-section .statistik-container .stats-card .stats-number {
+        font-size: 28px;
+    }
+    .about-section .statistik-container .stats-card .stats-label-container {
+        padding-top: 10px;
+    }
+    /* ================= Section kahim wahim ================= */
+    
+    /* ================= Section event ================= */
+    .card-event-header .header-right .arrow-icon {
+        width: 16px; height: 16px;
+    }
+    .card-event-header .header-left span {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+    .card-event-header .header-left img {
+        width: 40px; height: 40px;
+    }
+    
+    /* ================= Section event ================= */
+    
+    /* ================= Section Kenali ================= */
+    .kenali-section {
+        padding-top: 120px;
+    }
+    .kenali-section .kenali-container {
+        height: 720px;
+    }
+    .kenali-container .video-card-wrapper {
+        max-width: 41.6%; /* xl:max-w-5/12 */
+    }
+    .kenali-container .video-overlay {
+        padding: 30px; /* xl:p-7.5 */
+    }
+    .kenali-container .video-overlay .video-description h2 {
+        font-size: 1.5rem;
+    }
+    .kenali-container .video-overlay .video-description p {
+        font-size: 1rem;
+    }
+    .kenali-container .exploration-container {
+        max-width: 58.33%;
+        gap: 80px;
+    }
+    .kenali-container .exploration-container .title-wrapper {
+        gap: 10px;
+    }
+    .kenali-container .exploration-container .title-wrapper h2 {
+        font-size: 1.8rem;
+    }
+    .kenali-container .exploration-container .title-wrapper h1 {
+        font-size: 2.875rem;
+    }
+    .kenali-container .exploration-container .exploration-grid {
+        gap: 40px;
+    }
+    .exploration-grid .card-visi-misi,
+    .exploration-grid .card-grand-design,
+    .exploration-grid .card-logo {
+        padding: 1.5rem;
+    }
+    .visi-misi-title-wrapper h3,
+    .grand-design-title-wrapper h3,
+    .logo-title-wrapper h3,
+    .sejarah-title-wrapper h3 {
+        font-size: 1.5rem;
+    }
+    .visi-misi-title-wrapper p,
+    .grand-design-title-wrapper p,
+    .logo-title-wrapper p,
+    .sejarah-title-wrapper p  {
+        font-size: 0.875rem;
+    }
+    .card-visi-misi img {
+        width: 120px;
+    }
+    .card-visi-misi .arrow-icon-top,
+    .card-grand-design .arrow-icon-top-2,
+    .card-logo .arrow-icon-top-3,
+    .card-sejarah .arrow-icon-top-4 {
+        width: 16px; height: 16px;
+    }
+    .card-grand-design img,
+    .card-logo img {
+        width: 148px;
+    }
+    .card-sejarah img {
+        width: 140px;
+    }
+    /* ================= Section Kenali ================= */
+
+    /* ================= Section Himfo ================= */
+    .himfo-section .himfo-card {
+        padding-top: 6.25rem;
+        padding-bottom: 6.25rem;
+    }
+    .himfo-card .mockup-container .mockup-himfo {
+        max-width: 125px;
+    }
+    .mockup-1 {
+        top: -48px; /* xl:-top-12 */
+        right: -8px; /* xl:-right-2 */
+    }
+    .mockup-2 {
+        bottom: -48px; /* xl:-bottom-12 */
+    }
+    .mockup-3 {
+        left: -8px; /* xl:-left-2 */
+    }
+    .himfo-card .himfo-container-content .himfo-content {
+        gap: 40px;
+    }
+    .himfo-content .himfo-title {
+        font-size: 1.5rem;
+    }
+    .himfo-content .himfo-subtitle {
+        font-size: 3rem;
+    }
+    .himfo-content p {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+    /* ================= Section Himfo ================= */
+
+    /* ================= Section Fitur Himfo ================= */
+    .fitur-himfo-title h1 {
+        font-size: 1.5rem;
+    }
+    .fitur-himfo-grid .fitur-himtika h3,
+    .fitur-himfo-grid .fitur-hiagenda h3 {
+        font-size: 1.875rem;
+    }
+    .fitur-himfo-grid .fitur-hicode h3 {
+        font-size: 1.875rem;
+    }
+    .fitur-himfo-grid .fitur-himtika p,
+    .fitur-himfo-grid .fitur-hiagenda p,
+    .fitur-himfo-grid .fitur-hicode p {
+        font-size: 1.125rem;
+    }
+    /* ================= Section Fitur Himfo ================= */
+
+    /* ================= Section FAQ ================= */
+    .faq-section .faq-left-column {
+        width: 47%;
+    }
+    .faq-section .faq-right-column {
+        width: 53%;
+    }
+    .faq-left-column .faq-title-wrapper .faq-title {
+        font-size: 1.5rem;
+    }
+    
+    .faq-left-column .faq-description {
+        font-size: 1.125rem;
+    }
+    /* ================= Section FAQ ================= */
+}
+
+/* 2XL Mode: (Tailwind 2xl: -> 1536px) */
+@media only screen and (min-width: 1536px) {
+    .margin-x-section {
+        padding-right: 140px;
+        padding-left: 140px;
+    }
+    .section-container {
+        max-width: 1600px;
+        margin-inline: auto;
+    }
+
+    /* ================= Section Hero ================= */
+    .hero-section {
+        padding-top: 200px;
+    }
+    .hero-section .hero-content .hero-title {
+        font-size: 72px;
+        line-height: 1.25;
+    }
+    .hero-section .hero-image-container .overlay-top {
+        padding-top: 32px;
+    }
+    .hero-section .hero-image-container .overlay-bottom {
+        padding-bottom: 32px;
+    }
+    .overlay-top .hero-logo-container {
+        margin-bottom: 120px;
+    }
+    .overlay-top .hero-logo-container .logo-bar-blur img {
+        width: 36px;
+        height: 36px;
+    }
+    .overlay-bottom .image-description-container {
+        margin-top: 120px;
+    }
+    .overlay-bottom .image-description-container .image-description-title .image-title {
+        font-size: 36px;
+    }
+    .hero-section .nilai-kabinet-container {
+        margin-top: 32px;
+    }
+    .nilai-kabinet-desktop .nilai-sistematis,
+    .nilai-kabinet-desktop .nilai-efisiensi,
+    .nilai-kabinet-desktop .nilai-lestari,
+    .nilai-kabinet-desktop .nilai-aktualisasi,
+    .nilai-kabinet-desktop .nilai-reformasi,
+    .nilai-kabinet-desktop .nilai-aktif,
+    .nilai-kabinet-desktop .nilai-sinergi {
+        gap: 8px;
+    }
+    .nilai-kabinet-desktop .nilai-title-pc,
+    .nilai-kabinet-mobile .nilai-title-mobile {
+        font-size: 24px;
+    }
+    .nilai-kabinet-mobile .nilai-reformasi-mobile,
+    .nilai-kabinet-mobile .nilai-aktif-mobile,
+    .nilai-kabinet-mobile .nilai-sinergi-mobile {
+        gap: 8px;
+    }
+    /* ================= Section Hero ================= */
+
+    /* ================= Section Kahim Wahim ================= */
+    /* .about-section .about-container {
+        gap: 100px;
+    } */
+    .about-section .about-container .about-title-container {
+        max-width: 672px;
+    }
+    .about-title-container h2 {
+        font-size: 30px;
+    }
+    .about-title-container h1 {
+        font-size: 48px;
+    }
+    .about-title-container p {
+        font-size: 18px;
+    }
+    .kahim-container .himtika-periode {
+        font-size: 30px;
+    }
+    .wahim-container .about-cabinet img {
+        width: 44px; height: 44px;
+    }
+    .wahim-container .about-cabinet h2 {
+        font-size: 30px;
+    }
+    .wahim-container .wahim-card {
+        width: 304px;
+        height: 480px;
+    }
+    .kahim-container .kahim-card {
+        width: 304px;
+        height: 480px;
+    }
+    /* ================= Section Kahim Wahim ================= */
+    
+    /* ================= Section Kenali ================= */
+    .kenali-section .kenali-container {
+        gap: 120px;
+    }
+    .kenali-container .video-card-wrapper {
+        max-width: 33.3%; /* 2xl:max-w-4/12 */
+    }
+    .kenali-container .exploration-container {
+        max-width: 66,6%;
+    }
+    .card-sejarah img {
+        width: 160px;
+    }
+    /* ================= Section Kenali ================= */
+    
+    /* ================= Section Event ================= */
+    .card-event-1 .card-event-footer,
+    .card-event-itbootcamp .card-event-footer,
+    .card-event-diesnatalis .card-event-footer {
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 30px;
+    }
+    .event-section .event-header h1 {
+        font-size: 48px;
+    }
+    /* ================= Section Event ================= */
+    
+    /* ================= Section Himfo ================= */
+    .fitur-himfo-title h2 {
+        font-size: 3rem;
+    }
+    .himfo-section .himfo-card {
+        padding-top: 7.5rem;
+        padding-bottom: 7.5rem;
+    }
+    .himfo-card .himfo-container-content {
+        gap: 120px;
+    }
+    .himfo-card .mockup-container .mockup-himfo {
+        max-width: 150px;
+    }
+    /* ================= Section Himfo ================= */
+
+    /* ================= Section FAQ ================= */
+    .faq-section .faq-container {
+        max-width: 1600px;
+    }
+    .faq-left-column .faq-title-wrapper .faq-subtitle {
+        font-size: 3rem;
+    }
+    /* ================= Section FAQ ================= */
+}

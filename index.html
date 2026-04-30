@@ -9,7 +9,6 @@
     <link rel="icon" href="assets/image/logo/HIMTIKA.webp" type="image/x-icon"/>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/output.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
 
@@ -26,7 +25,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 </head>
 <body>
-<div class="page-wrapper">
+<!-- <div class="page-wrapper"> -->
     <!-- Preloader -->
     <div class="preloader">
         <div class="icon"></div>
@@ -162,7 +161,7 @@
             <div class="close-btn"><span class="icon fas fa-times" style="font-size: 28px;"></span></div>
 
             <nav class="menu-box">
-                <div class="nav-logo"><a href="index.html"><img src="assets/image/logo/HIMTIKA.webp" alt=""
+                <div class="nav-logo"><a href="index.html"><img src="assets/image/logo/HIMTIKA.webp" width="100" height="100" alt=""
                             title=""></a></div>
                 <div class="menu-outer"></div>
                 <!--Social Links-->
@@ -188,61 +187,61 @@
     </header>
     <!-- End Main Header -->
 
-    <main class="bg-primaryBG selection:bg-darkGold selection:text-white">
+    <main class="main-section">
         <!-- Start Hero Section -->
-        <section id="hero-section" class="relative pt-35 md:pt-40 lg:pt-47 2xl:pt-50 flex flex-col justify-center items-center text-center px-6 sm:px-16 lg:px-20 xl:px-23 2xl:px-45" data-aos="fade-up">
-            <div class="absolute top-10 right-10 lg:right-20 lg:top-50 w-px h-px rounded-full shadow-green-glow-mob lg:shadow-green-glow z-1"></div>
+        <section id="hero-section" class="hero-section margin-x-section" data-aos="fade-up">
+            <div class="hero-glow"></div>
             
-            <div class="max-w-[1440px] 2xl:max-w-[1600px] mx-auto">
-                <div class="justify-center items-center text-center">
-                    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl md:leading-13 lg:leading-16 2xl:text-7xl 2xl:leading-tight text-center font-semibold opacity-90 font-montserrat text-notWhite z-2">Selamat Datang <span class="block mt-1 animated-text">Di <span class="relative z-0"></span></span></h1>
+            <div class="section-container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Selamat Datang <span class="block-title animated-text">Di <span></span></span></h1>
                 </div>
-                <div class="relative mt-2.5 lg:mt-4 z-2">
-                    <p class="text-[11px] sm:text-xs lg:text-lg font-inter font-normal lg:max-w-215 text-center text-notWhite justify-center m-5 max-w-[70%] mx-auto">Himpunan Mahasiswa Informatika Unsika (HIMTIKA) merupakan wadah bagi mahasiswa informatika agar dapat berkembang dan berprestasi.</p>
+                <div class="hero-desc-wrapper">
+                    <p class="hero-desc">Himpunan Mahasiswa Informatika Unsika (HIMTIKA) merupakan wadah bagi mahasiswa informatika agar dapat berkembang dan berprestasi.</p>
                 </div>
-                <div class="relative font-inter flex justify-center items-center text-lg gap-5 lg:gap-8 mt-1.5 sm:mt-3 select-none z-2">                      
-                    <button class="btnleft rounded-full border border-yellow-400 bg-mainGold flex justify-center items-center gap-2 px-5 py-2 md:px-6 md:py-2.5 text-xs lg:text-base md:font-medium lg:font-normal relative transition-all duration-500 overflow-hidden z-1 cursor-pointer text-black hover:text-white group">
-                        <a href="#about-section" class="text-black group-hover:text-white transition-all duration-500">Learn More</a>
-                        <svg class="w-3.5 h-3.5 md:w-4 md:h-4 lg:w-4.75 lg:h-4.75 rotate-180 group-hover:rotate-0 transition-all duration-500 fill-current" width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <div class="hero-cta-wrapper">                      
+                    <a href="#about-section" class="btnleft hero-btn-left">
+                        <span>Learn More</span>
+                        <svg class="btn-icon-top" width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M10 4L10 12.25L13.25 9L14 9.66L9.5 14.16L5 9.66L5.75 9L9 12.25L9 4H10ZM9.5 19C4.26 19 0 14.75 0 9.5C0 6.98044 1.00089 4.56408 2.78249 2.78249C4.56408 1.00089 6.98044 0 9.5 0C12.0196 0 14.4359 1.00089 16.2175 2.78249C17.9991 4.56408 19 6.98044 19 9.5C19 12.0196 17.9991 14.4359 16.2175 16.2175C14.4359 17.9991 12.0196 19 9.5 19ZM9.5 18C10.6162 18 11.7215 17.7801 12.7528 17.353C13.7841 16.9258 14.7211 16.2997 15.5104 15.5104C16.2997 14.7211 16.9258 13.7841 17.353 12.7528C17.7801 11.7215 18 10.6162 18 9.5C18 7.24566 17.1045 5.08365 15.5104 3.48959C13.9163 1.89553 11.7543 1 9.5 1C7.24566 1 5.08365 1.89553 3.48959 3.48959C1.89553 5.08365 1 7.24566 1 9.5C1 11.7543 1.89553 13.9163 3.48959 15.5104C5.08365 17.1045 7.24566 18 9.5 18Z" />
                         </svg>
-                    </button>                   
-                    <button class="btnright rounded-full border border-[#F3F98A] px-5 py-2 md:px-6 md:py-2.5 text-xs lg:text-base md:font-medium lg:font-normal relative transition-all duration-1000 overflow-hidden z-1 cursor-pointer hover:text-white hover:bg-mainGold group">
-                        <a href="https://himtika.cs.unsika.ac.id/kontak-kami/" class="aright text-white transition-all duration-500 group-hover:text-black">Hubungi Kami!</a>
-                    </button>
+                    </a>                   
+                    <a href="https://himtika.cs.unsika.ac.id/kontak-kami/" class="hero-btn-right">
+                        <span>Hubungi Kami!</span>
+                    </a>
                 </div>
     
-                <div class="relative w-full mx-auto mt-10 lg:mt-20 rounded-2xl lg:rounded-4xl overflow-hidden select-none glow-desc-div-mobile lg:glow-desc-div z-2">
+                <div class="hero-image-container">
                     <!-- <img src="assets/image/bg/bg-hero-1.webp" class="w-full block relative z-1"> -->
-                    <div class="hero-slider-wrapper relative z-1">
+                    <div class="hero-slider-wrapper">
                         <img src="assets/image/bg/bg-hero-1.webp" alt="Kegiatan HIMTIKA 1">
                         <img src="assets/image/bg/bg-hero-2.webp" alt="Kegiatan HIMTIKA 2">
                         <img src="assets/image/bg/bg-hero-3.webp" alt="Kegiatan HIMTIKA 3">
                         <img src="assets/image/bg/bg-hero-1.webp" alt="Kegiatan HIMTIKA 1 (Loop Buffer)">
                     </div>
     
-                    <div class="absolute inset-0 z-2 w-full h-full flex flex-col justify-between pointer-events-none">
-                        <div class="flex justify-center bg-linear-to-b from-black/80 via-black/50 to-transparent px-4 pt-1.5 sm:pt-2 md:pt-4 lg:px-6 lg:pt-5 xl:px-10 2xl:pt-8 pointer-events-auto">
-                            <div class="flex justify-center mb-5 lg:pb-10 2xl:mb-30">
-                                <div class="flex justify-center items-center bg-black/20 backdrop-blur-sm border border-white/60 rounded-full px-1 py-0.5 sm:px-2 sm:py-1 lg:px-3 lg:py-2 gap-0.5 sm:gap-1 lg:gap-2">
-                                    <img src="assets/image/logo/logo-unsika.webp" class="w-2 h-2 sm:w-4 sm:h-4 lg:w-6 lg:h-6 xl:w-8 xl:h-8 2xl:w-9 2xl:h-9 object-contain">
-                                    <img src="assets/image/logo/Fasilkom.webp" class="w-2 h-2 sm:w-4 sm:h-4 lg:w-6 lg:h-6 xl:w-8 xl:h-8 2xl:w-9 2xl:h-9 object-contain">
-                                    <img src="assets/image/logo/HIMTIKA.webp" class="w-2 h-2 sm:w-4 sm:h-4 lg:w-6 lg:h-6 xl:w-8 xl:h-8 2xl:w-9 2xl:h-9 object-contain">
-                                    <img src="assets/image/logo/selaras-no-shadow.webp" class="w-2 h-2 sm:w-4 sm:h-4 lg:w-6 lg:h-6 xl:w-8 xl:h-8 2xl:w-9 2xl:h-9 object-contain">
+                    <div class="image-overlay-container">
+                        <div class="overlay-top">
+                            <div class="hero-logo-container">
+                                <div class="logo-bar-blur">
+                                    <img src="assets/image/logo/logo-unsika.webp">
+                                    <img src="assets/image/logo/Fasilkom.webp">
+                                    <img src="assets/image/logo/HIMTIKA.webp">
+                                    <img src="assets/image/logo/selaras-no-shadow.webp">
                                 </div>
                             </div>
                         </div>
     
-                        <div class="flex justify-center bg-linear-to-t from-black/90 via-black/70 to-transparent px-4 pb-1 sm:pb-2 md:pb-4 lg:px-6 lg:pb-6 xl:px-10 2xl:pb-8 pointer-events-auto">
-                            <div class="flex flex-col justify-center lg:gap-1 mt-5 lg:mt-10 2xl:mt-30 font-montserrat w-full">
-                                <div class="flex justify-between items-center">
-                                    <span class="w-full bg-white/50 md:bg-white/80 h-px"></span>
-                                    <h3 class="text-white w-full text-[6px] sm:text-xs md:text-lg lg:text-xl xl:text-3xl 2xl:text-4xl font-medium lg:font-semibold font-serif">
+                        <div class="overlay-bottom">
+                            <div class="image-description-container">
+                                <div class="image-description-title">
+                                    <span class="image-title-line"></span>
+                                    <h3 class="image-title">
                                         KABINET SELARAS
                                     </h3>
-                                    <span class="w-full bg-white/50 md:bg-white/80 h-px"></span>
+                                    <span class="image-title-line"></span>
                                 </div>
-                                <p class="text-white/90 text-[4px] sm:text-[8px] md:text-[10px] lg:text-sm xl:text-lg">
+                                <p class="image-description-subtitle">
                                     HIMTIKA 2026
                                 </p>
                             </div>
@@ -250,14 +249,14 @@
                     </div>
                 </div>
                 
-                <div class="relative lg:flex lg:flex-wrap justify-between items-center text-center mt-3 lg:mt-6 2xl:mt-8 gap-1 lg:gap-0 w-[90%] mx-auto lg:w-full select-none z-2">
-                    <div class="flex justify-between lg:gap-2.5 font-inter w-full">
-                        <p class="flex justify-center items-center lg:px-4 gap-1 lg:gap-1.5 2xl:gap-2">
+                <div class="nilai-kabinet-container">
+                    <div class="nilai-kabinet-desktop">
+                        <p class="nilai-sistematis">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="none"
                                 viewBox="0 0 24 24"
-                                class="sparkle w-4 h-4"
+                                class="sparkle"
                             >
                                 <path
                                 class="path"
@@ -284,14 +283,14 @@
                                 d="M6.5 4L6.303 4.5915C6.24777 4.75718 6.15472 4.90774 6.03123 5.03123C5.90774 5.15472 5.75718 5.24777 5.5915 5.303L5 5.5L5.5915 5.697C5.75718 5.75223 5.90774 5.84528 6.03123 5.96877C6.15472 6.09226 6.24777 6.24282 6.303 6.4085L6.5 7L6.697 6.4085C6.75223 6.24282 6.84528 6.09226 6.96877 5.96877C7.09226 5.84528 7.24282 5.75223 7.4085 5.697L8 5.5L7.4085 5.303C7.24282 5.24777 7.09226 5.15472 6.96877 5.03123C6.84528 4.90774 6.75223 4.75718 6.697 4.5915L6.5 4Z"
                                 ></path>
                             </svg>
-                            <span class="text-notWhite text-[10px] sm:text-sm lg:text-base xl:text-xl 2xl:text-2xl lg:font-medium"> Sistematis</span>
+                            <span class="nilai-title-pc"> Sistematis</span>
                         </p>
-                        <p class="flex justify-center items-center lg:px-4 gap-1 lg:gap-1.5 2xl:gap-2">
+                        <p class="nilai-efisiensi">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="none"
                                 viewBox="0 0 24 24"
-                                class="sparkle w-4 h-4"
+                                class="sparkle"
                             >
                                 <path
                                 class="path"
@@ -318,14 +317,14 @@
                                 d="M6.5 4L6.303 4.5915C6.24777 4.75718 6.15472 4.90774 6.03123 5.03123C5.90774 5.15472 5.75718 5.24777 5.5915 5.303L5 5.5L5.5915 5.697C5.75718 5.75223 5.90774 5.84528 6.03123 5.96877C6.15472 6.09226 6.24777 6.24282 6.303 6.4085L6.5 7L6.697 6.4085C6.75223 6.24282 6.84528 6.09226 6.96877 5.96877C7.09226 5.84528 7.24282 5.75223 7.4085 5.697L8 5.5L7.4085 5.303C7.24282 5.24777 7.09226 5.15472 6.96877 5.03123C6.84528 4.90774 6.75223 4.75718 6.697 4.5915L6.5 4Z"
                                 ></path>
                             </svg>
-                            <span class="text-notWhite text-[10px] sm:text-sm lg:text-base xl:text-xl 2xl:text-2xl lg:font-medium"> Efisiensi</span>
+                            <span class="nilai-title-pc"> Efisiensi</span>
                         </p>
-                        <p class="flex justify-center items-center lg:px-4 gap-1 lg:gap-1.5 2xl:gap-2">
+                        <p class="nilai-lestari">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="none"
                                 viewBox="0 0 24 24"
-                                class="sparkle w-4 h-4"
+                                class="sparkle"
                             >
                                 <path
                                 class="path"
@@ -352,14 +351,14 @@
                                 d="M6.5 4L6.303 4.5915C6.24777 4.75718 6.15472 4.90774 6.03123 5.03123C5.90774 5.15472 5.75718 5.24777 5.5915 5.303L5 5.5L5.5915 5.697C5.75718 5.75223 5.90774 5.84528 6.03123 5.96877C6.15472 6.09226 6.24777 6.24282 6.303 6.4085L6.5 7L6.697 6.4085C6.75223 6.24282 6.84528 6.09226 6.96877 5.96877C7.09226 5.84528 7.24282 5.75223 7.4085 5.697L8 5.5L7.4085 5.303C7.24282 5.24777 7.09226 5.15472 6.96877 5.03123C6.84528 4.90774 6.75223 4.75718 6.697 4.5915L6.5 4Z"
                                 ></path>
                             </svg>
-                            <span class="text-notWhite text-[10px] sm:text-sm lg:text-base xl:text-xl 2xl:text-2xl lg:font-medium"> Lestari</span>
+                            <span class="nilai-title-pc"> Lestari</span>
                         </p>
-                        <p class="flex justify-center items-center lg:px-4 gap-1 lg:gap-1.5 2xl:gap-2">
+                        <p class="nilai-aktualisasi">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="none"
                                 viewBox="0 0 24 24"
-                                class="sparkle w-4 h-4"
+                                class="sparkle"
                             >
                                 <path
                                 class="path"
@@ -386,14 +385,14 @@
                                 d="M6.5 4L6.303 4.5915C6.24777 4.75718 6.15472 4.90774 6.03123 5.03123C5.90774 5.15472 5.75718 5.24777 5.5915 5.303L5 5.5L5.5915 5.697C5.75718 5.75223 5.90774 5.84528 6.03123 5.96877C6.15472 6.09226 6.24777 6.24282 6.303 6.4085L6.5 7L6.697 6.4085C6.75223 6.24282 6.84528 6.09226 6.96877 5.96877C7.09226 5.84528 7.24282 5.75223 7.4085 5.697L8 5.5L7.4085 5.303C7.24282 5.24777 7.09226 5.15472 6.96877 5.03123C6.84528 4.90774 6.75223 4.75718 6.697 4.5915L6.5 4Z"
                                 ></path>
                             </svg>
-                            <span class="text-notWhite text-[10px] sm:text-sm lg:text-base xl:text-xl 2xl:text-2xl lg:font-medium"> Aktualisasi</span>
+                            <span class="nilai-title-pc"> Aktualisasi</span>
                         </p>
-                        <p class="justify-center items-center lg:px-4 gap-1 lg:gap-1.5 2xl:gap-2 hidden lg:flex">
+                        <p class="nilai-reformasi">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="none"
                                 viewBox="0 0 24 24"
-                                class="sparkle w-4 h-4"
+                                class="sparkle"
                             >
                                 <path
                                 class="path"
@@ -420,14 +419,14 @@
                                 d="M6.5 4L6.303 4.5915C6.24777 4.75718 6.15472 4.90774 6.03123 5.03123C5.90774 5.15472 5.75718 5.24777 5.5915 5.303L5 5.5L5.5915 5.697C5.75718 5.75223 5.90774 5.84528 6.03123 5.96877C6.15472 6.09226 6.24777 6.24282 6.303 6.4085L6.5 7L6.697 6.4085C6.75223 6.24282 6.84528 6.09226 6.96877 5.96877C7.09226 5.84528 7.24282 5.75223 7.4085 5.697L8 5.5L7.4085 5.303C7.24282 5.24777 7.09226 5.15472 6.96877 5.03123C6.84528 4.90774 6.75223 4.75718 6.697 4.5915L6.5 4Z"
                                 ></path>
                             </svg>
-                            <span class="text-notWhite text-[10px] sm:text-sm lg:text-base xl:text-xl 2xl:text-2xl lg:font-medium"> Reformasi</span>
+                            <span class="nilai-title-pc"> Reformasi</span>
                         </p>
-                        <p class="justify-center items-center lg:px-4 gap-1 lg:gap-1.5 2xl:gap-2 hidden lg:flex">
+                        <p class="nilai-aktif">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="none"
                                 viewBox="0 0 24 24"
-                                class="sparkle w-4 h-4"
+                                class="sparkle"
                             >
                                 <path
                                 class="path"
@@ -454,14 +453,14 @@
                                 d="M6.5 4L6.303 4.5915C6.24777 4.75718 6.15472 4.90774 6.03123 5.03123C5.90774 5.15472 5.75718 5.24777 5.5915 5.303L5 5.5L5.5915 5.697C5.75718 5.75223 5.90774 5.84528 6.03123 5.96877C6.15472 6.09226 6.24777 6.24282 6.303 6.4085L6.5 7L6.697 6.4085C6.75223 6.24282 6.84528 6.09226 6.96877 5.96877C7.09226 5.84528 7.24282 5.75223 7.4085 5.697L8 5.5L7.4085 5.303C7.24282 5.24777 7.09226 5.15472 6.96877 5.03123C6.84528 4.90774 6.75223 4.75718 6.697 4.5915L6.5 4Z"
                                 ></path>
                             </svg>
-                            <span class="text-notWhite text-[10px] sm:text-sm lg:text-base xl:text-xl 2xl:text-2xl lg:font-medium"> Aktif</span>
+                            <span class="nilai-title-pc"> Aktif</span>
                         </p>
-                        <p class="justify-center items-center lg:px-4 gap-1 lg:gap-1.5 2xl:gap-2 hidden lg:flex">
+                        <p class="nilai-sinergi">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="none"
                                 viewBox="0 0 24 24"
-                                class="sparkle w-4 h-4"
+                                class="sparkle"
                             >
                                 <path
                                 class="path"
@@ -488,16 +487,16 @@
                                 d="M6.5 4L6.303 4.5915C6.24777 4.75718 6.15472 4.90774 6.03123 5.03123C5.90774 5.15472 5.75718 5.24777 5.5915 5.303L5 5.5L5.5915 5.697C5.75718 5.75223 5.90774 5.84528 6.03123 5.96877C6.15472 6.09226 6.24777 6.24282 6.303 6.4085L6.5 7L6.697 6.4085C6.75223 6.24282 6.84528 6.09226 6.96877 5.96877C7.09226 5.84528 7.24282 5.75223 7.4085 5.697L8 5.5L7.4085 5.303C7.24282 5.24777 7.09226 5.15472 6.96877 5.03123C6.84528 4.90774 6.75223 4.75718 6.697 4.5915L6.5 4Z"
                                 ></path>
                             </svg>
-                            <span class="text-notWhite text-[10px] sm:text-sm lg:text-base xl:text-xl 2xl:text-2xl lg:font-medium"> Sinergi</span>
+                            <span class="nilai-title-pc"> Sinergi</span>
                         </p>
                     </div>
-                    <div class="flex justify-between lg:gap-2.5 w-[80%] sm:w-[70%] lg:w-auto mx-auto mt-2 lg:mt-0 font-inter lg:hidden">
-                        <p class="flex justify-center items-center lg:p-4 lg:min-w-1.5 gap-1 lg:gap-1.5 2xl:gap-2">
+                    <div class="nilai-kabinet-mobile">
+                        <p class="nilai-reformasi-mobile">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="none"
                                 viewBox="0 0 24 24"
-                                class="sparkle w-4 h-4"
+                                class="sparkle"
                             >
                                 <path
                                 class="path"
@@ -524,14 +523,14 @@
                                 d="M6.5 4L6.303 4.5915C6.24777 4.75718 6.15472 4.90774 6.03123 5.03123C5.90774 5.15472 5.75718 5.24777 5.5915 5.303L5 5.5L5.5915 5.697C5.75718 5.75223 5.90774 5.84528 6.03123 5.96877C6.15472 6.09226 6.24777 6.24282 6.303 6.4085L6.5 7L6.697 6.4085C6.75223 6.24282 6.84528 6.09226 6.96877 5.96877C7.09226 5.84528 7.24282 5.75223 7.4085 5.697L8 5.5L7.4085 5.303C7.24282 5.24777 7.09226 5.15472 6.96877 5.03123C6.84528 4.90774 6.75223 4.75718 6.697 4.5915L6.5 4Z"
                                 ></path>
                             </svg>
-                            <span class="text-notWhite text-[10px] sm:text-sm lg:text-xl 2xl:text-2xl lg:font-medium"> Reformasi</span>
+                            <span class="nilai-title-mobile"> Reformasi</span>
                         </p>
-                        <p class="flex justify-center items-center lg:p-4 lg:min-w-1.5 gap-1 lg:gap-1.5 2xl:gap-2">
+                        <p class="nilai-aktif-mobile">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="none"
                                 viewBox="0 0 24 24"
-                                class="sparkle w-4 h-4"
+                                class="sparkle"
                             >
                                 <path
                                 class="path"
@@ -558,14 +557,14 @@
                                 d="M6.5 4L6.303 4.5915C6.24777 4.75718 6.15472 4.90774 6.03123 5.03123C5.90774 5.15472 5.75718 5.24777 5.5915 5.303L5 5.5L5.5915 5.697C5.75718 5.75223 5.90774 5.84528 6.03123 5.96877C6.15472 6.09226 6.24777 6.24282 6.303 6.4085L6.5 7L6.697 6.4085C6.75223 6.24282 6.84528 6.09226 6.96877 5.96877C7.09226 5.84528 7.24282 5.75223 7.4085 5.697L8 5.5L7.4085 5.303C7.24282 5.24777 7.09226 5.15472 6.96877 5.03123C6.84528 4.90774 6.75223 4.75718 6.697 4.5915L6.5 4Z"
                                 ></path>
                             </svg>
-                            <span class="text-notWhite text-[10px] sm:text-sm lg:text-xl 2xl:text-2xl lg:font-medium"> Aktualisasi</span>
+                            <span class="nilai-title-mobile"> Aktif</span>
                         </p>
-                        <p class="flex justify-center items-center lg:p-4 lg:min-w-1.5 gap-1 lg:gap-1.5 2xl:gap-2">
+                        <p class="nilai-sinergi-mobile">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="none"
                                 viewBox="0 0 24 24"
-                                class="sparkle w-4 h-4"
+                                class="sparkle"
                             >
                                 <path
                                 class="path"
@@ -592,55 +591,55 @@
                                 d="M6.5 4L6.303 4.5915C6.24777 4.75718 6.15472 4.90774 6.03123 5.03123C5.90774 5.15472 5.75718 5.24777 5.5915 5.303L5 5.5L5.5915 5.697C5.75718 5.75223 5.90774 5.84528 6.03123 5.96877C6.15472 6.09226 6.24777 6.24282 6.303 6.4085L6.5 7L6.697 6.4085C6.75223 6.24282 6.84528 6.09226 6.96877 5.96877C7.09226 5.84528 7.24282 5.75223 7.4085 5.697L8 5.5L7.4085 5.303C7.24282 5.24777 7.09226 5.15472 6.96877 5.03123C6.84528 4.90774 6.75223 4.75718 6.697 4.5915L6.5 4Z"
                                 ></path>
                             </svg>
-                            <span class="text-notWhite text-[10px] sm:text-sm lg:text-xl 2xl:text-2xl lg:font-medium"> Sinergi</span>
+                            <span class="nilai-title-mobile"> Sinergi</span>
                         </p>
                     </div>
                 </div>
             </div>
 
-            <div class="absolute bottom-60 left-10 lg:bottom-50 lg:left-50 w-px h-px rounded-full shadow-green-glow-mob lg:shadow-green-glow-2 z-1"></div>
+            <div class="hero-glow-2"></div>
         </section>
         <!-- End Hero Section -->
         
         <!-- Start sapaan kahim-wahim Section -->
-        <section id="about-section" class="relative px-6 sm:px-16 lg:px-20 xl:px-23 2xl:px-45 pt-20 xl:pt-35 pb-25">
-            <div class="absolute top-30 right-10 lg:right-20 lg:top-50 w-px h-px rounded-full shadow-green-glow-mob lg:shadow-green-glow"></div>
+        <section id="about-section" class="about-section margin-x-section">
+            <div class="about-glow"></div>
 
-            <div class="max-w-[1440px] 2xl:max-w-[1600px] mx-auto relative flex flex-col lg:flex-row justify-between lg:items-center max-w-full mx-auto gap-10 xl:gap-20 2xl:gap-50 z-2">
-                <div class="lg:w-3/7 xl:w-full flex flex-col lg:items-start gap-2 xl:gap-4 2xl:max-w-2xl font-montserrat">
-                    <h4 class="text-mainGold text-base xl:text-3xl font-semibold">About Us</h4>
-                    <h1 class="text-3xl xl:text-5xl text-notWhite font-semibold leading-[1.1] mb-6 lg:mb-4">Tak Kenal Maka Tak Sayang</h1>
-                    <p class="text-xs xl:text-lg text-notWhite mb-3 w-[97%] sm:max-w-xl lg:mb-7">
-                        Selamat Datang di HIMTIKA, tempat di mana kretivitas, inovasi, dan kolaborasi bertemu untuk menciptakan masa depan yang lebih cerdas!
+            <div class="section-container about-container">
+                <div class="about-title-container" data-aos="fade-left" data-aos-duration="800">
+                    <h2>About Us</h2>
+                    <h1>Tak Kenal Maka Tak Sayang</h1>
+                    <p>
+                        Selamat Datang di HIMTIKA, tempat di mana kreativitas, inovasi, dan kolaborasi bertemu untuk menciptakan masa depan yang lebih cerdas!
                     </p>
-                    <button class="flex justify-center items-center gap-2 rounded-full border border-yellow-400 bg-mainGold px-5 py-2 lg:px-6 lg:py-2.5 relative transition-all duration-500 overflow-hidden z-1 cursor-pointer hover:-translate-y-1 text-black hover:text-white w-fit">
-                        <a href="https://himtika.cs.unsika.ac.id/struktur-organisasi/" class="text-xs lg:text-base font-medium md:font-semibold select-none">Kenalan Yuk!</a>
+                    <button class="about-button">
+                        <a href="https://himtika.cs.unsika.ac.id/struktur-organisasi/">Kenalan Yuk!</a>
                     </button>
                 </div>
 
-                <div class="lg:w-4/7 xl:w-full flex justify-center lg:justify-end font-montserrat max-w-sm mx-auto sm:max-w-full z-2">
-                    <div class="flex gap-4.5 sm:gap-7">
-                        <div class="flex flex-col justify-between gap-2 sm:gap-4 lg:gap-2 xl:gap-4">
-                            <div class="relative rounded-tr-2xl rounded-tl-[44px] rounded-bl-2xl lg:rounded-tr-3xl lg:rounded-tl-[72px] lg:rounded-bl-3xl overflow-hidden bg-[#1a1a1a] 2xl:w-76 2xl:h-120 glow-desc-div-mobile md:glow-desc-div shine-effect">
-                                <img src="assets/image/Kahim-Akmal.png" alt="Ketua" class="w-full h-full object-cover select-none animate-floating">
-                                <div class="absolute bottom-0 right-0 left-0 px-3 pb-5 lg:pb-6 bg-linear-to-t from-black/95 via-black/80 to-transparent text-center box-border sm:w-[80%] md:w-full mx-auto select-none">
-                                    <p class="italic text-[8px] sm:text-sm lg:text-[15px] font-medium glow-text">Ketua Himpunan</p>
-                                    <h3 class="text-[13px] sm:text-[17px] lg:text-lg mt-1 sm:mt-2 lg:mt-1.5 font-medium leading-tight">M. <span class="text-mainGold">Akmal</span> Fauzan Nur Ramadhan</h3>
+                <div class="kahim-wahim-container" data-aos="fade-right" data-aos-duration="800">
+                    <div class="inner-container">
+                        <div class="kahim-container">
+                            <div class="kahim-card 2xl:w-76 2xl:h-120 glow-desc-div shine-effect">
+                                <img src="assets/image/Kahim-Akmal.png" alt="Ketua" class="animate-floating">
+                                <div class="kahim-overlay">
+                                    <h2 class="glow-text">Ketua Himpunan</h2>
+                                    <h3>M. <span class="text-gold">Akmal</span> Fauzan Nur Ramadhan</h3>
                                 </div>
                             </div>
-                            <p class="text-right text-sm sm:text-xl xl:text-2xl 2xl:text-3xl font-medium">HIMTIKA <span class="text-mainGold">2025-2026</span></p>
+                            <p class="himtika-periode">HIMTIKA <span class="text-gold">2025-2026</span></p>
                         </div>
     
-                        <div class="flex flex-col justify-between gap-2 sm:gap-3 xl:gap-4">
-                            <div class="flex items-center font-medium gap-2">
-                                <img src="assets/image/logo/selaras-no-shadow.webp" alt="logo" class="w-5 h-5 sm:w-7 sm:h-7 lg:w-10 lg:h-10 2xl:w-11 2xl:h-11 select-none">
-                                <h2 class="text-sm sm:text-xl xl:text-2xl">Kabinet <span class="text-mainGold">Selaras</span></span>
+                        <div class="wahim-container">
+                            <div class="about-cabinet">
+                                <img src="assets/image/logo/selaras-no-shadow.webp" alt="logo">
+                                <h2>Kabinet <span class="text-gold">Selaras</span></h2>
                             </div>
-                            <div class="relative rounded-tr-2xl rounded-br-[44px] rounded-bl-2xl lg:rounded-tr-3xl lg:rounded-br-[72px] lg:rounded-bl-3xl overflow-hidden bg-[#1a1a1a] 2xl:w-76 2xl:h-120 glow-desc-div-mobile md:glow-desc-div shine-effect">
-                                <img src="assets/image/Wahim-Indyra.png" alt="Wakil" class="w-full object-cover select-none animate-floating">
-                                <div class="absolute bottom-0 w-full px-3 pb-5 lg:pb-8 bg-linear-to-t from-black/95 via-black/80 to-transparent text-center box-border select-none">
-                                    <p class="italic text-[8px] sm:text-xs lg:text-[15px] font-medium glow-text">Wakil Ketua Himpunan</p>
-                                    <h3 class="text-sm sm:text-lg lg:text-lg mt-1 sm:mt-2 lg:mt-2.5 font-medium leading-tight"><span class="text-mainGold">Indyra</span> Putri Pratama</h3>
+                            <div class="wahim-card glow-desc-div shine-effect">
+                                <img src="assets/image/Wahim-Indyra.png" alt="Wakil" class="animate-floating">
+                                <div class="wahim-overlay">
+                                    <p class="glow-text">Wakil Ketua Himpunan</p>
+                                    <h3><span class="text-gold">Indyra</span> Putri Pratama</h3>
                                 </div>
                             </div>                        
                         </div>
@@ -648,34 +647,34 @@
                 </div>
             </div>
 
-            <div id="counters" class="max-w-[1440px] 2xl:max-w-[1600px] mx-auto relative flex flex-col sm:flex-row sm:flex-wrap lg:flex-nowrap justify-center xl:justify-between w-full mt-12 lg:mt-18 gap-5 xl:gap-7 font-montserrat">
-                <div class="absolute top-30 left-5 lg:hidden w-px h-px rounded-full shadow-green-glow-mob"></div>
-                <div id="card-statistik" class="flex flex-col w-full max-w-56 sm:w-[calc(50%-10px)] md:w-[calc(50%-12px)]  sm:max-w-none lg:w-full justify-between bg-glow-statistik border border-mainGold/65 px-4 py-3 sm:px-6 sm:py-5 xl:px-8 xl:py-7 rounded-xl md:rounded-3xl shadow-xl">
-                    <h2 class="text-notWhite text-sm sm:text-lg lg:text-xl xl:text-3xl mb-2 font-semibold"><span data-count="16">0</span> Proker</h2>
-                    <div class="flex pt-1.5 xl:pt-2.5 gap-2 items-center">
-                        <div class="flex items-center gap-1.5 md:gap-3">
-                            <img src="assets/image/icon/gambar-tanggal.svg" alt="logo" class="select-none w-4 h-4 md:w-7 md:h-7">
-                            <p class="text-[10px] sm:text-xs md:text-sm font-medium">Program Kerja</p>
+            <div id="counters" data-aos="fade-up" class="statistik-container section-container">
+                <div class="statistik-glow"></div>
+                <div id="card-statistik" class="bg-glow-statistik stats-card">
+                    <h2 class="stats-number"><span data-count="16">0</span> Proker</h2>
+                    <div class="stats-label-container">
+                        <div class="label-wrapper">
+                            <img src="assets/image/icon/gambar-tanggal.svg" alt="logo" class="icon-proker">
+                            <p class="label-proker">Program Kerja</p>
                         </div>
                     </div>
                 </div>
 
-                <div id="card-statistik" class="flex flex-col w-full max-w-56 ml-auto sm:w-[calc(50%-10px)] md:w-[calc(50%-12px)]  sm:max-w-none lg:w-full justify-between bg-glow-statistik border border-mainGold/65 px-4 py-3 sm:px-6 sm:py-5 xl:px-8 xl:py-7 rounded-xl md:rounded-3xl shadow-xl">
-                    <h2 class="text-notWhite text-sm sm:text-lg lg:text-xl xl:text-3xl mb-2 font-semibold"><span data-count="7">0</span>+ Event</h2>
-                    <div class="flex pt-1.5 xl:pt-2.5 gap-2 items-center">
-                        <div class="flex items-center gap-1 md:gap-3">
-                            <img src="assets/image/icon/gambar-piala.svg" alt="logo" class="select-none w-5 h-5 md:w-8 md:h-8">
-                            <p class="text-[8px] sm:text-xs md:text-sm font-medium">Seminar dan Lomba IT</p>
+                <div id="card-statistik" class="marginl-auto bg-glow-statistik stats-card">
+                    <h2 class="stats-number"><span data-count="7">0</span>+ Event</h2>
+                    <div class="stats-label-container">
+                        <div class="label-wrapper-2">
+                            <img src="assets/image/icon/gambar-piala.svg" alt="logo" class="icon-event">
+                            <p class="label-event">Seminar dan Lomba IT</p>
                         </div>
                     </div>
                 </div>  
 
-                <div id="card-statistik" class="flex flex-col w-full max-w-56 sm:w-[calc(50%-10px)] md:w-[calc(50%-12px)]  sm:max-w-none lg:w-full justify-between bg-glow-statistik border border-mainGold/65 px-4 py-3 sm:px-6 sm:py-5 xl:px-8 xl:py-7 rounded-xl md:rounded-3xl shadow-xl">
-                    <h2 class="text-notWhite text-sm sm:text-lg lg:text-xl xl:text-3xl mb-2 font-semibold"><span data-count="45">0</span> Anggota</h2>
-                    <div class="flex pt-1.5 xl:pt-2.5 gap-2 items-center">
-                        <div class="flex items-center gap-1.5 md:gap-3">
-                            <img src="assets/image/icon/gambar-orang.svg" alt="logo" class="select-none w-4 h-4 md:w-8 md:h-8">
-                            <p class="text-[10px] sm:text-xs md:text-sm font-medium">Pengurus Aktif</p>
+                <div id="card-statistik" class="bg-glow-statistik stats-card">
+                    <h2 class="stats-number"><span data-count="45">0</span> Anggota</h2>
+                    <div class="stats-label-container">
+                        <div class="label-wrapper">
+                            <img src="assets/image/icon/gambar-orang.svg" alt="logo" class=" icon-pengurus">
+                            <p class="label-pengurus">Pengurus Aktif</p>
                         </div>
                     </div>
                 </div>
@@ -683,73 +682,73 @@
         </section>  
         <!-- End sapaan kahim-wahim Section -->
 
-        <!-- Start Kenali Section-->
-        <section id="kenali-section" class="relative xl:pt-30 px-6 sm:px-16 lg:px-20 xl:px-23 2xl:px-45">
-            <div class="absolute top-50 left-15 lg:top-1/2 lg:left-100 w-px h-px rounded-full shadow-green-glow-mob lg:shadow-green-glow"></div>
+        <!-- Start Kenali Section -->
+        <section id="kenali-section" class="kenali-section  margin-x-section">
+            <div class="kenali-glow"></div>
 
-            <div class="max-w-[1440px] 2xl:max-w-[1600px] mx-auto relative flex flex-col-reverse lg:flex-row gap-12 lg:gap-20 2xl:gap-30 lg:h-150 xl:h-180 z-1">
-                <div class="h-112 lg:h-full w-full lg:max-w-5/7 xl:max-w-5/12 2xl:max-w-4/12">
-                    <a href="https://youtu.be/f3Xe4Vn8FJ8?si=CW1D3Vtc-gOZqMj8" target="_blank" class="block w-full h-full group">
-                        <div style="background-image: url('/assets/image/footage-cp.webp')" class="bg-cover bg-center md:bg-top lg:bg-center rounded-4xl h-full relative overflow-hidden glow-desc-div cursor-pointer">
-                            <div class="bg-linear-to-t from-black/80 to-transparent group-hover:from-[#47948A]/80 group-hover:to-transparent h-full p-5 sm:p-6 md:p-7.5 lg:p-6 xl:p-7.5 flex flex-col justify-between group-hover:transition-colors group-hover:duration-500 transition-colors duration-500">
-                                <button class="self-start bg-white/10 border border-white text-white text-xs sm:text-sm md:text-lg lg:text-base py-1.5 px-5 md:px-6 md:py-2 lg:px-5 lg:py-2 rounded-full cursor-pointer">Watch Now</button>
-                                <img src="assets/image/icon/play-pause.svg" alt="icon" class="w-15 h-15 flex items-center justify-center mx-auto hover:scale-120 transition-all duration-350">
-                                <div class="font-montserrat font-semibold">
-                                    <h2 class="text-xl md:text-2xl lg:text-xl xl:text-2xl">Cerita Singkat HIMTIKA</h2>
-                                    <p class="text-xs md:text-base lg:text-sx xl:text-base opacity-80 mt-1">HIMTIKA 2025-2026</p>
+            <div class="section-container kenali-container">
+                <div class="video-card-wrapper" data-aos="fade-right" data-aos-duration="800">
+                    <a href="https://youtu.be/f3Xe4Vn8FJ8?si=CW1D3Vtc-gOZqMj8" target="_blank" class="video-link-group">
+                        <div style="background-image: url('/assets/image/footage-cp.webp')" class="video-footage-bg glow-desc-div">
+                            <div class="video-overlay">
+                                <button>Watch Now</button>
+                                <img src="assets/image/icon/play-pause.svg" alt="icon">
+                                <div class="video-description">
+                                    <h2>Cerita Singkat HIMTIKA</h2>
+                                    <p>HIMTIKA 2025-2026</p>
                                 </div>
                             </div>  
                         </div>
                     </a>
                 </div>
     
-                <div class="w-full lg:max-w-4/7 xl:max-w-7/12 2xl:max-w-8/12 flex flex-col gap-6.5 lg:gap-5 xl:gap-20 justify-between h-full font-montserrat">
-                    <div class="flex flex-col gap-1 xl:gap-4">
-                        <h2 class="text-mainGold text-base md:text-lg xl:text-3xl font-semibold">Kenali</span>
-                        <h1 class="text-notWhite text-2xl md:text-3xl xl:text-5xl font-semibold leading-tight max-w-md md:max-w-lg lg:max-w-full">Eksplorasi Lebih Dalam Tentang HIMTIKA</h1>
+                <div class="exploration-container" data-aos="fade-left" data-aos-duration="800">
+                    <div class="title-wrapper">
+                        <h2>Kenali</h2>
+                        <h1>Eksplorasi Lebih Dalam Tentang HIMTIKA</h1>
                     </div>
     
-                    <div class="grid grid-cols-2 grid-rows-2 flex-1 gap-4 md:gap-7 xl:gap-10 h-full">
-                        <a href="https://himtika.cs.unsika.ac.id/visi-misi" target="_blank" class="rounded-xl px-3 py-8 sm:px-4 md:px-5 xl:p-6 relative flex flex-col justify-between transition-transform duration-300 hover:-translate-y-1 cursor-pointer bg-linear-to-br/oklch from-[#7A2E4F] to-[#E05491] selection:bg-pink-400 overflow-hidden group">
-                            <div class="relative z-2">
-                                <h3 class="mb-2 lg:mb-3 text-sm md:text-lg xl:text-2xl font-semibold title-text-shadow">Visi & Misi</h3>
-                                <p class="text-[10px] md:text-xs xl:text-sm lg:leading-relaxed max-w-[80%] font-inter font-light">Mengarahkan langkah HIMTIKA ke masa depan yang lebih terstruktur dan berdampak.</p>
+                    <div class="exploration-grid">
+                        <a href="https://himtika.cs.unsika.ac.id/visi-misi" class="card-visi-misi">
+                            <div class="visi-misi-title-wrapper">
+                                <h3 class="title-text-shadow">Visi & Misi</h3>
+                                <p>Mengarahkan langkah HIMTIKA ke masa depan yang lebih terstruktur dan berdampak.</p>
                             </div>
-                            <img src="assets/image/icon/target.svg" alt="icon" class="select-none absolute rounded-[14px] bottom-0 right-0 w-20 lg:w-27 xl:w-35 z-1 group-hover:scale-110 transition-all duration-500">
-                            <svg class="absolute top-3 right-3 lg:top-4 lg:right-4 transition-transform duration-700 w-2.5 h-2.5 md:w-3 md:h-3 lg:w-3.5 lg:h-3.5 xl:w-4 xl:h-4 group-hover:rotate-90 rotate-0" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <img src="assets/image/icon/target.svg" alt="icon">
+                            <svg class="arrow-icon-top" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M-4.03523e-05 9.65914L8.66202 0.997081H1.2374L1.17376 6.09774e-05H10.3661V9.19245L9.36912 9.12881V1.70419L0.707066 10.3662L-4.03523e-05 9.65914Z" fill="white"/>
                             </svg>
                         </a>
     
-                        <a href="https://himtika.cs.unsika.ac.id/grand-design-himtika-2024" target="_blank" class="rounded-xl px-3 py-8 sm:px-4 md:px-5 xl:p-6 relative flex flex-col justify-between transition-transform duration-300 hover:-translate-y-1 cursor-pointer bg-linear-to-br/oklch from-[#706637] to-mainGold overflow-hidden group">
-                            <div class="relative z-2">
-                                <h3 class="mb-2 lg:mb-3 text-sm md:text-lg xl:text-2xl font-semibold title-text-shadow">Grand Design</h3>
-                                <p class="text-[10px] md:text-xs xl:text-sm lg:leading-relaxed max-w-[80%] font-inter font-light">Gambaran besar arah pengembangan HIMTIKA dalam satu periode kepengurusan.</p>
+                        <a href="https://himtika.cs.unsika.ac.id/grand-design-himtika-2024" class="card-grand-design">
+                            <div class="grand-design-title-wrapper">
+                                <h3 class="title-text-shadow">Grand Design</h3>
+                                <p>Gambaran besar arah pengembangan HIMTIKA dalam satu periode kepengurusan.</p>
                             </div>
-                            <img src="assets/image/icon/gdbook.svg" alt="icon" class="select-none absolute rounded-[14px] bottom-0 right-0 w-22 lg:w-29 lg:w-37 opacity-80 z-1 group-hover:scale-110 transition-all duration-500 group-hover:opacity-100">
-                            <svg class="absolute top-3 right-3 lg:top-4 lg:right-4 transition-transform duration-700 w-2.5 h-2.5 md:w-3 md:h-3 lg:w-3.5 lg:h-3.5 xl:w-4 xl:h-4 group-hover:rotate-90 rotate-0" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <img src="assets/image/icon/gdbook.svg" alt="icon">
+                            <svg class="arrow-icon-top-2" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M-4.03523e-05 9.65914L8.66202 0.997081H1.2374L1.17376 6.09774e-05H10.3661V9.19245L9.36912 9.12881V1.70419L0.707066 10.3662L-4.03523e-05 9.65914Z" fill="white"/>
                             </svg>
                         </a>
     
-                        <a href="https://himtika.cs.unsika.ac.id/logo-himtika" target="_blank" class="rounded-xl p-4 lg:p-6 relative flex flex-col justify-end transition-transform duration-300 hover:-translate-y-1 cursor-pointer bg-linear-to-br/oklch from-[#162E2B] to-[#47948A] selection:bg-green-600 overflow-hidden group">
-                            <div class="relative z-2">
-                                <h3 class="mb-2 lg:mb-3 text-sm md:text-lg xl:text-2xl font-semibold title-text-shadow">Filosofi Logo</h3>
-                                <p class="text-[10px] md:text-xs xl:text-sm lg:leading-relaxed sm:max-w-[80%] font-inter font-light">Makna di balik setiap elemen logo sebagai identitas dan nilai HIMTIKA.</p>
+                        <a href="https://himtika.cs.unsika.ac.id/logo-himtika" class="card-logo">
+                            <div class="logo-title-wrapper">
+                                <h3 class="title-text-shadow">Filosofi Logo</h3>
+                                <p>Makna di balik setiap elemen logo sebagai identitas dan nilai HIMTIKA.</p>
                             </div>
-                            <img src="assets/image/icon/kabinetlogo.svg" alt="icon" class="select-none absolute rounded-[14px] top-0 left-0 w-25 lg:w-31 xl:w-37 opacity-80 z-1 group-hover:scale-110 transition-all duration-500 group-hover:opacity-100">
-                            <svg class="absolute top-3 right-3 lg:top-4 lg:right-4 transition-transform duration-700 w-2.5 h-2.5 md:w-3 md:h-3 lg:w-3.5 lg:h-3.5 xl:w-4 xl:h-4 group-hover:rotate-90 rotate-0" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <img src="assets/image/icon/kabinetlogo.svg" alt="icon">
+                            <svg class="arrow-icon-top-3 xl:w-4 xl:h-4" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M-4.03523e-05 9.65914L8.66202 0.997081H1.2374L1.17376 6.09774e-05H10.3661V9.19245L9.36912 9.12881V1.70419L0.707066 10.3662L-4.03523e-05 9.65914Z" fill="white"/>
                             </svg>
                         </a>
     
-                        <a href="https://himtika.cs.unsika.ac.id/logo-himtika" target="_blank" class="rounded-xl p-4 lg:p-6 relative flex flex-col justify-end transition-transform duration-300 hover:-translate-y-1 cursor-pointer bg-linear-to-br/oklch from-[#123B4D] to-[#298AB3] selection:bg-cyan-500  overflow-hidden group">
-                            <div class="relative z-2">
-                                <h3 class="mb-2 lg:mb-3 text-sm md:text-lg xl:text-2xl font-semibold title-text-shadow">Sejarah Himtika</h3>
-                                <p class="text-[10px] md:text-xs xl:text-sm lg:leading-relaxed sm:max-w-[80%] font-inter font-light">Perjalanan HIMTIKA dari awal berdiri hingga menjadi organisasi saat ini.</p>
+                        <a href="https://himtika.cs.unsika.ac.id/logo-himtika" class="card-sejarah">
+                            <div class="sejarah-title-wrapper">
+                                <h3 class="title-text-shadow">Sejarah Himtika</h3>
+                                <p>Perjalanan HIMTIKA dari awal berdiri hingga menjadi organisasi saat ini.</p>
                             </div>
-                            <img src="assets/image/logo/HIMTIKA.webp" alt="icon" class="select-none absolute rounded-[14px] -top-7 -left-7 lg:-top-10 lg:-left-10 w-25 lg:w-31 xl:w-40 opacity-70 z-1 group-hover:scale-110 transition-all duration-500 group-hover:opacity-100">
-                            <svg class="absolute top-3 right-3 lg:top-4 lg:right-4 transition-transform duration-700 w-2.5 h-2.5 md:w-3 md:h-3 lg:w-3.5 lg:h-3.5 xl:w-4 xl:h-4 group-hover:rotate-90 rotate-0" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <img src="assets/image/logo/HIMTIKA.webp" alt="icon">
+                            <svg class="arrow-icon-top-4" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M-4.03523e-05 9.65914L8.66202 0.997081H1.2374L1.17376 6.09774e-05H10.3661V9.19245L9.36912 9.12881V1.70419L0.707066 10.3662L-4.03523e-05 9.65914Z" fill="white"/>
                             </svg>
                         </a>
@@ -757,209 +756,223 @@
                 </div>
             </div>
         </section>
-        <!--End Eksplorasi Section-->
+        <!-- End Kenali Section -->
         
-        <!--Start Events Section-->
-        <section id="events-section" class="relative pt-30 pb-20 lg:pt-40 lg:pb-40 px-6 sm:px-16 lg:px-20 xl:px-23 2xl:px-45">
-            <div class="absolute top-30 right-10 lg:right-20 lg:top-1/2 w-px h-px rounded-full shadow-green-glow-mob lg:shadow-green-glow"></div>
+        <!-- Start Events Section -->
+        <section id="events-section" class="event-section margin-x-section">
+            <div class="event-glow"></div>
 
-            <div class="relative text-center mb-8 sm:mb-10 lg:mb-15 font-montserrat z-1">
-                <h2 class="text-mainGold text-base md:text-lg lg:text-2xl font-semibold mb-1 md:mb-2 lg:mb-2.5">Events</h2>
-                <h1 class="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-notWhite leading-tight max-w-xl mx-auto">Kegiatan Seru Yang Kami Laksanakan</h1>
+            <div class="event-header" data-aos="fade-up" data-aos-duration="800">
+                <h2>Events</h2>
+                <h1>Kegiatan Seru Yang Kami Laksanakan</h1>
             </div>
 
-            <div class="container swiper">
-                <div id="event-card-wrapper" class="card-wrapper mx-2.5 mb-6 md:mx-14 md:mb-9 py-5 px-2.5 overflow-hidden transition-all duration-500">
+            <div class="container swiper" data-aos="fade-up" data-aos-duration="800">
+                <div id="event-card-wrapper" class="card-wrapper">
                     <ul class="swiper-wrapper">
                         <!-- Create and Compete -->
-                        <li class="list-none swiper-slide rounded-3xl shadow-lg glow-desc-div-mobile lg:glow-desc-div">
-                            <a style="background-image: url('assets/image/bg/bg-cnc.webp')" href="https://www.instagram.com/cnc_himtika?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="w-full h-full bg-cover bg-top flex flex-col justify-between aspect-square rounded-3xl overflow-hidden hover:-translate-y-2 transition-all duration-500 group">
-                                <div class="flex justify-between items-center bg-linear-to-b from-black/90 via-black/50 to-transparent group-hover:via-[#47948A]/50 group-hover:from-[#47948A]/80 px-5 pt-4 transition-colors duration-500">
-                                    <div class="flex items-center gap-2">
-                                        <span class="backdrop-blur-md border border-white text-white font-semilight px-4 py-1.5 md:py-1 xl:px-5 xl:py-2 rounded-full text-[10px] sm:text-xs xl:text-sm z-2 font-inter">On-going</span>
-                                        <img src="assets/image/logo/logo-cnc.png" alt="logo-pekan-it" class="w-8 h-8 xl:w-10 xl:h-10 image-shadow">
+                        <li class="swiper-slide card-slide glow-desc-div">
+                            <a style="background-image: url('assets/image/bg/bg-cnc.webp')" href="https://www.instagram.com/cnc_himtika?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="card-event-1">
+                                <div class="card-event-header">
+                                    <div class="header-left">
+                                        <span>On-going</span>
+                                        <img src="assets/image/logo/logo-cnc.png" alt="logo-pekan-it" class="image-shadow">
                                     </div>
-                                    <div class="backdrop-blur-md bg-black/50 rounded-lg p-2">
-                                        <svg class="transition-transform duration-700 w-2.5 h-2.5 md:w-3 md:h-3 lg:w-3.5 lg:h-3.5 xl:w-4 xl:h-4 group-hover:rotate-90 rotate-0" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <div class="header-right">
+                                        <svg class="arrow-icon" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M-4.03523e-05 9.65914L8.66202 0.997081H1.2374L1.17376 6.09774e-05H10.3661V9.19245L9.36912 9.12881V1.70419L0.707066 10.3662L-4.03523e-05 9.65914Z" fill="white"/>
                                         </svg>
                                     </div>
+                                    <!-- <div class="header-right-uiverse">
+                                        <div class="menu-event">
+                                            <input type="checkbox" class="menu-open" name="menu-open" id="menu-open-card">
+                                            <label class="menu-open-button" for="menu-open-card">
+                                                <span class="lines line-1"></span>
+                                                <span class="lines line-2"></span>
+                                                <span class="lines line-3"></span>
+                                            </label>
+
+                                            <a href="#" class="menu-item-event blue-social-btn"> <i class="fa fa-anchor"></i> </a>
+                                            <a href="#" class="menu-item-event green-social-btn"> <i class="fa fa-coffee"></i> </a>
+                                            <a href="#" class="menu-item-event red-social-btn"> <i class="fa fa-heart"></i> </a>
+                                        </div>
+                                    </div> -->
                                 </div>
                                 
-                                <div class="card-overlay bg-linear-to-t from-black/90 to-transparent pt-12.5 px-5 pb-5 2xl:px-7.5 2xl:pb-7.5 text-white z-2">
-                                    <h3 class="sm:text-lg md:text-base lg:text-xl mb-3 font-semibold font-montserrat title-text-shadow">Create and Compete</h3>
-                                    <p class="text-[10px] sm:text-xs lg:text-sm opacity-95 font-inter line-clamp-1">Wadah pengembangan project mahasiswa sekaligus penyaluran informasi dan partisipasi dalam berbagai lomba IT.</p>
-                                    <button class="text-[10px] sm:text-sm text-mainGold font-semibold btn-seemore">
+                                <div class="card-event-footer">
+                                    <h3 class="title-text-shadow">Create and Compete</h3>
+                                    <p class="line-clamp-1">Wadah pengembangan project mahasiswa sekaligus penyaluran informasi dan partisipasi dalam berbagai lomba IT.</p>
+                                    <button class="btn-seemore">
                                         Lihat selengkapnya...
                                     </button>
                                 </div>
                             </a>
                         </li>
                         <!-- Pekan IT: Semantik IC -->
-                        <li class="list-none swiper-slide rounded-3xl shadow-lg glow-desc-div-mobile lg:glow-desc-div">
-                            <a style="background-image: url('assets/image/bg/semantik.jpeg')" href="https://himtika.cs.unsika.ac.id/pekan-it/detail-semantik.html" class="w-full h-full bg-cover bg-top flex flex-col justify-between aspect-square rounded-3xl overflow-hidden hover:-translate-y-2 transition-all duration-500 group">
+                        <li class="swiper-slide card-slide glow-desc-div">
+                            <a style="background-image: url('assets/image/bg/semantik.jpeg')" href="https://himtika.cs.unsika.ac.id/pekan-it/detail-semantik.html" class="card-event-1">
                                 <!-- <img src="assets/image/cbc1 1.png" alt="IT Bootcamp" class="w-full h-full object-cover"> -->
-                                <div class="flex justify-between items-center bg-linear-to-b from-black/90 via-black/50 to-transparent group-hover:via-[#47948A]/50 group-hover:from-[#47948A]/80 px-5 pt-4 transition-colors duration-500">
-                                    <div class="flex items-center gap-2">
-                                        <span class="backdrop-blur-md border border-white text-white font-semilight px-4 py-1.5 md:py-1 xl:px-5 xl:py-2 rounded-full text-[10px] sm:text-xs xl:text-sm z-2 font-inter">9 Mei 2026</span>
-                                        <img src="assets/image/logo/logo-pekan-it.webp" alt="logo-pekan-it" class="w-8 h-8 xl:w-10 xl:h-10 image-shadow">
+                                <div class="card-event-header">
+                                    <div class="header-left">
+                                        <span class="md:py-1 xl:px-5 xl:py-2 sm:text-xs xl:text-sm">9 Mei 2026</span>
+                                        <img src="assets/image/logo/logo-pekan-it.webp" alt="logo-pekan-it" class="image-shadow">
                                     </div>
-                                    <div class="backdrop-blur-md bg-black/50 rounded-lg p-2">
-                                        <svg class="transition-transform duration-700 w-2.5 h-2.5 md:w-3 md:h-3 lg:w-3.5 lg:h-3.5 xl:w-4 xl:h-4 group-hover:rotate-90 rotate-0" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <div class="header-right">
+                                        <svg class="arrow-icon transition-transform duration-700 w-2.5 h-2.5 md:w-3 md:h-3 lg:w-3.5 lg:h-3.5 xl:w-4 xl:h-4 group-hover:rotate-90 rotate-0" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M-4.03523e-05 9.65914L8.66202 0.997081H1.2374L1.17376 6.09774e-05H10.3661V9.19245L9.36912 9.12881V1.70419L0.707066 10.3662L-4.03523e-05 9.65914Z" fill="white"/>
                                         </svg>
                                     </div>
                                 </div>
                                 
-                                <div class="card-overlay bg-linear-to-t from-black/90 to-transparent pt-12.5 px-5 pb-5 2xl:px-7.5 2xl:pb-7.5 text-white z-2">
-                                    <h3 class="sm:text-lg md:text-base lg:text-xl mb-3 font-semibold font-montserrat title-text-shadow">Pekan IT: Semantik IC</h3>
-                                    <p class="text-[10px] sm:text-xs lg:text-sm opacity-95 font-inter line-clamp-1">Wadah bagi Mahasiswa Informatika Unsika untuk menunjukan bakat dan keahlian melalui ajang kompetisi hard skill.</p>
-                                    <button class="text-[10px] sm:text-sm text-mainGold font-semibold btn-seemore">
+                                <div class="card-event-footer">
+                                    <h3 class="title-text-shadow">Pekan IT: Semantik IC</h3>
+                                    <p class="line-clamp-1">Wadah bagi Mahasiswa Informatika Unsika untuk menunjukan bakat dan keahlian melalui ajang kompetisi hard skill.</p>
+                                    <button class="btn-seemore">
                                         Lihat selengkapnya...
                                     </button>
                                 </div>
                             </a>
                         </li> 
                         <!-- Pekan IT: NIC -->
-                        <li class="list-none swiper-slide rounded-3xl shadow-lg glow-desc-div-mobile lg:glow-desc-div">
-                            <a style="background-image: url('assets/image/bg/bg-pekan-it.webp')" href="https://himtika.cs.unsika.ac.id/pekan-it" class="w-full h-full bg-cover bg-top flex flex-col justify-between aspect-square rounded-3xl overflow-hidden hover:-translate-y-2 transition-all duration-500 group">
+                        <li class="swiper-slide card-slide glow-desc-div">
+                            <a style="background-image: url('assets/image/bg/bg-pekan-it.webp')" href="https://himtika.cs.unsika.ac.id/pekan-it" class="card-event-1">
                                 <!-- <img src="assets/image/cbc1 1.png" alt="IT Bootcamp" class="w-full h-full object-cover"> -->
-                                <div class="flex justify-between items-center bg-linear-to-b from-black/90 via-black/50 to-transparent group-hover:via-[#47948A]/50 group-hover:from-[#47948A]/80 px-5 pt-4 transition-colors duration-500">
-                                    <div class="flex items-center gap-2">
-                                        <span class="backdrop-blur-md border border-white text-white font-semilight px-4 py-1.5 md:py-1 xl:px-5 xl:py-2 rounded-full text-[10px] sm:text-xs xl:text-sm z-2 font-inter">Juni - Juli 2026</span>
-                                        <img src="assets/image/logo/logo-pekan-it.webp" alt="logo-pekan-it" class="w-8 h-8 xl:w-10 xl:h-10 image-shadow">
+                                <div class="card-event-header">
+                                    <div class="header-left">
+                                        <span class="md:py-1 xl:px-5 xl:py-2 sm:text-xs xl:text-sm">Juni - Juli 2026</span>
+                                        <img src="assets/image/logo/logo-pekan-it.webp" alt="logo-pekan-it" class="image-shadow">
                                     </div>
-                                    <div class="backdrop-blur-md bg-black/50 rounded-lg p-2">
-                                        <svg class="transition-transform duration-700 w-2.5 h-2.5 md:w-3 md:h-3 lg:w-3.5 lg:h-3.5 xl:w-4 xl:h-4 group-hover:rotate-90 rotate-0" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <div class="header-right">
+                                        <svg class="arrow-icon transition-transform duration-700 w-2.5 h-2.5 md:w-3 md:h-3 lg:w-3.5 lg:h-3.5 xl:w-4 xl:h-4 group-hover:rotate-90 rotate-0" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M-4.03523e-05 9.65914L8.66202 0.997081H1.2374L1.17376 6.09774e-05H10.3661V9.19245L9.36912 9.12881V1.70419L0.707066 10.3662L-4.03523e-05 9.65914Z" fill="white"/>
                                         </svg>
                                     </div>
                                 </div>
                                 
-                                <div class="card-overlay bg-linear-to-t from-black/90 to-transparent pt-12.5 px-5 pb-5 2xl:px-7.5 2xl:pb-7.5 text-white z-2">
-                                    <h3 class="sm:text-lg md:text-base lg:text-xl mb-3 font-semibold font-montserrat title-text-shadow">Pekan IT: NIC & Seminar</h3>
-                                    <p class="text-[10px] sm:text-xs lg:text-sm opacity-95 font-inter line-clamp-1">Kegiatan yang mewadahi ide dan kreativitas bidang IT lewat kompetisi dan edukasi tingkat nasional. Menghadirkan 2 rangkaian, yaitu perlombaan dan seminar.</p>
-                                    <button class="text-[10px] sm:text-sm text-mainGold font-semibold btn-seemore">
+                                <div class="card-event-footer">
+                                    <h3 class="title-text-shadow">Pekan IT: NIC & Seminar</h3>
+                                    <p class="line-clamp-1">Kegiatan yang mewadahi ide dan kreativitas bidang IT lewat kompetisi dan edukasi tingkat nasional. Menghadirkan 2 rangkaian, yaitu perlombaan dan seminar.</p>
+                                    <button class="btn-seemore">
                                         Lihat selengkapnya...
                                     </button>
                                 </div>
                             </a>
                         </li>
                         <!-- HiLInk -->
-                        <li class="list-none swiper-slide rounded-3xl shadow-lg glow-desc-div-mobile lg:glow-desc-div">
-                            <a style="background-image: url('assets/image/bg/bg-hilink.jpeg')" href="https://himtika.cs.unsika.ac.id/hgtc" class="w-full h-full bg-cover bg-top flex flex-col justify-between aspect-square rounded-3xl overflow-hidden hover:-translate-y-2 transition-all duration-500 group">
-                                <div class="flex justify-between items-center bg-linear-to-b from-black/90 via-black/50 to-transparent group-hover:via-[#47948A]/50 group-hover:from-[#47948A]/80 px-5 pt-4 transition-colors duration-500">
-                                    <div class="flex items-center gap-2">
-                                        <span class="backdrop-blur-md border border-white text-white font-semilight px-4 py-1.5 md:py-1 xl:px-5 xl:py-2 rounded-full text-[10px] sm:text-xs xl:text-sm z-2 font-inter">Coming soon</span>
-                                        <img src="assets/image/logo/HIMTIKA.webp" alt="logo-pekan-it" class="w-8 h-8 xl:w-10 xl:h-10 image-shadow">
+                        <li class="swiper-slide card-slide glow-desc-div">
+                            <a style="background-image: url('assets/image/bg/bg-hilink.jpeg')" href="https://himtika.cs.unsika.ac.id/hgtc" class="card-event-1">
+                                <div class="card-event-header">
+                                    <div class="header-left">
+                                        <span class="md:py-1 xl:px-5 xl:py-2 sm:text-xs xl:text-sm">Coming soon</span>
+                                        <img src="assets/image/logo/HIMTIKA.webp" alt="logo-pekan-it" class="image-shadow">
                                     </div>
-                                    <div class="backdrop-blur-md bg-black/50 rounded-lg p-2">
-                                        <svg class="transition-transform duration-700 w-2.5 h-2.5 md:w-3 md:h-3 lg:w-3.5 lg:h-3.5 xl:w-4 xl:h-4 group-hover:rotate-90 rotate-0" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <div class="header-right">
+                                        <svg class="arrow-icon transition-transform duration-700 w-2.5 h-2.5 md:w-3 md:h-3 lg:w-3.5 lg:h-3.5 xl:w-4 xl:h-4 group-hover:rotate-90 rotate-0" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M-4.03523e-05 9.65914L8.66202 0.997081H1.2374L1.17376 6.09774e-05H10.3661V9.19245L9.36912 9.12881V1.70419L0.707066 10.3662L-4.03523e-05 9.65914Z" fill="white"/>
                                         </svg>
                                     </div>
                                 </div>
                                 
-                                <div class="card-overlay bg-linear-to-t from-black/90 to-transparent pt-12.5 px-5 pb-5 2xl:px-7.5 2xl:pb-7.5 text-white z-2">
-                                    <h3 class="sm:text-lg md:text-base lg:text-xl mb-3 font-semibold font-montserrat title-text-shadow">Hi-Link</h3>
-                                    <p class="text-[10px] sm:text-xs lg:text-sm opacity-95 font-inter line-clamp-1">Kegiatan untuk menjalin relasi dengan universitas lain serta memperluas wawasan mahasiswa melalui keterlibatan dengan dunia industri dan lingkungan akademik.</p>
-                                    <button class="text-[10px] sm:text-sm text-mainGold font-semibold btn-seemore">
+                                <div class="card-event-footer">
+                                    <h3 class="title-text-shadow">Hi-Link</h3>
+                                    <p class="line-clamp-1">Kegiatan untuk menjalin relasi dengan universitas lain serta memperluas wawasan mahasiswa melalui keterlibatan dengan dunia industri dan lingkungan akademik.</p>
+                                    <button class="btn-seemore">
                                         Lihat selengkapnya...
                                     </button>
                                 </div>
                             </a>
                         </li>
                         <!-- LKMMPD -->
-                        <li class="list-none swiper-slide rounded-3xl shadow-lg glow-desc-div-mobile lg:glow-desc-div">
-                            <a style="background-image: url('assets/image/bg/bg-lkmmpd.jpg')" href="https://himtika.cs.unsika.ac.id/lkmmpd" class="w-full h-full bg-cover bg-top flex flex-col justify-between aspect-square rounded-3xl overflow-hidden hover:-translate-y-2 transition-all duration-500 group">
-                                <div class="flex justify-between items-center bg-linear-to-b from-black/90 via-black/50 to-transparent group-hover:via-[#47948A]/50 group-hover:from-[#47948A]/80 px-5 pt-4 transition-colors duration-500">
-                                    <div class="flex items-center gap-2">
-                                        <span class="backdrop-blur-md border border-white text-white font-semilight px-4 py-1.5 md:py-1 xl:px-5 xl:py-2 rounded-full text-[10px] sm:text-xs xl:text-sm z-2 font-inter">Agustus 2026</span>
-                                        <img src="assets/image/icon/coming-soon.png" alt="logo-pekan-it" class="w-8 h-8 xl:w-10 xl:h-10 image-shadow">
+                        <li class="swiper-slide card-slide glow-desc-div">
+                            <a style="background-image: url('assets/image/bg/bg-lkmmpd.jpg')" href="https://himtika.cs.unsika.ac.id/lkmmpd" class="card-event-1">
+                                <div class="card-event-header">
+                                    <div class="header-left">
+                                        <span class="md:py-1 xl:px-5 xl:py-2 sm:text-xs xl:text-sm">Agustus 2026</span>
+                                        <img src="assets/image/icon/coming-soon.png" alt="logo-pekan-it" class="image-shadow">
                                     </div>
-                                    <div class="backdrop-blur-md bg-black/50 rounded-lg p-2">
-                                        <svg class="transition-transform duration-700 w-2.5 h-2.5 md:w-3 md:h-3 lg:w-3.5 lg:h-3.5 xl:w-4 xl:h-4 group-hover:rotate-90 rotate-0" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <div class="header-right">
+                                        <svg class="arrow-icon transition-transform duration-700 w-2.5 h-2.5 md:w-3 md:h-3 lg:w-3.5 lg:h-3.5 xl:w-4 xl:h-4 group-hover:rotate-90 rotate-0" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M-4.03523e-05 9.65914L8.66202 0.997081H1.2374L1.17376 6.09774e-05H10.3661V9.19245L9.36912 9.12881V1.70419L0.707066 10.3662L-4.03523e-05 9.65914Z" fill="white"/>
                                         </svg>
                                     </div>
                                 </div>
                                 
-                                <div class="card-overlay bg-linear-to-t from-black/90 to-transparent pt-12.5 px-5 pb-5 2xl:px-7.5 2xl:pb-7.5 text-white z-2">
-                                    <h3 class="sm:text-lg md:text-base lg:text-xl mb-3 font-semibold font-montserrat title-text-shadow">LKMMPD 2026</h3>
-                                    <p class="text-[10px] sm:text-xs lg:text-sm opacity-95 font-inter line-clamp-1">Kegiatan untuk membekali mahasiswa baru dengan keterampilan komunikasi, pengenalan diri, dan kemampuan berpikir kritis.</p>
-                                    <button class="text-[10px] sm:text-sm text-mainGold font-semibold btn-seemore">
+                                <div class="card-event-footer">
+                                    <h3 class="title-text-shadow">LKMMPD 2026</h3>
+                                    <p class="line-clamp-1">Kegiatan untuk membekali mahasiswa baru dengan keterampilan komunikasi, pengenalan diri, dan kemampuan berpikir kritis.</p>
+                                    <button class="btn-seemore">
                                         Lihat selengkapnya...
                                     </button>
                                 </div>
                             </a>
                         </li>
                         <!-- Study Club -->
-                        <li class="list-none swiper-slide rounded-3xl shadow-lg glow-desc-div-mobile lg:glow-desc-div">
-                            <a style="background-image: url('assets/image/bg/bg-study-club.webp')" href="https://himtika.cs.unsika.ac.id/studyclub-2024" class="w-full h-full bg-cover bg-top flex flex-col justify-between aspect-square rounded-3xl overflow-hidden hover:-translate-y-2 transition-all duration-500 group">
-                                <div class="flex justify-between items-center bg-linear-to-b from-black/90 via-black/50 to-transparent group-hover:via-[#47948A]/50 group-hover:from-[#47948A]/80 px-5 pt-4 transition-colors duration-500">
-                                    <div class="flex items-center gap-2">
-                                        <span class="backdrop-blur-md border border-white text-white font-semilight px-4 py-1.5 md:py-1 xl:px-5 xl:py-2 rounded-full text-[10px] sm:text-xs xl:text-sm z-2 font-inter">Coming soon</span>
-                                        <img src="assets/image/logo/logo-study-club.png" alt="logo-pekan-it" class="w-8 h-8 xl:w-10 xl:h-10 image-shadow">
+                        <li class="swiper-slide card-slide glow-desc-div">
+                            <a style="background-image: url('assets/image/bg/bg-study-club.webp')" href="https://himtika.cs.unsika.ac.id/studyclub-2024" class="card-event-1">
+                                <div class="card-event-header">
+                                    <div class="header-left">
+                                        <span class="md:py-1 xl:px-5 xl:py-2 sm:text-xs xl:text-sm">Coming soon</span>
+                                        <img src="assets/image/logo/logo-study-club.png" alt="logo-pekan-it" class="image-shadow">
                                     </div>
-                                    <div class="backdrop-blur-md bg-black/50 rounded-lg p-2">
-                                        <svg class="transition-transform duration-700 w-2.5 h-2.5 md:w-3 md:h-3 lg:w-3.5 lg:h-3.5 xl:w-4 xl:h-4 group-hover:rotate-90 rotate-0" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <div class="header-right">
+                                        <svg class="arrow-icon transition-transform duration-700 w-2.5 h-2.5 md:w-3 md:h-3 lg:w-3.5 lg:h-3.5 xl:w-4 xl:h-4 group-hover:rotate-90 rotate-0" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M-4.03523e-05 9.65914L8.66202 0.997081H1.2374L1.17376 6.09774e-05H10.3661V9.19245L9.36912 9.12881V1.70419L0.707066 10.3662L-4.03523e-05 9.65914Z" fill="white"/>
                                         </svg>
                                     </div>
                                 </div>
                                 
-                                <div class="card-overlay bg-linear-to-t from-black/90 to-transparent pt-12.5 px-5 pb-5 2xl:px-7.5 2xl:pb-7.5 text-white z-2">
-                                    <h3 class="sm:text-lg md:text-base lg:text-xl mb-3 font-semibold font-montserrat title-text-shadow">Study Club</h3>
-                                    <p class="text-[10px] sm:text-xs lg:text-sm opacity-95 font-inter line-clamp-1">Kegiatan belajar bersama Mahasiswa Informatika Unsika untuk berbagi, berdiskusi, dan mengembangkan kemampuan di sesuai minat pada tiap bidang IT.</p>
-                                    <button class="text-[10px] sm:text-sm text-mainGold font-semibold btn-seemore">
+                                <div class="card-event-footer">
+                                    <h3 class="title-text-shadow">Study Club</h3>
+                                    <p class="line-clamp-1">Kegiatan belajar bersama Mahasiswa Informatika Unsika untuk berbagi, berdiskusi, dan mengembangkan kemampuan di sesuai minat pada tiap bidang IT.</p>
+                                    <button class="btn-seemore">
                                         Lihat selengkapnya...
                                     </button>
                                 </div>
                             </a>
                         </li>
                         <!-- IT Bootcamp -->
-                        <li class="list-none swiper-slide rounded-3xl shadow-lg glow-desc-div-mobile lg:glow-desc-div">
-                            <a style="background-image: url('assets/image/bg/bg-itbootcamp.webp')" href="https://himtika.cs.unsika.ac.id/it-bootcamp" class="w-full h-full bg-cover bg-top-right flex flex-col justify-between aspect-square rounded-3xl overflow-hidden hover:-translate-y-2 transition-all duration-500 group">
-                                <div class="flex justify-between items-center bg-linear-to-b from-black/90 via-black/50 to-transparent group-hover:via-[#47948A]/50 group-hover:from-[#47948A]/80 px-5 pt-4 transition-colors duration-500">
-                                    <div class="flex items-center gap-2">
-                                        <span class="backdrop-blur-md border border-white text-white font-semilight px-4 py-1.5 md:py-1 xl:px-5 xl:py-2 rounded-full text-[10px] sm:text-xs xl:text-sm z-2 font-inter">Oktober 2026</span>
-                                        <img src="assets/image/icon/coming-soon.png" alt="logo-pekan-it" class="w-8 h-8 xl:w-10 xl:h-10 image-shadow">
+                        <li class="swiper-slide card-slide glow-desc-div">
+                            <a style="background-image: url('assets/image/bg/bg-itbootcamp.webp')" href="https://himtika.cs.unsika.ac.id/it-bootcamp" class="card-event-itbootcamp">
+                                <div class="card-event-header">
+                                    <div class="header-left">
+                                        <span class="md:py-1 xl:px-5 xl:py-2 sm:text-xs xl:text-sm">Oktober 2026</span>
+                                        <img src="assets/image/icon/coming-soon.png" alt="logo-pekan-it" class="image-shadow">
                                     </div>
-                                    <div class="backdrop-blur-md bg-black/50 rounded-lg p-2">
-                                        <svg class="transition-transform duration-700 w-2.5 h-2.5 md:w-3 md:h-3 lg:w-3.5 lg:h-3.5 xl:w-4 xl:h-4 group-hover:rotate-90 rotate-0" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <div class="header-right">
+                                        <svg class="arrow-icon transition-transform duration-700 w-2.5 h-2.5 md:w-3 md:h-3 lg:w-3.5 lg:h-3.5 xl:w-4 xl:h-4 group-hover:rotate-90 rotate-0" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M-4.03523e-05 9.65914L8.66202 0.997081H1.2374L1.17376 6.09774e-05H10.3661V9.19245L9.36912 9.12881V1.70419L0.707066 10.3662L-4.03523e-05 9.65914Z" fill="white"/>
                                         </svg>
                                     </div>
                                 </div>
                                 
-                                <div class="card-overlay bg-linear-to-t from-black/90 to-transparent pt-12.5 px-5 pb-5 2xl:px-7.5 2xl:pb-7.5 text-white z-2">
-                                    <h3 class="sm:text-lg md:text-base lg:text-xl mb-3 font-semibold font-montserrat title-text-shadow">IT Bootcamp</h3>
-                                    <p class="text-[10px] sm:text-xs lg:text-sm opacity-95 font-inter line-clamp-1">Kegiatan pengenalan lingkungan Informatika Unsika, serta mengembangkan hardskill, softskill, dan membangun kebersamaan antar mahasiswa baru.</p>
-                                    <button class="text-[10px] sm:text-sm text-mainGold font-semibold btn-seemore">
+                                <div class="card-event-footer">
+                                    <h3 class="title-text-shadow">IT Bootcamp</h3>
+                                    <p class="line-clamp-1">Kegiatan pengenalan lingkungan Informatika Unsika, serta mengembangkan hardskill, softskill, dan membangun kebersamaan antar mahasiswa baru.</p>
+                                    <button class="btn-seemore">
                                         Lihat selengkapnya...
                                     </button>
                                 </div>
                             </a>
                         </li>
                         <!-- Diesnatalis -->
-                        <li class="list-none swiper-slide rounded-3xl shadow-lg glow-desc-div-mobile lg:glow-desc-div">
-                            <a style="background-image: url('assets/image/bg/bg-diesnat.webp')" href="https://himtika.cs.unsika.ac.id/diesnatalis" class="w-full h-full bg-cover bg-bottom flex flex-col justify-between aspect-square rounded-3xl overflow-hidden hover:-translate-y-2 transition-all duration-500 group">
-                                <div class="flex justify-between items-center bg-linear-to-b from-black/90 via-black/50 to-transparent group-hover:via-[#47948A]/50 group-hover:from-[#47948A]/80 px-5 pt-4 transition-colors duration-500">
-                                    <div class="flex items-center gap-2">
-                                        <span class="backdrop-blur-md border border-white text-white font-semilight px-4 py-1.5 md:py-1 xl:px-5 xl:py-2 rounded-full text-[10px] sm:text-xs xl:text-sm z-2 font-inter">Oktober 2026</span>
-                                        <img src="assets/image/icon/coming-soon.png" alt="logo-pekan-it" class="w-8 h-8 xl:w-10 xl:h-10 image-shadow">
+                        <li class="swiper-slide card-slide glow-desc-div">
+                            <a style="background-image: url('assets/image/bg/bg-diesnat.webp')" href="https://himtika.cs.unsika.ac.id/diesnatalis" class="card-event-diesnatalis">
+                                <div class="card-event-header">
+                                    <div class="header-left">
+                                        <span class="md:py-1 xl:px-5 xl:py-2 sm:text-xs xl:text-sm">Oktober 2026</span>
+                                        <img src="assets/image/icon/coming-soon.png" alt="logo-pekan-it" class="image-shadow">
                                     </div>
-                                    <div class="backdrop-blur-md bg-black/50 rounded-lg p-2">
-                                        <svg class="transition-transform duration-700 w-2.5 h-2.5 md:w-3 md:h-3 lg:w-3.5 lg:h-3.5 xl:w-4 xl:h-4 group-hover:rotate-90 rotate-0" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <div class="header-right">
+                                        <svg class="arrow-icon transition-transform duration-700 w-2.5 h-2.5 md:w-3 md:h-3 lg:w-3.5 lg:h-3.5 xl:w-4 xl:h-4 group-hover:rotate-90 rotate-0" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M-4.03523e-05 9.65914L8.66202 0.997081H1.2374L1.17376 6.09774e-05H10.3661V9.19245L9.36912 9.12881V1.70419L0.707066 10.3662L-4.03523e-05 9.65914Z" fill="white"/>
                                         </svg>
                                     </div>
                                 </div>
                                 
-                                <div class="card-overlay bg-linear-to-t from-black/90 to-transparent pt-12.5 px-5 pb-5 2xl:px-7.5 2xl:pb-7.5 text-white z-2">
-                                    <h3 class="sm:text-lg md:text-base lg:text-xl mb-3 font-semibold font-montserrat title-text-shadow">Diesnatalis IX HIMTIKA</h3>
-                                    <p class="text-[10px] sm:text-xs lg:text-sm opacity-95 font-inter line-clamp-1">Rangkaian acara untuk peringatan hari jadi HIMTIKA ke-9 (berdiri 16 Okt 2017) sebagai momentum untuk mempererat silaturahmi seluruh mahasiswa Informatika.</p>
-                                    <button class="text-[10px] sm:text-sm text-mainGold font-semibold btn-seemore">
+                                <div class="card-event-footer">
+                                    <h3 class="title-text-shadow">Diesnatalis IX HIMTIKA</h3>
+                                    <p class="line-clamp-1">Rangkaian acara untuk peringatan hari jadi HIMTIKA ke-9 (berdiri 16 Okt 2017) sebagai momentum untuk mempererat silaturahmi seluruh mahasiswa Informatika.</p>
+                                    <button class="btn-seemore">
                                         Lihat selengkapnya...
                                     </button>
                                 </div>
@@ -974,31 +987,31 @@
                 </div>
             </div>
         </section>
-        <!--End Events Section-->
+        <!-- End Events Section -->
 
-        <!--Start Himfo Section-->
-        <section id="himfo-section" class="pt-10 pb-20 md:pb-30 px-6 sm:px-16 lg:px-20 xl:px-23 2xl:px-45">
-            <div style="background-image: url('/assets/image/bglangit.png');" class="max-w-[1440px] 2xl:max-w-[1600px] mx-auto bg-cover rounded-2xl lg:rounded-3xl px-10 py-10 lg:px-15 lg:py-20 xl:py-25 2xl:py-30 overflow-hidden shadow-lg z-2">
-                <div class="auto-container flex flex-col-reverse lg:flex-row w-full items-center justify-center gap-23 lg:gap-20 2xl:gap-30">
-                    <div class=" flex justify-center select-none">
-                        <img src="assets/image/himfo-1.png" alt="HIMFO Mockup" class="max-w-[90px] xl:max-w-[125px] 2xl:max-w-[150px] relative -top-17 lg:-top-9 lg:-right-2 xl:-top-12 xl:-right-2 w-full h-auto hover:scale-105 transition-all duration-500">
-                        <img src="assets/image/himfo-2.png" alt="HIMFO Mockup" class="max-w-[90px] xl:max-w-[125px] 2xl:max-w-[150px] relative lg:-bottom-10 xl:-bottom-12  w-full h-auto hover:scale-105 transition-all duration-500 z-1">
-                        <img src="assets/image/himfo-3.png" alt="HIMFO Mockup" class="max-w-[90px] xl:max-w-[125px] 2xl:max-w-[150px] relative -top-9 lg:top-0 lg:-left-2 xl:-left-2 w-full h-auto hover:scale-105 transition-all duration-500">
+        <!-- Start Himfo Section -->
+        <section id="himfo-section" class="himfo-section margin-x-section">
+            <div style="background-image: url('/assets/image/bglangit.png');" data-aos="fade-up" class="section-container himfo-card">
+                <div class="himfo-container-content">
+                    <div class="mockup-container">
+                        <img src="assets/image/himfo-1.png" alt="HIMFO Mockup" class="mockup-himfo mockup-1">
+                        <img src="assets/image/himfo-2.png" alt="HIMFO Mockup" class="mockup-himfo mockup-2">
+                        <img src="assets/image/himfo-3.png" alt="HIMFO Mockup" class="mockup-himfo mockup-3">
                     </div>
     
-                    <div class="flex-1 flex flex-col gap-5 xl:gap-10 justify-center font-montserrat text-black">
+                    <div class="himfo-content">
                         <div>
-                            <span class="font-semibold text-lg md:text-xl xl:text-2xl">HIMFO</span>
-                            <h1 class="text-2xl md:text-3xl xl:text-5xl font-bold leading-tight">Menyatukan HIMTIKA Dalam Satu Platform</h1>
+                            <span class="himfo-title">HIMFO</span>
+                            <h1 class="himfo-subtitle">Menyatukan HIMTIKA Dalam Satu Platform</h1>
                         </div>
-                        <p class="font-inter mt-2 lg:mt-0 text-xs md:text-sm xl:text-base md:font-medium text-justify">
+                        <p>
                             HIMFO hadir sebagai pusat informasi dan layanan HIMTIKA yang dapat diakses kapan saja, 
                             membantu mahasiswa tetap terhubung dengan berbagai kegiatan dan perkembangan organisasi.
                         </p>
 
                         <!-- From Uiverse.io by Tsiangana --> 
                         <a href="https://drive.google.com/uc?export=download&id=1sNUtSCP-25CIjRoIm1-CgG7_nVJnLpne" target="_blank">
-                            <div class="tooltip-container select-none">
+                            <div class="tooltip-container">
                                 <span class="tooltip">Download</span>
                                 <span class="text">
                                     <div class="borde-back">
@@ -1039,187 +1052,183 @@
                 </div>
             </div>
         </section>
-        <!--End Himfo Section-->
+        <!-- End Himfo Section -->
 
         <!-- Start Fitur HIMFO Section -->
-        <section id="fitur-himfo-section" class="relative px-6 sm:px-16 lg:px-20 xl:px-23 2xl:px-45">
-            <div class="absolute top-10 left-20 lg:top-0 lg:left-100 w-px h-px rounded-full shadow-green-glow-mob lg:shadow-green-glow-2"></div>
-            <div class="max-w-[1440px] 2xl:max-w-[1600px] mx-auto relative z-2">
-                <div class="font-montserrat mb-8 lg:mb-15">
-                    <p class="fitur-subtitle text-mainGold text-base md:text-lg lg:text-xl xl:text-2xl font-semibold mb-1 lg:mb-3">Fitur HIMFO</h2>
-                    <h2 class="text-notWhite text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold max-w-3xl leading-tight">Dirancang Untuk Mendukung Aktivitas Mahasiswa</h1>
+        <section id="fitur-himfo-section" class="fitur-himfo-section margin-x-section">
+            <div class="fitur-himfo-glow"></div>
+            <div class="section-container fitur-himfo-container">
+                <div class="fitur-himfo-title" data-aos="fade-up" data-aos-duration="800">
+                    <h1>Fitur HIMFO</h1>
+                    <h2>Dirancang Untuk Mendukung Aktivitas Mahasiswa</h2>
                 </div>
 
-                <div class="grid grid-cols-2 lg:grid-cols-3 gap-4.5 lg:gap-7 font-montserrat">
+                <div class="fitur-himfo-grid" data-aos="fade-up" data-aos-duration="800">
                     <!-- Card 1: HIMTIKA -->
-                    <div class="relative rounded-2xl p-6 lg:pb-11 lg:pt-9 lg:px-9 bg-[#1F7F78] overflow-hidden">
-                        <img src="assets/image/icon/vectorfitur1.svg" alt="icon" class="select-none absolute -top-2 right-0 w-20 lg:w-32">
-                        <div style="background-image: url('assets/image/icon/fiturhimfo1.svg');" class="w-10 h-10 lg:w-16 lg:h-16 bg-cover rounded-[50%] flex items-center justify-center text-[38px] mb-5 lg:mb-12">
-                            
+                    <div class="fitur-himtika">
+                        <img src="assets/image/icon/vectorfitur1.svg" alt="icon">
+                        <div style="background-image: url('assets/image/icon/fiturhimfo1.svg');" class="bg-icon-himtika">
                         </div>
-                        <h3 class="text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold mb-3 md:mb-4 title-text-shadow">HIMTIKA</h3>
-                        <p class="text-[10px] sm:text-xs md:text-sm lg:text-base xl:text-lg font-inter leading-tight">
+                        <h3 class="title-text-shadow">HIMTIKA</h3>
+                        <p>
                             Menyediakan informasi seputar HIMTIKA, mulai dari profil organisasi, sejarah, hingga kepengurusan.
                         </p>
                     </div>
 
                     <!-- Card 2: HiAgenda -->
-                    <div class="relative rounded-2xl p-6 lg:pb-11 lg:pt-9 lg:px-9 bg-[#7A2E4F]">
-                        <img src="assets/image/icon/vectorfitur3.svg" alt="icon" class="select-none absolute top-0 right-0 w-15 lg:w-30">
-                        <div style="background-image: url('assets/image/icon/fiturhimfo3.svg');" class="w-10 h-10 lg:w-16 lg:h-16 bg-cover rounded-[50%] flex items-center justify-center text-[38px] mb-5 lg:mb-12">
+                    <div class="fitur-hiagenda">
+                        <img src="assets/image/icon/vectorfitur3.svg" alt="icon">
+                        <div style="background-image: url('assets/image/icon/fiturhimfo3.svg');" class="bg-icon-hiagenda">
                             
                         </div>
-                        <h3 class="text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold mb-3 md:mb-4 title-text-shadow">HiAgenda</h3>
-                        <p class="text-[10px] sm:text-xs md:text-sm lg:text-base xl:text-lg font-inter leading-tight">
+                        <h3 class="title-text-shadow">HiAgenda</h3>
+                        <p>
                             Fitur untuk melihat dan mengelola jadwal kegiatan, serta membuat workspace pribadi.
                         </p>
                     </div>
 
                     <!-- Card 3: HiCode -->
-                    <div class="relative rounded-2xl p-6 lg:pb-11 lg:pt-9 lg:px-9 bg-mainGold text-black overflow-hidden col-start-1 col-span-2 lg:col-auto lg:col-span-1">
-                        <img src="assets/image/icon/vectorfitur2.svg" alt="icon" class="select-none absolute -top-2 lg:top-4 right-0 w-30 lg:w-37.5">
-                        <div style="background-image: url('assets/image/icon/fiturhimfo2.svg');" class="w-10 h-10 lg:w-16 lg:h-16 bg-cover rounded-[50%] flex items-center justify-center text-[38px] mb-5 lg:mb-12">
+                    <div class="fitur-hicode">
+                        <img src="assets/image/icon/vectorfitur2.svg" alt="icon">
+                        <div style="background-image: url('assets/image/icon/fiturhimfo2.svg');" class="bg-icon-hicode">
                         
                         </div>
-                        <h3 class="text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold mb-3 md:mb-4">HiCode</h3>
-                        <p class="text-[10px] sm:text-xs md:text-sm lg:text-base xl:text-lg font-inter leading-tight">
+                        <h3>HiCode</h3>
+                        <p>
                             Platform pembelajaran untuk mengembangkan kemampuan coding mahasiswa.
                         </p>
                     
                     </div>
-
-                    
                 </div>
             </div>
         </section>
         <!-- End Fitur HIMFO Section -->
 
         <!----Start FAQ Section-->
-        <section id="faq-section" class="relative flex items-center pt-45 pb-30 px-6 sm:px-16 lg:px-20 xl:px-23 2xl:px-45">
-            <div class="absolute top-40 right-10 lg:right-40 lg:top-0 w-px h-px rounded-full shadow-green-glow-mob lg:shadow-green-glow"></div>
+        <section id="faq-section" class="faq-section margin-x-section">
+            <div class="faq-glow"></div>
             
-            <div class="max-w-[1440px] 2xl:max-w-[1600px] mx-auto relative flex flex-col justify-start lg:justify-center lg:flex-row gap-10 lg:gap-20 z-1">
-                
+            <div class="faq-container">
                 <!-- Left Column -->
-                <div class="xl:w-[47%]">
-                    <div class="font-montserrat font-semibold">
-                        <h1 class="text-base md:text-lg lg:text-xl xl:text-2xl text-mainGold mb-1 md:mb-2 lg:mb-3">Faq</h1>
-                        <h2 class="text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-notWhite mb-8 leading-tight">Pertanyaan Yang Sering Diajukan</h2>
+                <div class="faq-left-column" data-aos="fade-right" data-aos-duration="800">
+                    <div class="faq-title-wrapper">
+                        <h1 class="faq-title">Faq</h1>
+                        <h2 class="faq-subtitle">Pertanyaan Yang Sering Diajukan</h2>
                     </div>
                     
-                    <p class="max-w-140 text-xs sm:text-sm lg:text-base xl:text-lg text-notWhite font-semilight md:font-normal mb-5 lg:mb-9 font-inter">
+                    <p class="faq-description">
                         Masih ada pertanyaan yang belum terjawab
                         atau memiliki kritik/saran? Jangan ragu untuk menghubungi kami
                     </p>
 
-                    <button class="btnleft rounded-full border border-yellow-400 bg-mainGold flex justify-center items-center gap-2 px-5 py-2 md:px-6 md:py-2.5 text-xs lg:text-base md:font-medium lg:font-normal relative transition-all duration-500 overflow-hidden z-1 cursor-pointer text-black hover:text-white group select-none">
-                    <a href="https://himtika.cs.unsika.ac.id/kontak-kami/" class="font-medium text-black group-hover:text-white transition-all duration-500">Hubungi Kami</a>
-                </button> 
+                    <a href="https://himtika.cs.unsika.ac.id/kontak-kami/" class="faq-contact-button btnleft">
+                        <span>Hubungi Kami!</span>
+                    </a>
                 </div>
 
                 <!-- Right Column -->
-                <div class="xl:w-[53%] w-full mx-auto font-inter">
-                    <ul class="container-accordion flex flex-col gap-3 mx-auto w-full relative z-2">
-                        <li class="list-none w-auto px-3 py-2 sm:py-2.5 sm:px-3.5 bg-darkGreen border border-mainGold text-white rounded-2xl">
+                <div class="faq-right-column" data-aos="fade-left" data-aos-duration="800">
+                    <ul class="container-accordion">
+                        <li>
                             <input
                                 type="checkbox"
                                 name="accordion"
                                 id="first"
                                 class="accordion-toggle"
                             />
-                            <label id="faq" for="first" class="flex items-center gap-4 text-notWhite justify-between cursor-pointer text-xs sm:text-sm md:text-base p-1.5"
+                            <label id="faq" for="first"
                                 >Apa sih HIMTIKA itu?<i class="fa-solid fa-circle-arrow-down"></i
                             ></label>
                             <div class="content font-light">
-                                <p class="text-left text-xs sm:text-sm lg:text-base">
+                                <p class="faq-content">
                                 HIMTIKA merupakan himpunan mahasiswa Informatika unsika.
                                 </p>
                             </div>
                         </li>
-                        <li class="list-none w-auto px-3 py-2 sm:py-2.5 sm:px-3.5 bg-darkGreen border border-mainGold text-white rounded-2xl">
+                        <li>
                             <input
                                 type="checkbox"
                                 name="accordion"
                                 id="second"
                                 class="accordion-toggle"
                             />
-                            <label id="faq" for="second" class="flex items-center gap-4 text-notWhite font-medium justify-between cursor-pointer text-xs sm:text-sm md:text-base p-1.5"
+                            <label id="faq" for="second"
                                 >Bagaimana cara bergabung dengan HIMTIKA?<i
                                 class="fa-solid fa-circle-arrow-down"
                                 ></i
                             ></label>
                             <div class="content font-light">
-                                <p class="text-left text-xs sm:text-sm lg:text-base">
+                                <p class="faq-content">
                                 Untuk bergabung dengan HIMTIKA, mahasiswa Informatika dapat mendaftar saat open recruitment yang diadakan setiap tahun.
                                 </p>
                             </div>
                         </li>
-                        <li class="list-none w-auto px-3 py-2 sm:py-2.5 sm:px-3.5 bg-darkGreen border border-mainGold text-white rounded-2xl">
+                        <li>
                             <input
                                 type="checkbox"
                                 name="accordion"
                                 id="third"
                                 class="accordion-toggle"
                             />
-                            <label id="faq" for="third" class="flex items-center gap-4 text-notWhite font-medium justify-between cursor-pointer text-xs sm:text-sm md:text-base p-1.5"
+                            <label id="faq" for="third"
                                 >Apa manfaat bergabung di HIMTIKA?<i
                                 class="fa-solid fa-circle-arrow-down"
                                 ></i
                             ></label>
                             <div class="content font-light">
-                                <p class="text-left text-xs sm:text-sm lg:text-base">
+                                <p class="faq-content">
                                 Dengan bergabung di HIMTIKA, mahasiswa dapat memperluas jaringan, meningkatkan keterampilan teknis dan manajerial, serta mendapatkan pengalaman dalam berbagai proyek teknologi.
                                 </p>
                             </div>
                         </li>
-                        <li class="list-none w-auto px-3 py-2 sm:py-2.5 sm:px-3.5 bg-darkGreen border border-mainGold text-white rounded-2xl">
+                        <li>
                             <input
                                 type="checkbox"
                                 name="accordion"
                                 id="fourth"
                                 class="accordion-toggle"
                             />
-                            <label id="faq" for="fourth" class="flex items-center gap-4 text-notWhite font-medium justify-between cursor-pointer text-xs sm:text-sm md:text-base p-1.5"
+                            <label id="faq" for="fourth"
                                 >Apa saja kegiatan yang dilakukan HIMTIKA?<i class="fa-solid fa-circle-arrow-down"></i
                             ></label>
                             <div class="content font-light">
-                                <p class="text-left text-xs sm:text-sm lg:text-base">
+                                <p class="faq-content">
                                 HIMTIKA menyelenggarakan berbagai kegiatan seperti seminar IT, workshop coding, kompetisi hackathon, pelatihan teknologi, serta pengabdian masyarakat berbasis teknologi.
                                 </p>
                             </div>
                         </li>
-                        <li class="list-none w-auto px-3 py-2 sm:py-2.5 sm:px-3.5 bg-darkGreen border border-mainGold text-white rounded-2xl">
+                        <li>
                             <input
                                 type="checkbox"
                                 name="accordion"
                                 id="fifty"
                                 class="accordion-toggle"
                             />
-                            <label id="faq" for="fifty" class="flex items-center gap-4 text-notWhite font-medium justify-between cursor-pointer text-xs sm:text-sm md:text-base p-1.5"
+                            <label id="faq" for="fifty"
                                 >Apakah HIMTIKA hanya untuk mahasiswa Informatika?<i
                                 class="fa-solid fa-circle-arrow-down"
                                 ></i
                             ></label>
                             <div class="content font-light">
-                                <p class="text-left text-xs sm:text-sm lg:text-base">
+                                <p class="faq-content">
                                 Secara umum, HIMTIKA ditujukan untuk mahasiswa Informatika, namun beberapa kegiatan terbuka untuk mahasiswa dari jurusan lain yang tertarik di bidang IT.
                                 </p>
                             </div>
                         </li>
-                        <li class="list-none w-auto px-3 py-2 sm:py-2.5 sm:px-3.5 bg-darkGreen border border-mainGold text-white rounded-2xl">
+                        <li>
                             <input
                                 type="checkbox"
                                 name="accordion"
                                 id="sixty"
                                 class="accordion-toggle"
                             />
-                            <label id="faq" for="sixty" class="flex items-center gap-4 text-notWhite font-medium justify-between cursor-pointer text-xs sm:text-sm md:text-base p-[5px]"
-                                >Bagaimana cara mendapatkan informasi terbaru tentang HIMTIKA?<i
+                            <label id="faq" for="sixty"
+                                >Bagaimana cara mendapatkan informasi terbaru HIMTIKA?<i
                                 class="fa-solid fa-circle-arrow-down"
                                 ></i
                             ></label>
                             <div class="content font-light">
-                                <p class="text-left text-xs sm:text-sm lg:text-base">
+                                <p class="faq-content">
                                 Informasi terbaru tentang HIMTIKA dapat diperoleh melalui media sosial resmi HIMTIKA, website organisasi, serta grup komunitas yang dikelola oleh pengurus HIMTIKA.
                                 </p>
                             </div>
@@ -1334,11 +1343,13 @@
         </footer>
         <!-- Footer End -->
     </main>
+
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-        AOS.init({
-            once: true,
-        });
+        // AOS.init({
+        //     once: true,
+        // });
+        AOS.init();
     </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="assets/js/jquery.js"></script>
