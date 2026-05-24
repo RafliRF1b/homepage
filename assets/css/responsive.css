@@ -672,7 +672,7 @@
     .card-event-1 .card-event-footer .btn-seemore,
     .card-event-itbootcamp .card-event-footer .btn-seemore,
     .card-event-diesnatalis .card-event-footer .btn-seemore {
-        font-size: 14px;
+        font-size: 12px;
     }
     /* ================= Section Event ================= */
 
@@ -820,6 +820,9 @@
     .card-logo .arrow-icon-top-3,
     .card-sejarah .arrow-icon-top-4 {
         width: 12px; height: 12px;
+    }
+    .footer-badge-right {
+        display: inline-block;
     }
     /* ================= Section Kenali ================= */
     
@@ -1259,7 +1262,7 @@
     .card-event-1 .card-event-footer p,
     .card-event-itbootcamp .card-event-footer p,
     .card-event-diesnatalis .card-event-footer p {
-        font-size: 14px;
+        font-size: 12px;
     }
     .card-wrapper .card-slide .card-event-1:hover,
     .card-wrapper .card-slide .card-event-itbootcamp:hover,
@@ -1479,8 +1482,8 @@
         width: 16px; height: 16px;
     }
     .card-event-header .header-left span {
-        padding: 8px 20px;
-        font-size: 14px;
+        padding: 5.5px 15px;
+        font-size: 13.5px;
     }
     .card-event-header .header-left img {
         width: 40px; height: 40px;
@@ -1747,6 +1750,14 @@
     }
     .event-section .event-header h1 {
         font-size: 48px;
+    }
+    .card-event-header .header-left span {
+        padding: 8px 20px;
+    }
+    .card-event-1 .card-event-footer p,
+    .card-event-itbootcamp .card-event-footer p,
+    .card-event-diesnatalis .card-event-footer p {
+        font-size: 14px;
     }
     /* ================= Section Event ================= */
     

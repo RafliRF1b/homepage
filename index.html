@@ -688,18 +688,21 @@
 
             <div class="section-container kenali-container">
                 <div class="video-card-wrapper" data-aos="fade-right" data-aos-duration="800">
-                    <a href="https://youtu.be/f3Xe4Vn8FJ8?si=CW1D3Vtc-gOZqMj8" target="_blank" class="video-link-group">
-                        <div style="background-image: url('/assets/image/footage-cp.webp')" class="video-footage-bg glow-desc-div">
+                    <div id="open-video" target="_blank" class="video-link-group">
+                        <div class="video-footage-bg glow-desc-div">
+                            <img src="/assets/image/footage-cp.webp" alt="Footage CP" class="video-bg-image">
                             <div class="video-overlay">
                                 <button>Watch Now</button>
-                                <img src="assets/image/icon/play-pause.svg" alt="icon">
+                                <div class="play-icon-wrapper">
+                                    <img src="assets/image/icon/play-pause.svg" alt="icon">
+                                </div>
                                 <div class="video-description">
-                                    <h2>Cerita Singkat HIMTIKA</h2>
+                                    <h2>Company Profile HIMTIKA</h2>
                                     <p>HIMTIKA 2025-2026</p>
                                 </div>
                             </div>  
                         </div>
-                    </a>
+                    </div>
                 </div>
     
                 <div class="exploration-container" data-aos="fade-left" data-aos-duration="800">
@@ -742,7 +745,7 @@
                             </svg>
                         </a>
     
-                        <a href="https://himtika.cs.unsika.ac.id/logo-himtika" class="card-sejarah">
+                        <a href="https://himtika.cs.unsika.ac.id/sejarah-himtika" class="card-sejarah">
                             <div class="sejarah-title-wrapper">
                                 <h3 class="title-text-shadow">Sejarah Himtika</h3>
                                 <p>Perjalanan HIMTIKA dari awal berdiri hingga menjadi organisasi saat ini.</p>
@@ -783,20 +786,6 @@
                                             <path d="M-4.03523e-05 9.65914L8.66202 0.997081H1.2374L1.17376 6.09774e-05H10.3661V9.19245L9.36912 9.12881V1.70419L0.707066 10.3662L-4.03523e-05 9.65914Z" fill="white"/>
                                         </svg>
                                     </div>
-                                    <!-- <div class="header-right-uiverse">
-                                        <div class="menu-event">
-                                            <input type="checkbox" class="menu-open" name="menu-open" id="menu-open-card">
-                                            <label class="menu-open-button" for="menu-open-card">
-                                                <span class="lines line-1"></span>
-                                                <span class="lines line-2"></span>
-                                                <span class="lines line-3"></span>
-                                            </label>
-
-                                            <a href="#" class="menu-item-event blue-social-btn"> <i class="fa fa-anchor"></i> </a>
-                                            <a href="#" class="menu-item-event green-social-btn"> <i class="fa fa-coffee"></i> </a>
-                                            <a href="#" class="menu-item-event red-social-btn"> <i class="fa fa-heart"></i> </a>
-                                        </div>
-                                    </div> -->
                                 </div>
                                 
                                 <div class="card-event-footer">
@@ -810,11 +799,11 @@
                         </li>
                         <!-- Pekan IT: Semantik IC -->
                         <li class="swiper-slide card-slide glow-desc-div">
-                            <a style="background-image: url('assets/image/bg/semantik.jpeg')" href="https://himtika.cs.unsika.ac.id/pekan-it/detail-semantik.html" class="card-event-1">
+                            <a style="background-image: url('assets/image/bg/bg-semantik.webp')" href="https://himtika.cs.unsika.ac.id/pekan-it/detail-semantik/" class="card-event-1">
                                 <!-- <img src="assets/image/cbc1 1.png" alt="IT Bootcamp" class="w-full h-full object-cover"> -->
                                 <div class="card-event-header">
                                     <div class="header-left">
-                                        <span class="md:py-1 xl:px-5 xl:py-2 sm:text-xs xl:text-sm">9 Mei 2026</span>
+                                        <span class="md:py-1 xl:px-5 xl:py-2 sm:text-xs xl:text-sm">13 Mei 2026</span>
                                         <img src="assets/image/logo/logo-pekan-it.webp" alt="logo-pekan-it" class="image-shadow">
                                     </div>
                                     <div class="header-right">
@@ -860,11 +849,12 @@
                         </li>
                         <!-- HiLInk -->
                         <li class="swiper-slide card-slide glow-desc-div">
-                            <a style="background-image: url('assets/image/bg/bg-hilink.jpeg')" href="https://himtika.cs.unsika.ac.id/hgtc" class="card-event-1">
+                            <a style="background-image: url('assets/image/bg/bg-hilink.webp')" href="https://youtu.be/xM5NkhJl__I?si=9iDjeOZPKXwtsnZY" target="_blank" class="card-event-1">
                                 <div class="card-event-header">
                                     <div class="header-left">
-                                        <span class="md:py-1 xl:px-5 xl:py-2 sm:text-xs xl:text-sm">Coming soon</span>
-                                        <img src="assets/image/logo/HIMTIKA.webp" alt="logo-pekan-it" class="image-shadow">
+                                        <span class="md:py-1 xl:px-5 xl:py-2 sm:text-xs xl:text-sm">16 Mei 2026</span>
+                                        <img src="assets/image/logo/HIMTIKA.webp" alt="logo-himtika" class="image-shadow">
+                                        <img src="assets/image/logo/HMIF-UPNVJ.webp" alt="logo-hmif" class="image-shadow">
                                     </div>
                                     <div class="header-right">
                                         <svg class="arrow-icon transition-transform duration-700 w-2.5 h-2.5 md:w-3 md:h-3 lg:w-3.5 lg:h-3.5 xl:w-4 xl:h-4 group-hover:rotate-90 rotate-0" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -876,6 +866,30 @@
                                 <div class="card-event-footer">
                                     <h3 class="title-text-shadow">Hi-Link</h3>
                                     <p class="line-clamp-1">Event yang mencakup dua agenda, HIMTIKA Exchange (HE) dan HIMTIKA Goes To Company (HGTC). HE adalah kegiatan untuk menjalin relasi dengan universitas lain, serta HGTC adalah kegiatan memperluas wawasan mahasiswa melalui keterlibatan dengan dunia industri.</p>
+                                    <button class="btn-seemore">
+                                        Lihat selengkapnya...
+                                    </button>
+                                </div>
+                            </a>
+                        </li>
+                        <!-- Study Club -->
+                        <li class="swiper-slide card-slide glow-desc-div">
+                            <a style="background-image: url('assets/image/bg/bg-study-club.webp')" href="https://himtika.cs.unsika.ac.id/studyclub-2024" class="card-event-1">
+                                <div class="card-event-header">
+                                    <div class="header-left">
+                                        <span class="md:py-1 xl:px-5 xl:py-2 sm:text-xs xl:text-sm">Juli 2026</span>
+                                        <img src="assets/image/logo/logo-study-club.png" alt="logo-pekan-it" class="image-shadow">
+                                    </div>
+                                    <div class="header-right">
+                                        <svg class="arrow-icon transition-transform duration-700 w-2.5 h-2.5 md:w-3 md:h-3 lg:w-3.5 lg:h-3.5 xl:w-4 xl:h-4 group-hover:rotate-90 rotate-0" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M-4.03523e-05 9.65914L8.66202 0.997081H1.2374L1.17376 6.09774e-05H10.3661V9.19245L9.36912 9.12881V1.70419L0.707066 10.3662L-4.03523e-05 9.65914Z" fill="white"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                
+                                <div class="card-event-footer">
+                                    <h3 class="title-text-shadow">Study Club</h3>
+                                    <p class="line-clamp-1">Kegiatan belajar bersama Mahasiswa Informatika Unsika untuk berbagi, berdiskusi, dan mengembangkan kemampuan di sesuai minat pada tiap bidang IT.</p>
                                     <button class="btn-seemore">
                                         Lihat selengkapnya...
                                     </button>
@@ -900,30 +914,6 @@
                                 <div class="card-event-footer">
                                     <h3 class="title-text-shadow">LKMMPD 2026</h3>
                                     <p class="line-clamp-1">Kegiatan untuk membekali mahasiswa baru dengan keterampilan komunikasi, pengenalan diri, dan kemampuan berpikir kritis.</p>
-                                    <button class="btn-seemore">
-                                        Lihat selengkapnya...
-                                    </button>
-                                </div>
-                            </a>
-                        </li>
-                        <!-- Study Club -->
-                        <li class="swiper-slide card-slide glow-desc-div">
-                            <a style="background-image: url('assets/image/bg/bg-study-club.webp')" href="https://himtika.cs.unsika.ac.id/studyclub-2024" class="card-event-1">
-                                <div class="card-event-header">
-                                    <div class="header-left">
-                                        <span class="md:py-1 xl:px-5 xl:py-2 sm:text-xs xl:text-sm">Coming soon</span>
-                                        <img src="assets/image/logo/logo-study-club.png" alt="logo-pekan-it" class="image-shadow">
-                                    </div>
-                                    <div class="header-right">
-                                        <svg class="arrow-icon transition-transform duration-700 w-2.5 h-2.5 md:w-3 md:h-3 lg:w-3.5 lg:h-3.5 xl:w-4 xl:h-4 group-hover:rotate-90 rotate-0" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M-4.03523e-05 9.65914L8.66202 0.997081H1.2374L1.17376 6.09774e-05H10.3661V9.19245L9.36912 9.12881V1.70419L0.707066 10.3662L-4.03523e-05 9.65914Z" fill="white"/>
-                                        </svg>
-                                    </div>
-                                </div>
-                                
-                                <div class="card-event-footer">
-                                    <h3 class="title-text-shadow">Study Club</h3>
-                                    <p class="line-clamp-1">Kegiatan belajar bersama Mahasiswa Informatika Unsika untuk berbagi, berdiskusi, dan mengembangkan kemampuan di sesuai minat pada tiap bidang IT.</p>
                                     <button class="btn-seemore">
                                         Lihat selengkapnya...
                                     </button>
@@ -1238,6 +1228,34 @@
             </div>
         </section>
         <!----End FAQ Section-->
+
+        <div id="video-modal" class="custom-modal-overlay">
+            <div class="custom-modal-content">
+                <button id="close-video" class="custom-modal-close-btn">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+
+                <div class="custom-modal-video-container">
+                    <iframe id="youtube-player" 
+                            src="" 
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+
+                <div class="custom-modal-footer">
+                    <div class="footer-text-left">
+                        <h4>Company Profile HIMTIKA</h4>
+                        <p>Official Video • Kabinet Selaras</p>
+                    </div>
+                    <span class="footer-badge-right">ESC TO CLOSE</span>
+                </div>
+            </div>
+        </div>
     </main>
 
     <!-- Back To Top Button -->

@@ -274,6 +274,47 @@ const swiper = new Swiper('.card-wrapper', {
 	}
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const openBtn = document.getElementById('open-video');
+    const closeBtn = document.getElementById('close-video');
+    const modal = document.getElementById('video-modal');
+    const player = document.getElementById('youtube-player');
+    
+    const videoUrl = "https://www.youtube.com/embed/L37ebiX-0-g?autoplay=1&rel=0";
+
+    // Buka Modal
+    openBtn.addEventListener('click', () => {
+        player.setAttribute('src', videoUrl);
+        modal.classList.add('active'); // Memakai class CSS biasa (.active)
+        document.body.style.overflow = 'hidden'; 
+		document.body.classList.add('modal-open');
+    });
+
+    // Tutup Modal
+    const closeModal = () => {
+        player.setAttribute('src', ''); 
+        modal.classList.remove('active');
+        document.body.style.overflow = ''; 
+		document.body.classList.remove('modal-open');
+    };
+
+    closeBtn.addEventListener('click', closeModal);
+
+    // Klik luar area video untuk menutup
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+
+    // Tombol ESC keyboard
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            closeModal();
+        }
+    });
+});
+
 document.querySelectorAll('.btn-seemore').forEach((btn) => {
 	btn.addEventListener('click', (e) => {
 		e.preventDefault();
