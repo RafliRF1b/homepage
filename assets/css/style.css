@@ -829,7 +829,7 @@ img, svg {
 	font-size: 16px;
 	font-family: "Figtree";
 	margin-left: 20px;
-	text-transform: capitalize;
+	text-transform: none;
 }
 
 .mobile-menu .navigation li.current > a,
