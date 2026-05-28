@@ -1360,7 +1360,6 @@ img, svg {
     display: flex;
     flex-direction: column;
 	justify-content: space-between;
-    max-width: 100%;
     gap: 40px;
     z-index: 2;
 }
