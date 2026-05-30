@@ -109,7 +109,7 @@ img, svg {
 	background-color:rgba(0,0,0,0); 
 	background-position:center center; 
 	background-repeat:no-repeat; 
-	background-image:url(../img/icon/gear\ full\ 9.svg);
+	background-image:url(../image/icon/gear\ full\ 9.svg);
 
 	/* GANTI INI: Pakai Pixel biar anteng pas browser ditarik */
     background-size: 974px auto;
@@ -132,7 +132,7 @@ img, svg {
 	background-color:rgba(0,0,0,0); 
 	background-position:center center; 
 	background-repeat:no-repeat; 
-	background-image:url(../img/icon/rebuild\ tanpa\ gear.svg);
+	background-image:url(../image/icon/rebuild\ tanpa\ gear.svg);
 	/* GANTI INI: Pakai Pixel juga biar sinkron */
     background-size: 397px auto;
 	-webkit-transition: all 200ms ease;
