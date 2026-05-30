@@ -14,6 +14,92 @@
     }
 }
 
+@keyframes pulsingGlowEffect {
+    0%, 100% { 
+        /* State Meredup (Initial) */
+        box-shadow: 0 0 200px 100px rgba(31, 127, 120, 0.2); 
+    }
+    50% { 
+        /* State Menerang (Target) - Membesar 3x radius, 4x spread */
+        box-shadow: 0 0 200px 100px rgba(31, 127, 120, 0.45); 
+    }
+}
+
+@keyframes slowFloat {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-60px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes slowFloat2 {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(60px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* MD Mode: (Tailwind md: -> 768px) */
+@media only screen and (min-width: 768px) {
+  @keyframes slowFloat {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-150px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+  }
+  @keyframes slowFloat2 {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(150px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+  }
+}
+
+/* LG Mode: (Tailwind lg: -> 1024px) */
+@media only screen and (min-width: 1024px) {
+  @keyframes slowFloat {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-250px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+  }
+  @keyframes slowFloat2 {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(250px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+  }
+}
+
 /* Typing animation title */
 @keyframes cursor {
   to {

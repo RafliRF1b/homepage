@@ -14,42 +14,6 @@
     }
 }
 
-@media only screen and (max-width: 1280px){
-    /* From Uiverse.io by Tsiangana */ 
-    .tooltip-container {
-        font-size: 10px;
-        /*padding: 0.7em 1.8em;*/
-        width: 40px;
-        height: 40px;
-    }
-    .tooltip-container .borde-back {
-        width: 50px;
-        height: 50px;
-    }
-
-    .tooltip-container .icon {
-        width: 40px;
-        height: 40px;
-    }
-
-    .tooltip {
-        width: 145px;
-        height: 42px;
-        padding-right: 20px;
-        font-size: 15px;
-    }
-
-    .tooltip-container:hover .tooltip {
-        left: 0%; /* Altere para a posição desejada (a direita) */
-    }
-    .tooltip-container:hover {
-        transform: translateX(0px);
-        transition: 0.5s linear;
-        margin-left: 0px;
-    }
-    /* From Uiverse.io by Tsiangana */ 
-}
-
 @media only screen and (max-width: 1023px){
 	/* 1. Perbaikan Marquee & Rectangle (Header Top) */
     .live-news {
@@ -57,7 +21,7 @@
     }
 
     .live-news .auto-container {
-        padding: 0 0 !important;
+        padding: 0 10px !important;
     }
 
     /* Rectangle Nama Kabinet di HP */
@@ -103,6 +67,11 @@
         height: 75px !important;
     }
 
+    .main-header .nav-outer .main-menu,
+	.sticky-header{
+		display: none !important;
+	}
+
     .main-header .nav-outer .logo-outer img {
         width: 180px !important;
         height: auto !important;
@@ -119,9 +88,9 @@
     .nav-outer .mobile-nav-toggler {
         font-size: 28px !important;
         padding: 0 !important;
-        top: 60% !important;
+        top: 68% !important;
         transform: translateY(-50%) !important;
-        right: 50px !important;
+        right: 40px !important;
     }
 
 	.preloader .icon {
@@ -131,7 +100,7 @@
         background-size: 237px auto;
         margin-left: 21px;
     }
-    
+	
 	.main-header .nav-outer .main-menu,
 	.sticky-header{
 		display: none !important;
@@ -155,7 +124,8 @@
 		display: flex;
 		align-items: center;
 		justify-content: flex-start;
-		margin-left: 10px;
+		margin-left: 20px;
+		margin-right: 10px;
 		width:auto;
 		float:none;	
 	}
@@ -181,7 +151,7 @@
 		position: absolute;
 		right: 10px;
 		/* top: 60%; */
-		/* transform: translateY(-58%); */
+		transform: translateY(-58%);
 		line-height: 50px;
 		display: block;
 		margin: 0;
@@ -204,9 +174,7 @@
     .tentang-kami {
         display: flex; justify-content: start;
     }
-    .media-hp-footer {
-        display: flex; justify-content: center; 
-    }
+    
 
     .authorized-brand {
 		margin-top: -10px;
@@ -298,6 +266,42 @@
     }
 }
 
+@media only screen and (max-width: 1280px){
+    /* From Uiverse.io by Tsiangana */ 
+    .tooltip-container {
+        font-size: 10px;
+        /*padding: 0.7em 1.8em;*/
+        width: 40px;
+        height: 40px;
+    }
+    .tooltip-container .borde-back {
+        width: 50px;
+        height: 50px;
+    }
+
+    .tooltip-container .icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .tooltip {
+        width: 145px;
+        height: 42px;
+        padding-right: 20px;
+        font-size: 15px;
+    }
+
+    .tooltip-container:hover .tooltip {
+        left: 0%; /* Altere para a posição desejada (a direita) */
+    }
+    .tooltip-container:hover {
+        transform: translateX(0px);
+        transition: 0.5s linear;
+        margin-left: 0px;
+    }
+    /* From Uiverse.io by Tsiangana */ 
+}
+
 @media only screen and (max-width: 768px){
 	/* 1. Perbaikan Marquee & Rectangle (Header Top) */
     .live-news {
@@ -305,7 +309,7 @@
     }
 
     .live-news .auto-container {
-        padding: 0 0 !important;
+        padding: 0 10px !important;
     }
 
     /* Rectangle Nama Kabinet di HP */
@@ -367,7 +371,7 @@
         padding: 0 !important;
         top: 75% !important;
         transform: translateY(-50%) !important;
-        right: 25px !important;
+        right: 10px !important;
     }
 
 	.preloader .icon {
