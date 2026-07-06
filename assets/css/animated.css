@@ -185,3 +185,49 @@
 	100% { transform: translate(50%, 50%) rotate(-25deg); opacity: 0; }
 }
 /* Card animation kahim wahim */
+
+/* Fade background image switching event */
+@keyframes bgCrossFadeSemantik {
+  /* --- GAMBAR 1 (Aktif di awal) --- */
+  0%, 28% {
+    background-image: url('../image/bg/bg-semantik-comprog.webp');
+    opacity: 1; /* Muncul penuh */
+  }
+  33.33%, 61.66% {
+    /* Proses memudar hilang, lalu dioper ke gambar 2 */
+    background-image: url('../image/bg/bg-semantik-desain.webp');
+    opacity: 1;
+  }
+  66.66%, 95% {
+    /* Proses memudar hilang, lalu dioper ke gambar 3 */
+    background-image: url('../image/bg/bg-semantik-typing.webp');
+    opacity: 1;
+  }
+  100% {
+    background-image: url('../image/bg/bg-semantik-comprog.webp');
+    opacity: 1;
+  }
+}
+
+@keyframes bgCrossFadeHGTC {
+  /* --- GAMBAR 1 (0% - 25%) --- */
+  0%, 20% {
+    background-image: url('../image/bg/bg-hgtc-1.webp');
+  }
+  25%, 45% {
+    /* --- GAMBAR 2 (25% - 50%) --- */
+    background-image: url('../image/bg/bg-hgtc-2.webp');
+  }
+  50%, 70% {
+    /* --- GAMBAR 3 (50% - 75%) --- */
+    background-image: url('../image/bg/bg-hgtc-3.webp');
+  }
+  75%, 95% {
+    /* --- GAMBAR 4 (75% - 100%) --- */
+    background-image: url('../image/bg/bg-hgtc-4.webp');
+  }
+  100% {
+    background-image: url('../image/bg/bg-hgtc-1.webp');
+  }
+}
+/* Fade background image switching event */

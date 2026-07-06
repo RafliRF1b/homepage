@@ -1407,6 +1407,9 @@
         font-size: 1rem;
     }
     /* ================= Section FAQ ================= */
+
+    .media-hp-footer { margin-left: 0px; }
+    .aplikasi-publik { margin-left: 0px; }
 }
 
 /* XL Mode: (Tailwind xl: -> 1280px) */
@@ -1490,7 +1493,10 @@
         font-size: 13.5px;
     }
     .card-event-header .header-left img {
-        width: 40px; height: 40px;
+        width: 38px; height: 38px;
+    }
+    .card-event-header .header-left .logo-itb {
+        width: 88px;
     }
     
     /* ================= Section event ================= */
