@@ -844,7 +844,7 @@
         margin-bottom: 36px;
     }
     .card-event-header .header-left span {
-        padding-top: 4px; padding-bottom: 4px;
+        padding: 4px 11px;
     }
     .card-event-header .header-right .arrow-icon {
         width: 12px; height: 12px;
@@ -1489,8 +1489,7 @@
         width: 16px; height: 16px;
     }
     .card-event-header .header-left span {
-        padding: 5.5px 15px;
-        font-size: 13.5px;
+        padding: 5px 15px;
     }
     .card-event-header .header-left img {
         width: 38px; height: 38px;
@@ -1762,7 +1761,7 @@
         font-size: 48px;
     }
     .card-event-header .header-left span {
-        padding: 8px 20px;
+        font-size: 13px;
     }
     .card-event-1 .card-event-footer p,
     .card-event-itbootcamp .card-event-footer p,

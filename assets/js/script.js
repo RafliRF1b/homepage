@@ -12,29 +12,6 @@
 	
 	//Update Header Style and Scroll to Top
 	function headerStyle() {
-		// if($('.main-header').length){
-		// 	var windowpos = $(window).scrollTop();
-		// 	var headerUpper = $('.header-upper');
-		// 	var headerTop = $('.header-top');
-		// 	var scrollLink = $('.scroll-to-top');
-			
-		// 	// Cek jika scroll lebih dari 100px
-		// 	if (windowpos > 136) {
-		// 		// Menambahkan kelas sticky pada header-upper
-		// 		headerUpper.addClass('sticky');
-		// 		// Menyembunyikan header-top
-		// 		headerTop.fadeOut(300);
-		// 		// Menampilkan scroll-to-top
-		// 		scrollLink.fadeIn(1000);
-		// 	} else {
-		// 		// Menghapus kelas sticky pada header-upper
-		// 		headerUpper.removeClass('sticky');
-		// 		// Menampilkan kembali header-top
-		// 		headerTop.fadeIn(300);
-		// 		// Menyembunyikan scroll-to-top
-		// 		scrollLink.fadeOut(300);
-		// 	}
-		// }
 		if($('.main-header').length){
 			var scrollY = $(window).scrollTop();
 			var header = $('.main-header');

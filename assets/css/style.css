@@ -2300,7 +2300,7 @@ body.modal-open {
     border: 1px solid white;
     color: white;
     font-weight: 300;
-    padding: 6px 16px;
+    padding: 6px 10px;
     border-radius: 9999px;
     font-size: 10px;
     font-family: var(--font-inter);
@@ -2397,41 +2397,6 @@ button {
 .card-wrapper .swiper-slide-button {
 	color: #D6C26A;
 	margin-top: -35px;
-}
-
-.card-event-bg-semantik,
-.card-event-bg-hgtc {
-    position: relative;
-    z-index: 1;
-}
-
-.card-event-bg-semantik::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    transition: background-image 0.8s ease-in-out;
-    animation: bgCrossFadeSemantik 15s ease-in-out infinite;
-}
-.card-event-bg-hgtc::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    transition: background-image 0.8s ease-in-out;
-    animation: bgCrossFadeHGTC 20s ease-in-out infinite;
 }
 
 @media screen and (max-width: 768px) {
