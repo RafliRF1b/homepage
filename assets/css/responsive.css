@@ -538,7 +538,7 @@
         margin-right: 40px;
     }
 
-    /* ================= Section Hero ================= */
+    /* ================= START HERO SECTION ================= */
     .hero-section .hero-content .hero-title {
         font-size: 36px;
     }
@@ -575,7 +575,7 @@
     .overlay-bottom .image-description-container .image-description-title .image-title {
         font-size: 12px;
     }
-    /* ================= Section Hero ================= */
+    /* ================= END HERO SECTION ================= */
 
     /* START AVATAR GUIDE SECTION */
     .avatar-guide-section {
@@ -739,6 +739,35 @@
     .kenali-container .video-overlay button {
         font-size: 0.875rem;
     }
+
+    .kenali-slider {
+        min-height: 430px;
+        gap: 16px;
+    }
+    .kenali-slider-navigation {
+        gap: 20px;
+    }
+    .kenali-slider-button svg {
+        width: 23px;
+        height: 23px;
+    }
+    .kenali-slider-counter {
+        font-size: 13px;
+    }
+    .kenali-slider-viewport {
+        min-height: 370px;
+    }
+    .exploration-grid .kenali-card {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .kenali-card-title-wrapper h3 {
+        font-size: 1rem;
+    }
+    .kenali-card-title-wrapper p {
+        font-size: 11px;
+    }
+
     .exploration-grid .card-visi-misi,
     .exploration-grid .card-grand-design,
     .exploration-grid .card-logo,
@@ -1012,6 +1041,33 @@
     .kenali-container .exploration-container .exploration-grid {
         gap: 28px;
     }
+
+    .kenali-slider {
+        min-height: 450px;
+    }
+    .kenali-slider-track {
+        --kenali-slide-gap: 24px;
+    }
+    .kenali-slider-viewport {
+        min-height: 390px;
+    }
+    .kenali-card-title-wrapper h3 {
+        font-size: 1.125rem;
+    }
+    .kenali-card-title-wrapper p {
+        font-size: 0.75rem;
+    }
+    .kenali-card-asset.asset-bottom-right {
+        width: 108px;
+    }
+    .kenali-card-asset.asset-top-left {
+        width: 124px;
+    }
+    .kenali-card-arrow {
+        width: 12px;
+        height: 12px;
+    }
+
     .exploration-grid .card-visi-misi,
     .exploration-grid .card-grand-design {
         padding-left: 1.25rem; /* px-5 */
@@ -1474,7 +1530,7 @@
     }
     .kenali-section .kenali-container {
         flex-direction: row;
-        gap: 80px;
+        gap: 50px;
         height: 600px;
     }
     .kenali-container .video-card-wrapper {
@@ -1503,22 +1559,51 @@
     }
     .kenali-container .exploration-container {
         max-width: 57.14%;
-        gap: 20px;
+        gap: 30px;
     }
     .kenali-container .exploration-container .title-wrapper h1 {
         max-width: 100%;
+    }
+
+    .kenali-slider {
+        min-height: 0;
+        gap: 14px;
+    }
+    .kenali-slider-viewport {
+        min-height: 0;
+    }
+    .kenali-slider-navigation {
+        gap: 22px;
+    }
+    .kenali-slider-button {
+        width: 35px;
+        height: 35px;
+    }
+    .kenali-card-title-wrapper h3 {
+        margin-bottom: 12px;
+    }
+    .kenali-card-arrow {
+        top: 16px;
+        right: 16px;
+        width: 14px;
+        height: 14px;
+    }
+    .kenali-card-asset.asset-bottom-right {
+        width: 116px;
+    }
+    .kenali-card-asset.asset-top-left {
+        top: -40px;
+        left: -40px;
+        width: 124px;
+    }
+    .kenali-card-title-wrapper h3 {
+        font-size: 1.1rem;
     }
     .visi-misi-title-wrapper h3,
     .grand-design-title-wrapper h3,
     .logo-title-wrapper h3,
     .sejarah-title-wrapper h3 {
         margin-bottom: 12px;
-    }
-    .visi-misi-title-wrapper p,
-    .grand-design-title-wrapper p,
-    .logo-title-wrapper p,
-    .sejarah-title-wrapper p {
-        line-height: 1.625;
     }
     .card-visi-misi img {
         width: 108px;
@@ -1869,6 +1954,7 @@
     }
     .kenali-section .kenali-container {
         height: 720px;
+        gap: 70px;
     }
     .kenali-container .video-card-wrapper {
         max-width: 41.6%; /* xl:max-w-5/12 */
@@ -1884,7 +1970,7 @@
     }
     .kenali-container .exploration-container {
         max-width: 58.33%;
-        gap: 80px;
+        gap: 40px;
     }
     .kenali-container .exploration-container .title-wrapper {
         gap: 10px;
@@ -1898,6 +1984,57 @@
     .kenali-container .exploration-container .exploration-grid {
         gap: 40px;
     }
+
+    .kenali-slider {
+        gap: 18px;
+    }
+    .kenali-slider-button {
+        width: 40px;
+        height: 40px;
+    }
+    .kenali-slider-button svg {
+        width: 25px;
+        height: 25px;
+    }
+    .kenali-slider-counter {
+        min-width: 56px;
+        font-size: 14px;
+    }
+    .exploration-grid .kenali-card {
+        padding: 1.5rem;
+    }
+    .card-kalender-informatika,
+    .card-tenaga-pendidik {
+        padding: 1.5rem !important;
+    }
+    .kenali-card-title-wrapper h3 {
+        font-size: 1.3rem;
+    }
+    .kenali-card-title-wrapper p {
+        font-size: 0.875rem;
+    }
+    .kenali-card-deskripsi-strukorg {
+        max-width: 75%;
+    }
+    .kenali-card-asset.asset-bottom-right {
+        width: 138px;
+        /* width: 148px; */
+    }
+    .kenali-card-asset.asset-bottom-strukorg {
+        bottom: -15px;
+    }
+    .kenali-card-asset.asset-bottom-medpart {
+        bottom: -20px;
+        right: -30px;
+    }
+    .kenali-card-asset.asset-top-left {
+        width: 140px;
+    }
+    .kenali-card-arrow {
+        width: 16px;
+        height: 16px;
+    }
+
     .exploration-grid .card-visi-misi,
     .exploration-grid .card-grand-design,
     .exploration-grid .card-logo {
@@ -1907,7 +2044,7 @@
     .grand-design-title-wrapper h3,
     .logo-title-wrapper h3,
     .sejarah-title-wrapper h3 {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
     .visi-misi-title-wrapper p,
     .grand-design-title-wrapper p,

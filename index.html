@@ -596,8 +596,6 @@
 
             <!-- START AVATAR GUIDE SECTION -->
             <section id="avatar-guide-section" class="avatar-guide-section" aria-labelledby="avatar-guide-title">
-                <!-- Overlay fokus tengah bersifat opsional -->
-                <!-- Hapus komentar pada CSS jika ingin mengaktifkannya -->
                 
                 <div class="avatar-guide__stage">
                     <div class="avatar-guide__badge">
@@ -614,7 +612,6 @@
                     <!-- SELA -->
                     <div id="avatarCharacterSela" class="avatar-character avatar-character--sela" data-character="sela">
                         <div id="avatarBubbleSela" class="avatar-bubble avatar-bubble--sela" role="button" tabindex="0" aria-label="Lanjutkan percakapan bersama Sela" aria-live="polite">
-                            <!-- <span class="avatar-bubble__eyebrow">HALOOO</span> -->
                             <div class="avatar-bubble__meta">
                                 <span class="avatar-bubble__eyebrow">HALOOO</span>
                                 <span id="avatarBubbleProgressSela" class="avatar-bubble__progress" hidden>
@@ -648,7 +645,6 @@
                             aria-label="Lanjutkan percakapan bersama Aras"
                             aria-live="polite"
                         >
-                            <!-- <span class="avatar-bubble__eyebrow">HALOOO</span> -->
                             <div class="avatar-bubble__meta">
                                 <span class="avatar-bubble__eyebrow">HALOOO</span>
                                 <span id="avatarBubbleProgressAras" class="avatar-bubble__progress" hidden>
@@ -809,8 +805,194 @@
                             <h2>Kenali</h2>
                             <h1>Eksplorasi Lebih Dalam Tentang HIMTIKA</h1>
                         </div>
+
+                        <div class="kenali-slider">
+                            <!-- Navigasi Slider -->
+                            <div class="kenali-slider-navigation">
+                                <button type="button" id="kenali-prev" class="kenali-slider-button" aria-label="Tampilkan card Kenali sebelumnya">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+
+                                <div class="kenali-slider-counter" aria-live="polite">
+                                    <span id="kenali-current-slide">01</span>
+                                    <span class="kenali-counter-divider">/</span>
+                                    <span id="kenali-total-slide">02</span>
+                                </div>
+
+                                <button type="button" id="kenali-next" class="kenali-slider-button" aria-label="Tampilkan card Kenali berikutnya">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <!-- Viewport Slider -->
+                            <div class="kenali-slider-viewport" tabindex="0">
+                                <div id="kenali-slider-track" class="kenali-slider-track">
+                                    <!-- ================= SLIDE 1: CARD LAMA ================= -->
+                                    <div class="kenali-slide">
+                                        <div class="exploration-grid">
+                                            <!-- Visi & Misi -->
+                                            <a href="https://himtika.cs.unsika.ac.id/visi-misi" class="card-visi-misi">
+                                                <div class="visi-misi-title-wrapper">
+                                                    <h3 class="title-text-shadow">Visi & Misi</h3>
+                                                    <p>
+                                                        Mengarahkan langkah HIMTIKA ke masa depan yang
+                                                        lebih terstruktur dan berdampak.
+                                                    </p>
+                                                </div>
+                                                <img src="assets/image/icon/target.svg" alt="Ilustrasi target Visi dan Misi">
+                                                <svg class="arrow-icon-top" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M-4.03523e-05 9.65914L8.66202 0.997081H1.2374L1.17376 6.09774e-05H10.3661V9.19245L9.36912 9.12881V1.70419L0.707066 10.3662L-4.03523e-05 9.65914Z"
+                                                        fill="white"
+                                                    />
+                                                </svg>
+                                            </a>
+                                            <!-- Grand Design -->
+                                            <a href="https://himtika.cs.unsika.ac.id/grand-design-himtika" class="card-grand-design">
+                                                <div class="grand-design-title-wrapper">
+                                                    <h3 class="title-text-shadow">Grand Design</h3>
+                                                    <p>
+                                                        Gambaran besar arah pengembangan HIMTIKA dalam
+                                                        satu periode kepengurusan.
+                                                    </p>
+                                                </div>
+                                                <img src="assets/image/icon/gdbook.svg" alt="Ilustrasi Grand Design">
+                                                <svg class="arrow-icon-top-2" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M-4.03523e-05 9.65914L8.66202 0.997081H1.2374L1.17376 6.09774e-05H10.3661V9.19245L9.36912 9.12881V1.70419L0.707066 10.3662L-4.03523e-05 9.65914Z"
+                                                        fill="white"
+                                                    />
+                                                </svg>
+                                            </a>
+                                            <!-- Filosofi Logo -->
+                                            <a href="https://himtika.cs.unsika.ac.id/logo-himtika" class="card-logo">
+                                                <div class="logo-title-wrapper">
+                                                    <h3 class="title-text-shadow">Filosofi Logo</h3>
+                                                    <p>
+                                                        Makna di balik setiap elemen logo sebagai
+                                                        identitas dan nilai HIMTIKA.
+                                                    </p>
+                                                </div>
+                                                <img src="assets/image/icon/kabinetlogo.svg" alt="Ilustrasi Filosofi Logo" >
+                                                <svg class="arrow-icon-top-3" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M-4.03523e-05 9.65914L8.66202 0.997081H1.2374L1.17376 6.09774e-05H10.3661V9.19245L9.36912 9.12881V1.70419L0.707066 10.3662L-4.03523e-05 9.65914Z"
+                                                        fill="white"
+                                                    />
+                                                </svg>
+                                            </a>
+                                            <!-- Sejarah HIMTIKA -->
+                                            <a href="https://himtika.cs.unsika.ac.id/sejarah-himtika" class="card-sejarah">
+                                                <div class="sejarah-title-wrapper">
+                                                    <h3 class="title-text-shadow">Sejarah HIMTIKA</h3>
+                                                    <p>
+                                                        Perjalanan HIMTIKA dari awal berdiri hingga
+                                                        menjadi organisasi saat ini.
+                                                    </p>
+                                                </div>
+                                                <img src="assets/image/logo/HIMTIKA.webp" alt="Logo HIMTIKA">
+                                                <svg class="arrow-icon-top-4" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M-4.03523e-05 9.65914L8.66202 0.997081H1.2374L1.17376 6.09774e-05H10.3661V9.19245L9.36912 9.12881V1.70419L0.707066 10.3662L-4.03523e-05 9.65914Z"
+                                                        fill="white"
+                                                    />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <!-- ================= SLIDE 2: CARD BARU ================= -->
+                                    <div class="kenali-slide">
+                                        <div class="exploration-grid">
+                                            <!-- Struktur Pengurus -->
+                                            <a href="https://himtika.cs.unsika.ac.id/struktur-organisasi/" class="kenali-card card-struktur-pengurus">
+                                                <div class="kenali-card-title-wrapper">
+                                                    <h3 class="title-text-shadow">
+                                                        Struktur Pengurus
+                                                    </h3>
+                                                    <p class="kenali-card-deskripsi-strukorg">
+                                                        Kenali susunan kepengurusan kabinet SELARAS yang menjalankan roda organisasi HIMTIKA.
+                                                    </p>
+                                                </div>
+                                                <img class="kenali-card-asset asset-bottom-right asset-bottom-strukorg" src="assets/image/icon/strukorg-asset.webp" alt="Ilustrasi Struktur Pengurus">
+                                                <svg class="kenali-card-arrow"
+                                                    width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M-4.03523e-05 9.65914L8.66202 0.997081H1.2374L1.17376 6.09774e-05H10.3661V9.19245L9.36912 9.12881V1.70419L0.707066 10.3662L-4.03523e-05 9.65914Z"
+                                                        fill="white"
+                                                    />
+                                                </svg>
+                                            </a>
+                                            <!-- Media Partner -->
+                                            <a href="https://himtika.cs.unsika.ac.id/media-partner/" class="kenali-card card-media-partner">
+                                                <div class="kenali-card-title-wrapper">
+                                                    <h3 class="title-text-shadow">
+                                                        Media Partner
+                                                    </h3>
+                                                    <p class="kenali-card-deskripsi-medpart">
+                                                        Ajukan kerja sama publikasi untuk memperluas
+                                                        jangkauan informasi kegiatanmu.
+                                                    </p>
+                                                </div>
+                                                <img class="kenali-card-asset asset-bottom-right asset-bottom-medpart" src="assets/image/icon/medpart-icon.webp" alt="Ilustrasi Media Partner">
+                                                <svg class="kenali-card-arrow" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M-4.03523e-05 9.65914L8.66202 0.997081H1.2374L1.17376 6.09774e-05H10.3661V9.19245L9.36912 9.12881V1.70419L0.707066 10.3662L-4.03523e-05 9.65914Z"
+                                                        fill="white"
+                                                    />
+                                                </svg>
+                                            </a>
+                                            <!-- Kalender Informatika -->
+                                            <a href="https://himtika.cs.unsika.ac.id/kalender/" class="kenali-card card-kalender-informatika">
+                                                <div class="kenali-card-title-wrapper">
+                                                    <h3 class="title-text-shadow">
+                                                        Kalender IF
+                                                    </h3>
+                                                    <p>
+                                                        Temukan jadwal kegiatan & agenda 
+                                                        Informatika dalam satu kalender.
+                                                    </p>
+                                                </div>
+                                                <img class="kenali-card-asset asset-top-left" src="assets/image/icon/calendar-graphic.webp" alt="Ilustrasi Kalender Informatika">
+                                                <svg
+                                                    class="kenali-card-arrow" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M-4.03523e-05 9.65914L8.66202 0.997081H1.2374L1.17376 6.09774e-05H10.3661V9.19245L9.36912 9.12881V1.70419L0.707066 10.3662L-4.03523e-05 9.65914Z"
+                                                        fill="white"
+                                                    />
+                                                </svg>
+                                            </a>
+                                            <!-- Tenaga Pendidik -->
+                                            <a href="https://himtika.cs.unsika.ac.id/dosen/" class="kenali-card card-tenaga-pendidik">
+                                                <div class="kenali-card-title-wrapper">
+                                                    <h3 class="title-text-shadow">
+                                                        Tenaga Pendidik
+                                                    </h3>
+                                                    <p>
+                                                        Kenali dosen dan tenaga pendidik Program Studi
+                                                        Informatika UNSIKA.
+                                                    </p>
+                                                </div>
+                                                <img class="kenali-card-asset asset-top-left" src="assets/image/icon/tendik-icon.webp" alt="Ilustrasi Tenaga Pendidik">
+                                                <svg
+                                                    class="kenali-card-arrow" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M-4.03523e-05 9.65914L8.66202 0.997081H1.2374L1.17376 6.09774e-05H10.3661V9.19245L9.36912 9.12881V1.70419L0.707066 10.3662L-4.03523e-05 9.65914Z"
+                                                        fill="white"
+                                                    />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
         
-                        <div class="exploration-grid">
+                        <!-- <div class="exploration-grid">
                             <a href="https://himtika.cs.unsika.ac.id/visi-misi" class="card-visi-misi">
                                 <div class="visi-misi-title-wrapper">
                                     <h3 class="title-text-shadow">Visi & Misi</h3>
@@ -846,7 +1028,7 @@
         
                             <a href="https://himtika.cs.unsika.ac.id/sejarah-himtika" class="card-sejarah">
                                 <div class="sejarah-title-wrapper">
-                                    <h3 class="title-text-shadow">Sejarah Himtika</h3>
+                                    <h3 class="title-text-shadow">Sejarah HIMTIKA</h3>
                                     <p>Perjalanan HIMTIKA dari awal berdiri hingga menjadi organisasi saat ini.</p>
                                 </div>
                                 <img src="assets/image/logo/HIMTIKA.webp" alt="icon">
@@ -854,7 +1036,7 @@
                                     <path d="M-4.03523e-05 9.65914L8.66202 0.997081H1.2374L1.17376 6.09774e-05H10.3661V9.19245L9.36912 9.12881V1.70419L0.707066 10.3662L-4.03523e-05 9.65914Z" fill="white"/>
                                 </svg>
                             </a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </section>

@@ -15,6 +15,15 @@
     --color-notWhite: #F0EDDB;
     --color-muted: #959697;
     --color-greenCabinet: rgba(50, 97, 93, 1);
+
+    --color-structure-dark: #260828;
+    --color-structure-light: #47113E;
+    --color-medpart-dark: #373A8C;
+    --color-medpart-light: #5358DD;
+    --color-calendar-dark: #303A52;
+    --color-calendar-light: #596783;
+    --color-tendik-dark: #1E4B44;
+    --color-tendik-light: #3E766E;
 }
 
 /*Batas*/
@@ -1862,7 +1871,7 @@ Overlay tidak perlu diubah pada JavaScript.
     left: 38px;
     z-index: 2;
     display: flex;
-    width: min(130px, calc(100vw - 76px));
+    width: min(300px, calc(100vw - 76px));
     min-height: unset;
     padding: 10px 12px;
     border: 1px solid var(--color-darkGold);
@@ -1895,7 +1904,7 @@ Overlay tidak perlu diubah pada JavaScript.
 }
 .avatar-companion__text {
     color: var(--color-notWhite);
-    font-size: 8px;
+    font-size: 9.5px;
     line-height: 1.45;
 }
 .avatar-companion__notification {
@@ -2480,11 +2489,247 @@ Overlay tidak perlu diubah pada JavaScript.
 .kenali-container .exploration-container .exploration-grid {
     display: grid;
     flex: 1;
+    width: 100%;
     height: 100%;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-template-rows: repeat(2, minmax(0, 1fr));
     gap: 16px;
 }
+
+/* ================= Slider Card Kenali ================= */
+.kenali-slider {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 14px;
+    width: 100%;
+    min-width: 0;
+    min-height: 390px;
+}
+.kenali-slider-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    flex-shrink: 0;
+}
+.kenali-slider-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    border: 1px solid rgba(214, 194, 106, 0.55);
+    border-radius: 9999px;
+    background-color: rgba(214, 194, 106, 0.08);
+    color: var(--color-mainGold);
+    cursor: pointer;
+    transition:
+        background-color 300ms ease,
+        border-color 300ms ease,
+        color 300ms ease,
+        transform 300ms ease,
+        opacity 300ms ease;
+}
+.kenali-slider-button svg {
+    width: 20px;
+    height: 20px;
+}
+.kenali-slider-button:hover {
+    color: var(--color-primaryBG);
+    background-color: var(--color-mainGold);
+    border-color: var(--color-mainGold);
+    transform: scale(1.08);
+}
+.kenali-slider-button:focus-visible {
+    outline: 2px solid var(--color-mainGold);
+    outline-offset: 3px;
+}
+.kenali-slider-button:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+    transform: none;
+    background-color: rgba(214, 194, 106, 0.05);
+    color: var(--color-mainGold);
+}
+.kenali-slider-counter {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    min-width: 48px;
+    justify-content: center;
+    color: var(--color-notWhite);
+    font-family: var(--font-montserrat);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    user-select: none;
+}
+.kenali-slider-counter #kenali-current-slide {
+    color: var(--color-mainGold);
+    font-weight: 700;
+}
+.kenali-counter-divider,
+.kenali-slider-counter #kenali-total-slide {
+    color: var(--color-muted);
+}
+.kenali-slider-viewport {
+    flex: 1;
+    width: 100%;
+    min-width: 0;
+    min-height: 330px;
+    overflow: hidden;
+}
+.kenali-slider-track {
+    --kenali-slide-gap: 20px;
+
+    display: flex;
+    gap: var(--kenali-slide-gap);
+    width: 100%;
+    height: 100%;
+    transition: transform 600ms cubic-bezier(0.65, 0, 0.35, 1);
+    will-change: transform;
+    touch-action: pan-y;
+}
+.kenali-slider-track.is-dragging {
+    transition: none;
+}
+.kenali-slide {
+    flex: 0 0 100%;
+    width: 100%;
+    
+    min-width: 100%;
+    height: 100%;
+}
+.exploration-grid .kenali-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: 2rem 0.75rem;
+    border-radius: 0.75rem;
+    color: #ffffff;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 300ms ease;
+}
+.exploration-grid .kenali-card:hover {
+    transform: translateY(-4px);
+}
+.kenali-card-title-wrapper {
+    position: relative;
+    z-index: 2;
+}
+.kenali-card-title-wrapper h3 {
+    margin-bottom: 8px;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+.kenali-card-title-wrapper p {
+    font-family: var(--font-inter);
+    font-size: 10px;
+    font-weight: 300;
+}
+.kenali-card-deskripsi-strukorg,
+.kenali-card-deskripsi-medpart {
+    max-width: 80%;
+}
+.card-struktur-pengurus {
+    background: linear-gradient(
+        to bottom right,
+        var(--color-structure-dark),
+        var(--color-structure-light)
+    );
+}
+.card-media-partner {
+    background: linear-gradient(
+        to bottom right,
+        var(--color-medpart-dark),
+        var(--color-medpart-light)
+    );
+}
+.card-kalender-informatika {
+    justify-content: flex-end !important;
+    padding: 1rem !important;
+    background: linear-gradient(
+        to bottom right,
+        var(--color-calendar-dark),
+        var(--color-calendar-light)
+    );
+}
+.card-tenaga-pendidik {
+    justify-content: flex-end !important;
+    padding: 1rem !important;
+    background: linear-gradient(
+        to bottom right,
+        var(--color-tendik-dark),
+        var(--color-tendik-light)
+    );
+}
+.kenali-card-asset {
+    position: absolute;
+    z-index: 1;
+    user-select: none;
+    border-radius: 14px;
+    opacity: 0.8;
+    transition:
+        transform 500ms ease,
+        opacity 500ms ease;
+}
+.kenali-card-asset.asset-bottom-right {
+    width: 88px;
+}
+.kenali-card-asset.asset-bottom-strukorg {
+    right: -10px;
+    bottom: -10px;
+}
+.kenali-card-asset.asset-bottom-medpart {
+    right: -10px;
+    bottom: -20px;
+}
+.kenali-card-asset.asset-top-left {
+    top: -28px;
+    left: -28px;
+    width: 100px;
+    transform: rotate(-10deg);
+}
+.kenali-card:hover .kenali-card-asset {
+    transform: scale(1.1);
+    opacity: 1;
+}
+.kenali-card-arrow {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 10px;
+    height: 10px;
+    z-index: 3;
+    transform: rotate(0deg);
+    transition: transform 700ms ease;
+}
+.kenali-card:hover .kenali-card-arrow {
+    transform: rotate(90deg);
+}
+/* Warna selection */
+.card-struktur-pengurus::selection,
+.card-struktur-pengurus *::selection {
+    background-color: var(--color-structure-light);
+}
+.card-media-partner::selection,
+.card-media-partner *::selection {
+    background-color: var(--color-medpart-light);
+}
+.card-kalender-informatika::selection,
+.card-kalender-informatika *::selection {
+    background-color: var(--color-calendar-light);
+}
+.card-tenaga-pendidik::selection,
+.card-tenaga-pendidik *::selection {
+    background-color: var(--color-tendik-light);
+}
+
 /* --- Overlay Hitam di Belakang --- */
 /* Class sakti untuk mengunci total scroll halaman utama */
 body.modal-open {

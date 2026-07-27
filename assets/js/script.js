@@ -308,3 +308,212 @@ document.querySelectorAll('.btn-seemore').forEach((btn) => {
 		}
 	});
 });
+
+// ================= SLIDER SECTION KENALI =================
+document.addEventListener("DOMContentLoaded", () => {
+    const viewport = document.querySelector(".kenali-slider-viewport");
+    const sliderTrack = document.getElementById("kenali-slider-track");
+    const previousButton = document.getElementById("kenali-prev");
+    const nextButton = document.getElementById("kenali-next");
+    const currentSlideElement = document.getElementById(
+        "kenali-current-slide"
+    );
+    const totalSlideElement = document.getElementById(
+        "kenali-total-slide"
+    );
+
+    if (
+        !viewport ||
+        !sliderTrack ||
+        !previousButton ||
+        !nextButton ||
+        !currentSlideElement ||
+        !totalSlideElement
+    ) {
+        return;
+    }
+
+    const slides = sliderTrack.querySelectorAll(".kenali-slide");
+    const totalSlides = slides.length;
+
+    let currentSlideIndex = 0;
+    let dragStartX = 0;
+    let dragCurrentX = 0;
+    let isDragging = false;
+
+    const formatSlideNumber = (number) => {
+        return String(number).padStart(2, "0");
+    };
+
+    const getSlideGap = () => {
+        const trackStyle = window.getComputedStyle(sliderTrack);
+        const gapValue =
+            trackStyle.columnGap ||
+            trackStyle.gap ||
+            "0";
+
+        return Number.parseFloat(gapValue) || 0;
+    };
+
+    const getSlideDistance = () => {
+        return viewport.clientWidth + getSlideGap();
+    };
+
+    const getBaseTranslate = () => {
+        return -(currentSlideIndex * getSlideDistance());
+    };
+
+    const setTrackPosition = (translateX, animate = true) => {
+        sliderTrack.classList.toggle("is-dragging", !animate);
+        sliderTrack.style.transform = `translate3d(${translateX}px, 0, 0)`;
+    };
+
+    const updateNavigation = () => {
+        currentSlideElement.textContent = formatSlideNumber(
+            currentSlideIndex + 1
+        );
+
+        totalSlideElement.textContent = formatSlideNumber(totalSlides);
+
+        previousButton.disabled = currentSlideIndex === 0;
+        nextButton.disabled =
+            currentSlideIndex === totalSlides - 1;
+    };
+
+    const moveToCurrentSlide = (animate = true) => {
+        setTrackPosition(getBaseTranslate(), animate);
+        updateNavigation();
+    };
+
+    const showPreviousSlide = () => {
+        if (currentSlideIndex <= 0) {
+            moveToCurrentSlide();
+            return;
+        }
+
+        currentSlideIndex -= 1;
+        moveToCurrentSlide();
+    };
+
+    const showNextSlide = () => {
+        if (currentSlideIndex >= totalSlides - 1) {
+            moveToCurrentSlide();
+            return;
+        }
+
+        currentSlideIndex += 1;
+        moveToCurrentSlide();
+    };
+
+    const startDrag = (clientX) => {
+        isDragging = true;
+        dragStartX = clientX;
+        dragCurrentX = clientX;
+
+        sliderTrack.classList.add("is-dragging");
+    };
+
+    const dragSlider = (clientX) => {
+        if (!isDragging) {
+            return;
+        }
+
+        dragCurrentX = clientX;
+
+        let dragDistance = dragCurrentX - dragStartX;
+
+        const isDraggingPastFirstSlide =
+            currentSlideIndex === 0 && dragDistance > 0;
+
+        const isDraggingPastLastSlide =
+            currentSlideIndex === totalSlides - 1 &&
+            dragDistance < 0;
+
+        // Resistance ketika ditarik melewati batas awal/akhir
+        if (
+            isDraggingPastFirstSlide ||
+            isDraggingPastLastSlide
+        ) {
+            dragDistance *= 0.25;
+        }
+
+        const dragTranslate =
+            getBaseTranslate() + dragDistance;
+
+        setTrackPosition(dragTranslate, false);
+    };
+
+    const endDrag = () => {
+        if (!isDragging) {
+            return;
+        }
+
+        isDragging = false;
+        sliderTrack.classList.remove("is-dragging");
+
+        const dragDistance = dragCurrentX - dragStartX;
+        const slideDistance = getSlideDistance();
+
+        // Minimal sekitar 18% lebar slide
+        const dragThreshold = Math.min(
+            slideDistance * 0.18,
+            120
+        );
+
+        if (
+            dragDistance < -dragThreshold &&
+            currentSlideIndex < totalSlides - 1
+        ) {
+            currentSlideIndex += 1;
+        } else if (
+            dragDistance > dragThreshold &&
+            currentSlideIndex > 0
+        ) {
+            currentSlideIndex -= 1;
+        }
+
+        moveToCurrentSlide(true);
+    };
+
+    previousButton.addEventListener(
+        "click",
+        showPreviousSlide
+    );
+
+    nextButton.addEventListener(
+        "click",
+        showNextSlide
+    );
+
+    viewport.addEventListener("touchstart", (event) => {
+        startDrag(event.touches[0].clientX);
+    }, {
+        passive: true
+    });
+
+    viewport.addEventListener("touchmove", (event) => {
+        dragSlider(event.touches[0].clientX);
+    }, {
+        passive: true
+    });
+
+    viewport.addEventListener("touchend", endDrag);
+    viewport.addEventListener("touchcancel", endDrag);
+
+    viewport.addEventListener("keydown", (event) => {
+        if (event.key === "ArrowLeft") {
+            showPreviousSlide();
+        }
+
+        if (event.key === "ArrowRight") {
+            showNextSlide();
+        }
+    });
+
+    window.addEventListener("resize", () => {
+        moveToCurrentSlide(false);
+    });
+
+    moveToCurrentSlide(false);
+});
+// ================= END SLIDER SECTION KENALI =================
