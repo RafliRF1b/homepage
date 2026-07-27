@@ -576,6 +576,100 @@
         font-size: 12px;
     }
     /* ================= Section Hero ================= */
+
+    /* START AVATAR GUIDE SECTION */
+    .avatar-guide-section {
+        padding-top: 62px;
+    }
+    .avatar-guide-section,
+    .avatar-guide__stage {
+        min-height: 620px;
+    }
+    .avatar-guide__stage::after {
+        background:
+            linear-gradient(
+                to top,
+                var(--color-primaryBG) 20%,
+                color-mix(
+                    in srgb,
+                    var(--color-primaryBG) 86%,
+                    transparent
+                ) 34%,
+                color-mix(
+                    in srgb,
+                    var(--color-darkGreen) 42%,
+                    transparent
+                ) 68%,
+                transparent 100%
+            );
+    }
+    .avatar-guide__badge {
+        top: 52px;
+    }
+    .avatar-guide__badge-title {
+        font-size: 10px;
+    }
+    .avatar-guide__interaction-hint {
+        font-size: 10px;
+    }
+    .avatar-character {
+        bottom: 105px;
+        width: 34%;
+        max-width: 230px;
+    }
+    .avatar-character--sela {
+        left: 2%;
+    }
+    .avatar-character--aras {
+        right: 2%;
+    }
+    .avatar-bubble {
+        /* top: -102px; */
+        bottom: 95%;
+        width: 230px;
+        /* min-height: 130px; */
+        padding: 16px;
+    }
+    .avatar-bubble--sela {
+        left: 28px;
+    }
+    .avatar-bubble--aras {
+        right: 25px;
+    }
+    .avatar-bubble__title {
+        font-size: 16px;
+    }
+    .avatar-bubble__text {
+        font-size: 11px;
+    }
+    .avatar-bubble__cta {
+        font-size: 10px;
+    }
+    .avatar-guide__center {
+        bottom: 66px;
+    }
+    .avatar-guide__ornament {
+        margin-top: 10px;
+        gap: 12px;
+    }
+    .avatar-guide__ornament img {
+        width: 24px;
+        height: 24px;
+    }
+    .avatar-guide__scroll svg {
+        width: 28px;
+        height: 28px;
+    }
+    .avatar-guide__center h2 {
+        max-width: 360px;
+        font-size: 20px;
+    }
+    .avatar-grass {
+        bottom: 27px;
+        width: 55%;
+        max-width: 430px;
+    }
+    /* END AVATAR GUIDE SECTION */
     
     /* ================= Section Kahim Wahim ================= */
     .about-title-container h2 {
@@ -747,6 +841,121 @@
         font-size: 10px;
     }
     /* ================= Section Hero ================= */
+
+    /* START AVATAR GUIDE SECTION */
+    .avatar-guide-section {
+        min-height: 630px;
+        background-image: url("../image/bg/bg-avatar-desktop.webp");
+        padding-top: 82px;
+    }
+    .avatar-guide__stage {
+        min-height: 630px;
+    }
+    .avatar-guide__badge {
+        top: 54px;
+        gap: 9px;
+    }
+    .avatar-guide__badge-title {
+        font-size: 11px;
+    }
+    .avatar-guide__stage:hover .avatar-guide__badge-title {
+        letter-spacing: 5px;
+    }
+    .avatar-guide__interaction-hint {
+        font-size: 11px;
+    }
+    @keyframes avatarFloatLeft {
+        0% { transform: translateY(0) rotate(-0.8deg); }
+        25% { transform: translateY(-12px) rotate(0deg); }
+        50% { transform: translateY(-18px) rotate(0.6deg); }
+        75% { transform: translateY(-10px) rotate(0deg); }
+        100% { transform: translateY(0) rotate(-0.8deg); }
+    }
+
+    @keyframes avatarFloatRight {
+        0% { transform: translateY(-18px) rotate(0.6deg); }
+        25% { transform: translateY(-10px) rotate(0deg); }
+        50% { transform: translateY(0) rotate(-0.8deg); }
+        75% { transform: translateY(-12px) rotate(0deg); }
+        100% { transform: translateY(-18px) rotate(0.6deg); }
+    }
+    .avatar-character {
+        bottom: 95px;
+        width: 34%;
+        max-width: 250px;
+    }
+    .avatar-character--sela {
+        left: 3%;
+    }
+    .avatar-character--aras {
+        right: 3%;
+    }
+    .avatar-bubble {
+        /* top: -112px; */
+        bottom: 99%;
+        width: 250px;
+        border-radius: 18px;
+    }
+    .avatar-bubble--sela {
+        left: 54px;
+    }
+    .avatar-bubble--aras {
+        right: 54px;
+    }
+    .avatar-bubble__eyebrow {
+        font-size: 10px;
+    }
+    .avatar-bubble__title {
+        font-size: 21px;
+    }
+    .avatar-bubble__text {
+        font-size: 12px;
+    }
+    .avatar-bubble__cta {
+        font-size: 11px;
+        margin-top: 8px;
+    }
+    .avatar-guide__center {
+        bottom: 86px;
+    }
+    .avatar-guide__center h2 {
+        max-width: 440px;
+        font-size: 23px;
+    }
+    .avatar-guide__scroll {
+        margin-top: 12px;
+    }
+    .avatar-grass {
+        bottom: 15px;
+        width: 45%;
+        max-width: 430px;
+    }
+    .avatar-grass--left {
+        left: -2%;
+    }
+    .avatar-grass--right {
+        right: -2%;
+    }
+    .avatar-companion {
+        bottom: 22px;
+        left: 20px;
+        width: 74px;
+        height: 84px;
+    }
+    .avatar-companion__character {
+        width: 70px;
+        height: 82px;
+    }
+    .avatar-companion__bubble {
+        bottom: 72px;
+        left: 50px;
+        width: 280px;
+        padding: 15px 17px;
+    }
+    .avatar-companion__text {
+        font-size: 12px;
+    }
+    /* END AVATAR GUIDE SECTION */
     
     /* ================= Section Kahim Wahim ================= */
     .about-section .statistik-container .stats-card {
@@ -1068,6 +1277,109 @@
         gap: 6px;
     }
     /* ================= Section Hero ================= */
+
+    /* ================= START AVATAR GUIDE SECTION ================= */
+    .avatar-guide-section,
+    .avatar-guide__stage {
+        min-height: 660px;
+    }
+    .avatar-guide__badge {
+        top: 60px;
+        gap: 12px;
+    }
+    .avatar-guide__badge-title {
+        gap: 12px;
+        font-size: 12px;
+        letter-spacing: 5px;
+    }
+    .avatar-guide__stage:hover .avatar-guide__badge-title {
+        letter-spacing: 7px;
+    }
+    .avatar-guide__interaction-hint {
+        font-size: 12px;
+    }
+    .avatar-character {
+        bottom: 95px;
+        width: 34%;
+        max-width: 270px;
+    }
+    .avatar-character--sela {
+        left: 3%;
+    }
+    .avatar-character--aras {
+        right: 3%;
+    }
+    .avatar-bubble {
+        /* top: -104px; */
+        bottom: 100%;
+        width: 300px;
+        /* min-height: 150px; */
+        padding: 18px;
+        border-radius: 20px;
+    }
+    .avatar-bubble--sela {
+        left: 64px;
+    }
+    .avatar-bubble--aras {
+        right: 64px;
+    }
+    .avatar-bubble__eyebrow {
+        font-size: 12px;
+    }
+    .avatar-bubble__title {
+        font-size: 24px;
+    }
+    .avatar-bubble__text {
+        /* min-height: 22px; */
+        font-size: 13px;
+    }
+    .avatar-bubble__cta {
+        font-size: 12px;
+        margin-top: 14px;
+    }
+    .avatar-guide__center {
+        bottom: 86px;
+    }
+    .avatar-guide__center h2 {
+        max-width: 440px;
+        font-size: 30px;
+    }
+    .avatar-guide__ornament {
+        margin-top: 12px;
+        width: 380px;
+    }
+    .avatar-guide__scroll {
+        margin-top: 18px;
+        font-size: 13px;
+        gap: 3px;
+    }
+    .avatar-grass {
+        bottom: 10px;
+        width: 38%;
+        max-width: 500px;
+    }
+    .avatar-companion {
+        bottom: 28px;
+        left: 26px;
+        width: 92px;
+        height: 106px;
+    }
+    .avatar-companion__character {
+        width: 88px;
+        height: 102px;
+    }
+    .avatar-companion__bubble {
+        bottom: 88px;
+        left: 64px;
+        min-height: 92px;
+    }
+    .avatar-companion__name {
+        font-size: 11px;
+    }
+    .avatar-companion__text {
+        font-size: 13px;
+    }
+    /* ================= END AVATAR GUIDE SECTION ================= */
 
     /* ================= Section Kahim Wahim ================= */
     .about-section .about-glow {
@@ -1440,6 +1752,56 @@
     }
     /* ================= Section Hero ================= */
 
+    /* ================= START AVATAR GUIDE SECTION ================= */
+    .avatar-guide-section,
+    .avatar-guide__stage {
+        min-height: 670px;
+    }
+    .avatar-guide__stage:hover .avatar-guide__badge-title {
+        letter-spacing: 8px;
+    }
+    .avatar-character {
+        bottom: 108px;
+        width: 34%;
+        max-width: 320px;
+    }
+    .avatar-character--sela {
+        left: 2%;
+    }
+    .avatar-character--aras {
+        right: 2%;
+    }
+    .avatar-bubble {
+        /* top: -104px; */
+        bottom: 98%;
+        width: 330px;
+        /* min-height: 160px; */
+    }
+    .avatar-bubble--sela {
+        left: 60px;
+    }
+    .avatar-bubble--aras {
+        right: 60px;
+    }
+    .avatar-guide__center {
+        bottom: 106px;
+    }
+    .avatar-guide__center h2 {
+        max-width: 580px;
+        font-size: 38px;
+    }
+    .avatar-guide__ornament {
+        margin-top: 16px;
+    }
+    .avatar-guide__scroll {
+        margin-top: 18px;
+    }
+    .avatar-grass {
+        bottom: 0;
+        max-width: 560px;
+    }
+    /* ================= END AVATAR GUIDE SECTION ================= */
+
     /* ================= Section kahim wahim ================= */
     .about-section {
         padding-top: 140px;
@@ -1698,6 +2060,59 @@
         gap: 8px;
     }
     /* ================= Section Hero ================= */
+
+    /* ================= START AVATAR GUIDE SECTION ================= */
+    .avatar-guide-section,
+    .avatar-guide__stage {
+        min-height: 900px;
+    }
+    .avatar-guide__badge {
+        top: 72px;
+    }
+    .avatar-guide__interaction-hint {
+        font-size: 14px;
+    }
+    .avatar-guide__badge-title {
+        font-size: 13px;
+    }
+    .avatar-character {
+        width: 28%;
+        max-width: 470px;
+    }
+    .avatar-character--sela {
+        left: 3%;
+    }
+    .avatar-character--aras {
+        right: 3%;
+    }
+    .avatar-bubble {
+        /* top: -130px; */
+        width: 300px;
+        bottom: 95%;
+        /* min-height: 174px; */
+        padding: 22px;
+    }
+    .avatar-bubble--sela {
+        left: 300px;
+    }
+    .avatar-bubble--aras {
+        right: 300px;
+    }
+    .avatar-bubble__title {
+        font-size: 28px;
+    }
+    .avatar-bubble__text {
+        font-size: 14px;
+    }
+    .avatar-guide__center h2 {
+        max-width: 640px;
+        font-size: 48px;
+    }
+    .avatar-grass {
+        bottom: -10px;
+        max-width: 620px;
+    }
+    /* ================= END AVATAR GUIDE SECTION ================= */
 
     /* ================= Section Kahim Wahim ================= */
     /* .about-section .about-container {

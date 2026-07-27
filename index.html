@@ -593,6 +593,112 @@
                 <div class="hero-glow-2 floating-glow"></div>
             </section>
             <!-- End Hero Section -->
+
+            <!-- START AVATAR GUIDE SECTION -->
+            <section id="avatar-guide-section" class="avatar-guide-section" aria-labelledby="avatar-guide-title">
+                <!-- Overlay fokus tengah bersifat opsional -->
+                <!-- Hapus komentar pada CSS jika ingin mengaktifkannya -->
+                
+                <div class="avatar-guide__stage">
+                    <div class="avatar-guide__badge">
+                        <div class="avatar-guide__badge-title" aria-hidden="true">
+                            <span>✦</span>
+                            <p>TEMUI AVATAR SELARAS</p>
+                            <span>✦</span>
+                        </div>
+                        <p class="avatar-guide__interaction-hint">
+                            Klik salah satu avatar untuk berinteraksi
+                        </p>
+                    </div>
+
+                    <!-- SELA -->
+                    <div id="avatarCharacterSela" class="avatar-character avatar-character--sela" data-character="sela">
+                        <div id="avatarBubbleSela" class="avatar-bubble avatar-bubble--sela" role="button" tabindex="0" aria-label="Lanjutkan percakapan bersama Sela" aria-live="polite">
+                            <!-- <span class="avatar-bubble__eyebrow">HALOOO</span> -->
+                            <div class="avatar-bubble__meta">
+                                <span class="avatar-bubble__eyebrow">HALOOO</span>
+                                <span id="avatarBubbleProgressSela" class="avatar-bubble__progress" hidden>
+                                    1/6
+                                </span>
+                            </div>
+                            <strong class="avatar-bubble__title">
+                                Aku <span>Sela!</span>
+                            </strong>
+                            <span id="avatarBubbleTextSela" class="avatar-bubble__text">
+                                Aku siap mengajakmu berani melangkah.
+                            </span>
+                            <a id="avatarBubbleCtaSela" class="avatar-bubble__cta" href="https://himtika.cs.unsika.ac.id/logo-himtika/">
+                                Yuk Kenali Filosofiku!
+                                <span aria-hidden="true">→</span>
+                            </a>
+                        </div>
+
+                        <button class="avatar-character__button" type="button" aria-label="Berinteraksi dengan Sela">
+                            <img id="avatarImageSela" class="avatar-character__image avatar-character__image--floating" src="assets/image/avatar/sela-greeting.webp" alt="Sela, maskot Kabinet Selaras" draggable="false">
+                        </button>
+                    </div>
+
+                    <!-- ARAS -->
+                    <div id="avatarCharacterAras" class="avatar-character avatar-character--aras" data-character="aras">
+                        <div
+                            id="avatarBubbleAras"
+                            class="avatar-bubble avatar-bubble--aras"
+                            role="button"
+                            tabindex="0"
+                            aria-label="Lanjutkan percakapan bersama Aras"
+                            aria-live="polite"
+                        >
+                            <!-- <span class="avatar-bubble__eyebrow">HALOOO</span> -->
+                            <div class="avatar-bubble__meta">
+                                <span class="avatar-bubble__eyebrow">HALOOO</span>
+                                <span id="avatarBubbleProgressAras" class="avatar-bubble__progress" hidden>
+                                    1/6
+                                </span>
+                            </div>
+                            <strong class="avatar-bubble__title">
+                                Aku <span>Aras!</span>
+                            </strong>
+                            <span id="avatarBubbleTextAras" class="avatar-bubble__text">
+                                Aku siap menemanimu tumbuh seimbang.
+                            </span>
+                            <a id="avatarBubbleCtaAras" class="avatar-bubble__cta" href="https://himtika.cs.unsika.ac.id/logo-himtika/">
+                                Mari Lihat Ceritaku!
+                                <span aria-hidden="true">→</span>
+                            </a>
+                        </div>
+
+                        <button class="avatar-character__button" type="button" aria-label="Berinteraksi dengan Aras">
+                            <img id="avatarImageAras" class="avatar-character__image avatar-character__image--floating-reverse" src="assets/image/avatar/aras-greeting.webp" alt="Aras, maskot Kabinet Selaras" draggable="false">
+                        </button>
+                    </div>
+
+                    <!-- Asset rumput tetap sibling, tidak masuk wrapper avatar -->
+                    <img class="avatar-grass avatar-grass--left" src="assets/image/avatar/grass-left.webp" alt="" aria-hidden="true" draggable="false">
+                    <img class="avatar-grass avatar-grass--right" src="assets/image/avatar/grass-right.webp" alt="" aria-hidden="true" draggable="false">
+
+                    <div class="avatar-guide__center">
+                        <h2 id="avatar-guide-title">
+                            Bersama kami,
+                            <span class="block-text">mari <span class="text-gold">jelajahi HIMTIKA.</span></span>
+                        </h2>
+
+                        <div class="avatar-guide__ornament" aria-hidden="true">
+                            <span></span>
+                            <img src="assets/image/logo/selaras-no-shadow.webp" alt="">
+                            <span></span>
+                        </div>
+
+                        <a class="avatar-guide__scroll" href="#about-section" aria-label="Lanjut menuju section berikutnya">
+                            <span>Scroll untuk mulai menjelajah</span>
+
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M6 9L12 15L18 9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <!-- END AVATAR GUIDE SECTION -->
             
             <!-- Start sapaan kahim-wahim Section -->
             <section id="about-section" class="about-section margin-x-section">
@@ -1276,6 +1382,26 @@
                 </div>
             </div>
         </main>
+
+        <!-- START FIXED AVATAR COMPANION -->
+        <aside id="avatarCompanion" class="avatar-companion" aria-live="polite" aria-hidden="true">
+            <button id="avatarCompanionBubble" class="avatar-companion__bubble" type="button" aria-label="Buka atau lanjutkan pesan pemandu">
+                <span id="avatarCompanionName" class="avatar-companion__name">
+                    Aras
+                </span>
+                <span id="avatarCompanionText" class="avatar-companion__text"></span>
+            </button>
+
+            <button id="avatarCompanionCharacter" class="avatar-companion__character" type="button" aria-label="Buka pesan pemandu HIMTIKA">
+                <img id="avatarCompanionImage" src="assets/image/avatar/aras-greeting.webp" alt="Pemandu HIMTIKA" draggable="false">
+                <span id="avatarCompanionNotification" class="avatar-companion__notification" aria-hidden="true"></span>
+            </button>
+
+            <button id="avatarCompanionClose" class="avatar-companion__close" type="button" aria-label="Sembunyikan pemandu">
+                ×
+            </button>
+        </aside>
+        <!-- END FIXED AVATAR COMPANION -->
     
         <!-- Back To Top Button -->
         <button class="button-back-to-top back-to-top" id="backToTop">
@@ -1400,5 +1526,10 @@
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/scrollbar.js"></script>
     <script src="assets/js/script.js"></script>
+    <!-- GSAP khusus animasi avatar -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+
+    <!-- Sistem Avatar Sela & Aras -->
+    <script src="assets/js/avatar-guide.js"></script>
 </body>
 </html>
