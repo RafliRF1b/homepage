@@ -633,7 +633,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (dialogue.ctaText && dialogue.ctaLink) {
             character.cta.innerHTML =
-                `${dialogue.ctaText} <span aria-hidden="true">→</span>`;
+                `${dialogue.ctaText} <svg xmlns="http://www.w3.org/2000/svg" width="1.78em" height="1em" viewBox="0 0 16 9"><title xmlns="">arrowright</title><path fill="currentColor" d="M12.5 5h-9c-.28 0-.5-.22-.5-.5s.22-.5.5-.5h9c.28 0 .5.22.5.5s-.22.5-.5.5"/><path fill="currentColor" d="M10 8.5a.47.47 0 0 1-.35-.15c-.2-.2-.2-.51 0-.71l3.15-3.15l-3.15-3.15c-.2-.2-.2-.51 0-.71s.51-.2.71 0l3.5 3.5c.2.2.2.51 0 .71l-3.5 3.5c-.1.1-.23.15-.35.15Z"/></svg>`;
 
             character.cta.href = dialogue.ctaLink;
             character.cta.hidden = false;
@@ -845,10 +845,6 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
         eyebrow.textContent = dialogue.eyebrow;
-        // title.innerHTML =
-        //     characterName === "sela"
-        //         ? 'Aku <span>Sela!</span>'
-        //         : 'Aku <span>Aras!</span>';
         title.hidden = true;
         title.innerHTML = "";
 
@@ -987,10 +983,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 ? "SELA BERBICARA"
                 : "ARAS BERBICARA";
 
-        // title.innerHTML =
-        //     speaker === "sela"
-        //         ? 'Aku <span>Sela!</span>'
-        //         : 'Aku <span>Aras!</span>';
         title.hidden = true;
         title.innerHTML = "";
 
@@ -1097,32 +1089,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         resetCharacterPoses();
     }
-
-    /* ========================================================
-       AVATAR SECTION OBSERVER
-       ======================================================== */
-
-    // const avatarSectionObserver = new IntersectionObserver(
-    //     (entries) => {
-    //         const entry = entries[0];
-
-    //         if (entry.isIntersecting) {
-    //             isAvatarSectionVisible = true;
-    //             hideCompanion(true);
-    //             enterIntroState();
-    //         } else {
-    //             isAvatarSectionVisible = false;
-    //             leaveAvatarSection();
-    //             evaluateCompanionVisibility();
-    //         }
-    //     },
-    //     {
-    //         threshold: 0.32
-    //     }
-    // );
-
-    // avatarSectionObserver.observe(avatarSection);
-
     /* ========================================================
     AVATAR SECTION OBSERVER
 
@@ -1171,8 +1137,8 @@ document.addEventListener("DOMContentLoaded", () => {
             * Pada kondisi ini avatar boleh dihentikan.
             */
             const hasReturnedToHero =
-                entry.boundingClientRect.top >=
-                window.innerHeight;
+                !entry.isIntersecting &&
+                entry.boundingClientRect.top >= 0;
 
             if (
                 hasReturnedToHero &&
