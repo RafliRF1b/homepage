@@ -1102,22 +1102,100 @@ document.addEventListener("DOMContentLoaded", () => {
        AVATAR SECTION OBSERVER
        ======================================================== */
 
-    const avatarSectionObserver = new IntersectionObserver(
-        (entries) => {
-            const entry = entries[0];
+    // const avatarSectionObserver = new IntersectionObserver(
+    //     (entries) => {
+    //         const entry = entries[0];
 
-            if (entry.isIntersecting) {
+    //         if (entry.isIntersecting) {
+    //             isAvatarSectionVisible = true;
+    //             hideCompanion(true);
+    //             enterIntroState();
+    //         } else {
+    //             isAvatarSectionVisible = false;
+    //             leaveAvatarSection();
+    //             evaluateCompanionVisibility();
+    //         }
+    //     },
+    //     {
+    //         threshold: 0.32
+    //     }
+    // );
+
+    // avatarSectionObserver.observe(avatarSection);
+
+    /* ========================================================
+    AVATAR SECTION OBSERVER
+
+    Tugasnya:
+    1. Memulai INTRO ketika Avatar Section terlihat 32%.
+    2. Tidak menghentikan avatar ketika scroll ke bawah.
+        Section berikutnya yang akan mengambil alih.
+    3. Menghentikan avatar ketika user kembali ke Hero.
+    ======================================================== */
+
+    const AVATAR_SECTION_ENTER_RATIO = 0.32;
+
+    const avatarSectionObserver = new IntersectionObserver(
+        ([entry]) => {
+            /*
+            * MASUK AVATAR SECTION
+            *
+            * Guard !isAvatarSectionVisible mencegah INTRO
+            * dijalankan ulang ketika user hanya scroll sedikit.
+            */
+            if (
+                entry.isIntersecting &&
+                entry.intersectionRatio >= AVATAR_SECTION_ENTER_RATIO &&
+                !isAvatarSectionVisible
+            ) {
                 isAvatarSectionVisible = true;
+
                 hideCompanion(true);
                 enterIntroState();
-            } else {
-                isAvatarSectionVisible = false;
-                leaveAvatarSection();
-                evaluateCompanionVisibility();
+
+                return;
             }
+
+            /*
+            * Selama section masih terlihat, jangan mengubah apa pun.
+            * Typewriter, timer, dan state sekarang tetap berjalan.
+            */
+            if (entry.isIntersecting) {
+                return;
+            }
+
+            /*
+            * Jika Avatar Section tidak terlihat dan posisinya berada
+            * DI BAWAH viewport, artinya user kembali naik ke Hero.
+            *
+            * Pada kondisi ini avatar boleh dihentikan.
+            */
+            const hasReturnedToHero =
+                entry.boundingClientRect.top >=
+                window.innerHeight;
+
+            if (
+                hasReturnedToHero &&
+                isAvatarSectionVisible
+            ) {
+                isAvatarSectionVisible = false;
+
+                leaveAvatarSection();
+                hideCompanion(true);
+            }
+
+            /*
+            * Kalau section tidak terlihat karena sudah lewat ke atas
+            * saat scroll turun, jangan lakukan apa pun di sini.
+            *
+            * Companion observer yang akan mengambil alih.
+            */
         },
         {
-            threshold: 0.32
+            threshold: [
+                0,
+                AVATAR_SECTION_ENTER_RATIO
+            ]
         }
     );
 
@@ -1155,7 +1233,8 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!companion.root) return;
 
         clearCompanionTimer();
-        cancelTyping();
+        // cancelTyping();
+        companion.root.classList.remove("is-typing");
 
         companionBubbleOpen = false;
 
@@ -1315,9 +1394,9 @@ document.addEventListener("DOMContentLoaded", () => {
     function activateCompanionSection(sectionId) {
         const map = COMPANION_SECTION_MAP[sectionId];
 
+        
         if (
             !map ||
-            isAvatarSectionVisible ||
             companionHiddenByUser
         ) {
             return;
@@ -1358,22 +1437,22 @@ document.addEventListener("DOMContentLoaded", () => {
         showCompanionBubble(messageData);
     }
 
-    function evaluateCompanionVisibility() {
-        const avatarRect =
-            avatarSection.getBoundingClientRect();
+    // function evaluateCompanionVisibility() {
+    //     const avatarRect =
+    //         avatarSection.getBoundingClientRect();
 
-        /*
-         * Companion hanya aktif apabila user sudah berada
-         * di bawah Avatar Section, bukan ketika scroll ke Hero.
-         */
-        const hasPassedAvatarSection =
-            avatarRect.bottom <=
-            window.innerHeight * 0.4;
+    //     /*
+    //      * Companion hanya aktif apabila user sudah berada
+    //      * di bawah Avatar Section, bukan ketika scroll ke Hero.
+    //      */
+    //     const hasPassedAvatarSection =
+    //         avatarRect.bottom <=
+    //         window.innerHeight * 0.4;
 
-        if (!hasPassedAvatarSection) {
-            hideCompanion();
-        }
-    }
+    //     if (!hasPassedAvatarSection) {
+    //         hideCompanion();
+    //     }
+    // }
 
     /* ========================================================
        COMPANION SECTION OBSERVER
@@ -1390,6 +1469,51 @@ document.addEventListener("DOMContentLoaded", () => {
     const visibleSectionRatios = new Map();
 
     const companionSectionObserver =
+        // new IntersectionObserver(
+        //     (entries) => {
+        //         entries.forEach((entry) => {
+        //             visibleSectionRatios.set(
+        //                 entry.target.id,
+        //                 entry.isIntersecting
+        //                     ? entry.intersectionRatio
+        //                     : 0
+        //             );
+        //         });
+
+        //         if (
+        //             isAvatarSectionVisible ||
+        //             companionHiddenByUser
+        //         ) {
+        //             return;
+        //         }
+
+        //         const activeEntry =
+        //             [...visibleSectionRatios.entries()]
+        //                 .filter(([, ratio]) => ratio > 0)
+        //                 .sort(
+        //                     (first, second) =>
+        //                         second[1] - first[1]
+        //                 )[0];
+
+        //         if (!activeEntry) {
+        //             return;
+        //         }
+
+        //         activateCompanionSection(activeEntry[0]);
+        //     },
+        //     {
+        //         rootMargin: "-18% 0px -42% 0px",
+        //         threshold: [
+        //             0.08,
+        //             0.18,
+        //             0.28,
+        //             0.4,
+        //             0.55,
+        //             0.7
+        //         ]
+        //     }
+        // );
+
         new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
@@ -1401,13 +1525,14 @@ document.addEventListener("DOMContentLoaded", () => {
                     );
                 });
 
-                if (
-                    isAvatarSectionVisible ||
-                    companionHiddenByUser
-                ) {
+                if (companionHiddenByUser) {
                     return;
                 }
 
+                /*
+                * Cari section companion yang saat ini paling dominan
+                * terlihat di area observer.
+                */
                 const activeEntry =
                     [...visibleSectionRatios.entries()]
                         .filter(([, ratio]) => ratio > 0)
@@ -1420,17 +1545,30 @@ document.addEventListener("DOMContentLoaded", () => {
                     return;
                 }
 
-                activateCompanionSection(activeEntry[0]);
+                const activeSectionId = activeEntry[0];
+
+                /*
+                * Section Kahim–Wahim atau section companion lainnya
+                * sekarang mengambil alih lifecycle Avatar Section.
+                */
+                if (isAvatarSectionVisible) {
+                    isAvatarSectionVisible = false;
+                    leaveAvatarSection();
+                }
+
+                activateCompanionSection(activeSectionId);
             },
             {
-                rootMargin: "-18% 0px -42% 0px",
+                /*
+                * Area deteksi dibuat cukup luas agar Kahim–Wahim
+                * langsung aktif, bukan menunggu sampai Events.
+                */
+                rootMargin: "-8% 0px -48% 0px",
                 threshold: [
-                    0.08,
-                    0.18,
-                    0.28,
-                    0.4,
-                    0.55,
-                    0.7
+                    0.05,
+                    0.15,
+                    0.3,
+                    0.5
                 ]
             }
         );
@@ -1571,13 +1709,13 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     );
 
-    window.addEventListener(
-        "scroll",
-        evaluateCompanionVisibility,
-        {
-            passive: true
-        }
-    );
+    // window.addEventListener(
+    //     "scroll",
+    //     evaluateCompanionVisibility,
+    //     {
+    //         passive: true
+    //     }
+    // );
 
     /* ========================================================
        INITIAL STATE
