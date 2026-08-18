@@ -2368,6 +2368,7 @@ Overlay tidak perlu diubah pada JavaScript.
 .kenali-container .video-overlay button {
     align-self: flex-start;
     background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
     border: 1px solid white;
     color: white;
     border-radius: 9999px;
