@@ -2,13 +2,41 @@
 	
 	"use strict";
 	
-	//Hide Loading Box (Preloader)
-	function handlePreloader() {
-		if($('.preloader').length){
-			$('body').addClass('page-loaded');
-			$('.preloader').delay(1000).fadeOut(300);
-		}
-	}
+    // Hide Loading Box (Preloader) & Buka Kunci Scroll
+    var preloaderClosed = false;
+
+    function handlePreloader() {
+        if (preloaderClosed) return;
+        preloaderClosed = true;
+
+        window.scrollTo(0, 0);
+        
+        // Biarkan CSS bawaan .page-loaded menjalankan animasi slide aslinya
+        $('body').addClass('page-loaded');
+
+        // Tunggu sampai animasi slide CSS selesai (~800ms - 1000ms), baru buka kunci scroll
+        setTimeout(function() {
+            document.documentElement.classList.remove('is-preloading');
+            if ($('.preloader').length) {
+                $('.preloader').remove();
+            }
+        }, 900); // Sesuaikan angka 900 ini dengan durasi transition slide di style.css
+    }
+
+    // Jalankan segera setelah struktur HTML siap (tidak menunggu gambar bawah selesai)
+    $(document).ready(function() {
+        setTimeout(handlePreloader, 400);
+    });
+
+    // Jaring pengaman maksimal 3.5 detik jika ada aset/CDN yang macet
+    setTimeout(handlePreloader, 3500);
+
+	// function handlePreloader() {
+	// 	if($('.preloader').length){
+	// 		$('body').addClass('page-loaded');
+	// 		$('.preloader').delay(1000).fadeOut(300);
+	// 	}
+	// }
 	
 	//Update Header Style and Scroll to Top
 	function headerStyle() {
@@ -27,7 +55,7 @@
 				// Marquee tetap tampil di atas
 				// headerTop.show(); 
 				
-			} else if (scrollY > 200 && scrollY <= 350) {
+			} else if (scrollY > 200 && scrollY <= 450) {
 				// STATE: SEMBUNYI (Transisi kabur ke atas)
 				header.css({
 					"transform": "translateY(-100px)",
@@ -47,16 +75,30 @@
 		}
 	}
 	
-	$(window).on('scroll', function() {
-		headerStyle();
-	});
-	
-	
 	headerStyle();
 
 	$(window).on('scroll', function() {
 		headerStyle();
 	});
+
+    var $backToTop = $('#backToTop');
+	var isTicking = false;
+	window.addEventListener('scroll', function() {
+		if (!isTicking) {
+			window.requestAnimationFrame(function() {
+				headerStyle();
+
+				if (window.scrollY > 300) {
+					$backToTop.addClass('show');
+				} else {
+					$backToTop.removeClass('show');
+				}
+
+				isTicking = false;
+			});
+			isTicking = true;
+		}
+	}, { passive: true });
 
 	//Submenu Dropdown Toggle
 	if($('.main-header li.dropdown ul').length){
@@ -100,16 +142,16 @@
 		});
 	}
 
-	$(window).on('scroll', function() {
-		var scrollPos = $(window).scrollTop();
-		var btn = $('#backToTop');
+	// $(window).on('scroll', function() {
+	// 	var scrollPos = $(window).scrollTop();
+	// 	var btn = $('#backToTop');
 
-		if (scrollPos > 300) {
-			btn.addClass('show');
-		} else {
-			btn.removeClass('show');
-		}
-	});
+	// 	if (scrollPos > 300) {
+	// 		btn.addClass('show');
+	// 	} else {
+	// 		btn.removeClass('show');
+	// 	}
+	// });
 
 	// Fungsi Klik: Balik ke Atas
 	$('#backToTop').on('click', function(e) {
@@ -121,9 +163,9 @@
 	
 	// Loading masuk page akan di gantikan dengan fungsi berikut
 	
-	$(window).on('load', function() {
-		handlePreloader();
-	});	
+	// $(window).on('load', function() {
+	// 	handlePreloader();
+	// });	
 
 })(window.jQuery);
 
@@ -144,10 +186,6 @@
 	  console.log("Inspect Element telah dinonaktifkan!"); // Debugging
 	}
   });
-  // Mencegah Klik Kanan
-  document.addEventListener("contextmenu", function (event) {
-	event.preventDefault();
-  });
   // Mencegah Drag & Drop pada Semua Gambar
   document.addEventListener("dragstart", function (event) {
 	event.preventDefault();
@@ -159,50 +197,54 @@
 
 
 // NUMBER COUNTING ANIMATION
-const semuaAngka = document.querySelectorAll("#card-statistik span");
-const container = document.getElementById("counters");
+document.addEventListener("DOMContentLoaded", () => {
+    const countersContainer = document.getElementById("counters");
+    const counterNumbers = document.querySelectorAll("#card-statistik span[data-count]");
 
-let activated = false;
+    if (!countersContainer || !counterNumbers.length) return;
 
-window.addEventListener("scroll", () => {
-    // tambahan
-    const containerTop = container.getBoundingClientRect().top;
-    const windowHeight = window.innerHeight;
+    const animateCounters = () => {
+        counterNumbers.forEach((angka) => {
+            const target = parseInt(angka.dataset.count, 10);
+            const duration = 1200; // durasi animasi 1.2 detik
+            const startTime = performance.now();
 
-    // if (pageYOffset > container.offsetTop - container.offsetHeight - 200
-    if (containerTop < windowHeight - 50 && !activated) {
-        semuaAngka.forEach(angka => {
-            angka.innerText = 0;
-            let count = 0;
-            function updateCount(){
-                const target = parseInt(angka.dataset.count);
-                if (count < target){
-                    count++;
-                    angka.innerText = count;
-                    setTimeout(updateCount, 40);
+            const step = (currentTime) => {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                // Easing easeOutQuad agar melambat halus di akhir
+                const easeProgress = 1 - (1 - progress) * (1 - progress);
+                
+                angka.innerText = Math.floor(easeProgress * target);
+
+                if (progress < 1) {
+                    requestAnimationFrame(step);
                 } else {
                     angka.innerText = target;
                 }
+            };
+
+            requestAnimationFrame(step);
+        });
+    };
+
+    const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                animateCounters();
+            } else {
+                // Reset ke 0 saat keluar layar (mempertahankan perilaku asli)
+                counterNumbers.forEach((angka) => {
+                    angka.innerText = "0";
+                });
             }
-            updateCount();
-            activated = true;
         });
-    }
-    // } else if (pageYOffset < container.offsetTop - container.offsetHeight - 500
-    //     || pageYOffset === 0 && activated === true
-    // ) {
-    //     semuaAngka.forEach(angka => {
-    //         angka.innerText = 0;
-    //     });
-    //     activated = false;
-    // }
-    if (containerTop > windowHeight) {
-        semuaAngka.forEach((angka) => {
-        angka.innerText = 0;
-        });
-        activated = false;
-    }
-})
+    }, {
+        threshold: 0.25 // Animasi mulai saat 25% area statistik terlihat
+    });
+
+    counterObserver.observe(countersContainer);
+});
 // NUMBER COUNTING ANIMATION
 
 
