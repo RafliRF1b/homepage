@@ -10,23 +10,27 @@
         preloaderClosed = true;
 
         window.scrollTo(0, 0);
-        
-        // Biarkan CSS bawaan .page-loaded menjalankan animasi slide aslinya
-        $('body').addClass('page-loaded');
 
-        // Tunggu sampai animasi slide CSS selesai (~800ms - 1000ms), baru buka kunci scroll
-        setTimeout(function() {
+        if ($('.preloader').length) {
+            $('body').addClass('page-loaded');
+            // Durasi 1000ms memberi waktu penuh untuk animasi slide CSS selesai sebelum fadeOut & buka scroll
+            setTimeout(function() {
+                $('.preloader').fadeOut(300);
+                document.documentElement.classList.remove('is-preloading');
+            }, 1000);
+        } else {
             document.documentElement.classList.remove('is-preloading');
-            if ($('.preloader').length) {
-                $('.preloader').remove();
-            }
-        }, 900); // Sesuaikan angka 900 ini dengan durasi transition slide di style.css
+        }
     }
 
     // Jalankan segera setelah struktur HTML siap (tidak menunggu gambar bawah selesai)
     $(document).ready(function() {
         setTimeout(handlePreloader, 400);
     });
+
+    $(window).on('load', function() {
+		handlePreloader();
+	});	
 
     // Jaring pengaman maksimal 3.5 detik jika ada aset/CDN yang macet
     setTimeout(handlePreloader, 3500);
@@ -135,9 +139,9 @@
 		$(".scroll-to-target").on('click', function() {
 			var target = $(this).attr('data-target');
 		   // animate
-		   $('html, body').animate({
-			   scrollTop: $(target).offset().top
-			 }, 1500);
+		    $('html, body').animate({
+                scrollTop: $(target).offset().top
+            }, 1500);
 	
 		});
 	}
@@ -160,12 +164,6 @@
 			scrollTop: 0
 		}, 0);
 	});
-	
-	// Loading masuk page akan di gantikan dengan fungsi berikut
-	
-	// $(window).on('load', function() {
-	// 	handlePreloader();
-	// });	
 
 })(window.jQuery);
 
