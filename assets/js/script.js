@@ -2,38 +2,32 @@
 	
 	"use strict";
 	
-    // Hide Loading Box (Preloader) & Buka Kunci Scroll
     var preloaderClosed = false;
 
     function handlePreloader() {
-        if (preloaderClosed) return;
-        preloaderClosed = true;
+		if (preloaderClosed) return;
+		preloaderClosed = true;
 
-        window.scrollTo(0, 0);
+		if ($('.preloader').length) {
+			window.scrollTo(0, 0);
+			$('body').addClass('page-loaded');
+			$('.preloader').delay(1000).fadeOut(300, function() {
+				document.documentElement.classList.remove('is-preloading');
+				if (typeof AOS !== 'undefined') {
+					AOS.refreshHard();
+				}
+			});
+		} else {
+			document.documentElement.classList.remove('is-preloading');
+			if (typeof AOS !== 'undefined') {
+				AOS.refreshHard();
+			}
+		}
+	}
 
-        if ($('.preloader').length) {
-            $('body').addClass('page-loaded');
-            // Durasi 1000ms memberi waktu penuh untuk animasi slide CSS selesai sebelum fadeOut & buka scroll
-            setTimeout(function() {
-                $('.preloader').fadeOut(300);
-                document.documentElement.classList.remove('is-preloading');
-            }, 1000);
-        } else {
-            document.documentElement.classList.remove('is-preloading');
-        }
-    }
-
-    // Jalankan segera setelah struktur HTML siap (tidak menunggu gambar bawah selesai)
-    $(document).ready(function() {
-        setTimeout(handlePreloader, 400);
-    });
-
-    $(window).on('load', function() {
+	$(window).on('load', function() {
 		handlePreloader();
-	});	
-
-    // Jaring pengaman maksimal 3.5 detik jika ada aset/CDN yang macet
-    setTimeout(handlePreloader, 3500);
+	});
 
 	// function handlePreloader() {
 	// 	if($('.preloader').length){
